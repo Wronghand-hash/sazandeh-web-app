@@ -3,6 +3,7 @@ import {
   AiOutlineMail,
   AiOutlinePhone,
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function navbar() {
   return (
@@ -26,27 +27,36 @@ export default function navbar() {
           <div className=" w-12 h-12 bg-gray-500"></div>
         </div>
         <div className="flex w-full   h-16 justify-end pr-48 p-8 space-x-12 items-center align-center">
-          <p className="cursor-pointer hover:border-2 border-black transition-all p-2">
+          <Link className="cursor-pointer hover:border-2 border-black transition-all p-2">
             درباره ما
-          </p>
-          <p className="cursor-pointer hover:border-2 border-black transition-all">
+          </Link>
+          <Link
+            to={"/contactus"}
+            className="cursor-pointer hover:border-2 border-black transition-all"
+          >
             تماس باما
-          </p>
+          </Link>
           <p className="cursor-pointer hover:border-2 border-black transition-all p-1">
             فروشگاه
           </p>
           <p className="cursor-pointer hover:border-2 border-black transition-all p-1">
             وبلاگ
           </p>
-          <p className="cursor-pointer hover:border-2 border-black transition-all p-1">
+          <Link
+            to={"/services"}
+            className="cursor-pointer hover:border-2 border-black transition-all p-1"
+          >
             خدمات
-          </p>
+          </Link>
           <p className="cursor-pointer hover:border-2 border-black transition-all p-1">
             پروژه ها
           </p>
-          <p className="cursor-pointer hover:border-2 border-black transition-all p-1">
+          <Link
+            to={"/"}
+            className="cursor-pointer hover:border-2 border-black transition-all p-1"
+          >
             خانه
-          </p>
+          </Link>
         </div>
       </div>
     </div>
