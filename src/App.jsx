@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="w-full h-full bg-purple-400 App">
+    <div className="w-full h-full App">
       <Navbar />
       <ContactUs />
     </div>
