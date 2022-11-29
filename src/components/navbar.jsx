@@ -7,7 +7,7 @@ import {
 export default function navbar() {
   return (
     <div className="w-full fixed flex-col h-24 bg-transparent flex">
-      <div className="bg-black text-white flex justify-end pr-52 p-4 space-x-8">
+      <div className="bg-transparent text-white flex justify-end pr-52 p-4 space-x-8">
         <div className="flex space-x-2 justity-between items-center">
           <AiOutlineClockCircle />
           <p>شنبه تا پنج شنبه 12 الی 11</p>
