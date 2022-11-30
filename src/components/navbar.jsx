@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function navbar() {
   return (
-    <div className="w-full fixed flex-col h-24 bg-transparent flex">
+    <div className="w-full fixed flex-col h-24 bg-black flex">
       <div className="bg-transparent text-white flex justify-end pr-52 p-4 space-x-8">
         <div className="flex space-x-2 justity-between items-center">
           <AiOutlineClockCircle />
@@ -27,33 +27,33 @@ export default function navbar() {
           <div className=" w-12 h-12 bg-gray-500"></div>
         </div>
         <div className="flex w-full   h-16 justify-end pr-48 p-8 space-x-12 items-center align-center">
-          <Link className="cursor-pointer hover:border-2 border-black transition-all p-2">
+          <Link className="cursor-pointer duration-300 hover:border-2 border-black transition-all p-2">
             درباره ما
           </Link>
           <Link
             to={"/contactus"}
-            className="cursor-pointer hover:border-2 border-black transition-all"
+            className="cursor-pointer duration-300 text-md   hover:bg-black hover:text-white  p-4 transition"
           >
-            تماس باما
+            <span className="px-10 flex items-center w-full">تماس باما</span>
           </Link>
-          <p className="cursor-pointer hover:border-2 border-black transition-all p-1">
+          <p className="cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition ">
             فروشگاه
           </p>
-          <p className="cursor-pointer hover:border-2 border-black transition-all p-1">
+          <p className="cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition ">
             وبلاگ
           </p>
           <Link
             to={"/services"}
-            className="cursor-pointer hover:border-2 border-black transition-all p-1"
+            className="cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition "
           >
             خدمات
           </Link>
-          <p className="cursor-pointer hover:border-2 border-black transition-all p-1">
+          <p className="cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition ">
             پروژه ها
           </p>
           <Link
             to={"/"}
-            className="cursor-pointer hover:border-2 border-black transition-all p-1"
+            className="cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition "
           >
             خانه
           </Link>
