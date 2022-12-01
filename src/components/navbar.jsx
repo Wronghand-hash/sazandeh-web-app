@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function navbar() {
   return (
-    <div className="w-full fixed flex-col h-24 bg-black flex">
+    <div className="w-full fixed flex-col h-24 bg-black flex z-50">
       <div className="bg-transparent text-white flex justify-end pr-52 p-4 space-x-8">
         <div className="flex space-x-2 justity-between items-center">
           <AiOutlineClockCircle />
