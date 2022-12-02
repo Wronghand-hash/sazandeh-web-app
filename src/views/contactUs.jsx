@@ -7,7 +7,7 @@ import { PhoneIncoming } from "phosphor-react";
 
 export default function contactUs() {
   return (
-    <div className="w-screen relative">
+    <div className="w-screen relative overflow-x-hidden overflow-y-auto">
       <Navbar className="" />
       <div className=" w-96 h-96 bg-yellow-400 absolute transform rotate-45 -translate-x-64 -translate-y-8"></div>
       <div className="flex justiy-end items-center w-full h-96 bg-black">
@@ -20,9 +20,10 @@ export default function contactUs() {
           </div>
         </div>
       </div>
-      <div className=" w-96 h-96 bg-yellow-400 absolute right-0 transform rotate-45 translate-x-64  top-0"></div>
+      <div className=" w-96 h-96 bg-neutral-900 absolute right-0     transform rotate-45 translate-x-52  top-0"></div>
+      <div className=" w-96 h-96 bg-yellow-400 absolute right-0   transform rotate-45 translate-x-64  top-0"></div>
 
-      <div className="flex  p-20 justify-center">
+      <div className="flex  p-20 justify-center bg-white">
         <div className="w-2/3 space-y-4 h-full flex flex-col">
           <div className="flex py-5 p-2 border-b-2 justify-end items-center">
             <p className="text-2xl font-bold">
