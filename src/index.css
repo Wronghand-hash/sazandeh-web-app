@@ -4,10 +4,10 @@
 
 @font-face {
   font-family: "IranSans";
-  src: url("../src/assets/fonts/iransansdnweblight.ttf");
+  src: url("../src/assets/fonts/IRANSansWeb.ttf");
   font-style: normal;
 }
 
 * {
-  font-family: "LaleZar", "Rezvan";
+  font-family: "IranSans";
 }

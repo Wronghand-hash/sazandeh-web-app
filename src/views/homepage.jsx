@@ -6,6 +6,10 @@ import {
   CaretLeft,
   CaretRight,
   ArrowCircleRight,
+  Copy,
+  Calculator,
+  RocketLaunch,
+  Activity,
 } from "phosphor-react";
 import mainPageBg from "../assets/images/mainPageBg.webp";
 import mainPageProjects from "../assets/images/mainPageProjects.webp";
@@ -187,23 +191,23 @@ export default function homePage() {
               alt=""
             />
           </div>
-          <div className="h-full w-3/5 bg-green-600">
-            <div className="w-full h-1/2 flex bg-red-500">
-              <div className=" w-1/3 h-full bg-yellow-500">
+          <div className="h-full w-3/5  ">
+            <div className="w-full h-1/2 flex  ">
+              <div className=" w-1/3 h-full  ">
                 <img
                   className=" w-full h-full object-fill"
                   src={mainPageProjects2}
                   alt=""
                 />
               </div>
-              <div className=" w-1/3 h-full bg-yellow-500">
+              <div className=" w-1/3 h-full  ">
                 <img
                   className=" w-full h-full object-fill"
                   src={mainPageProjects3}
                   alt=""
                 />
               </div>
-              <div className=" w-1/3 h-full bg-yellow-500">
+              <div className=" w-1/3 h-full  ">
                 <img
                   className=" w-full h-full object-fill"
                   src={mainPageProjects4}
@@ -211,27 +215,99 @@ export default function homePage() {
                 />
               </div>
             </div>
-            <div className="w-full h-1/2 flex bg-red-500">
-              <div className=" w-1/3 h-full bg-yellow-500">
+            <div className="w-full h-1/2 flex  ">
+              <div className=" w-1/3 h-full  ">
                 <img
                   className=" w-full h-full object-fill"
                   src={mainPageProjects5}
                   alt=""
                 />
               </div>
-              <div className=" w-1/3 h-full bg-yellow-500">
+              <div className=" w-1/3 h-full  ">
                 <img
                   className=" w-full h-full object-fill"
                   src={mainPageProjects6}
                   alt=""
                 />
               </div>
-              <div className=" w-1/3 h-full bg-yellow-500">
+              <div className=" w-1/3 h-full  ">
                 <img
                   className=" w-full h-full object-fill"
                   src={mainPageProjects7}
                   alt=""
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      // Fifth Section
+      <div className="w-screen h-rem26  pt-10 bg-white">
+        <div className="w-screen flex items-center flex-col">
+          <h3 className="py-2 text-md px-1 bg-blue-600 text-white">WORKFLOW</h3>
+          <h1 className="text-3xl my-2 font-bold">
+            روال دریافت خدمات و محصولات
+          </h1>
+
+          <div className="w-full h-56 flex items-center flex-row-reverse justify-around px-20 my-14 ">
+            <div className="flex flex-col items-center justify-center space-y-5">
+              <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+                <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                  1
+                </p>
+                <Copy size={30} weight="fill" />
+              </div>
+              <div className="flex items-center text-center flex-col w-64 space-y-4">
+                <h1 className="text-lg font-bold">انتخاب محصول و خدمت</h1>
+                <h5 className="text-sm">
+                  لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است
+                </h5>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-center space-y-5">
+              <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+                <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                  2
+                </p>
+                <Calculator size={30} weight="fill" />{" "}
+              </div>
+              <div className="flex items-center text-center flex-col w-64 space-y-4">
+                <h1 className="text-lg font-bold">براورد هزینه</h1>
+                <h5 className="text-sm">
+                  لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است
+                </h5>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-center space-y-5">
+              <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+                <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                  3
+                </p>
+                <RocketLaunch size={30} weight="fill" />{" "}
+              </div>
+              <div className="flex items-center text-center flex-col w-64 space-y-4">
+                <h1 className="text-lg font-bold">مشاوره و تایید نهایی</h1>
+                <h5 className="text-sm">
+                  لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است
+                </h5>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-center space-y-5">
+              <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+                <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                  4
+                </p>
+                <Activity size={30} weight="fill" />{" "}
+              </div>
+              <div className="flex items-center text-center flex-col w-64 space-y-4">
+                <h1 className="text-lg font-bold">اجرای پروژه</h1>
+                <h5 className="text-sm">
+                  لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است
+                </h5>
               </div>
             </div>
           </div>
