@@ -12,6 +12,7 @@ import {
   BookOpen,
   Lightbulb,
   PictureInPicture,
+  Copy,
 } from "phosphor-react";
 import manWithSmile from "../assets/images/manWithSmile.webp";
 
@@ -40,7 +41,7 @@ export default function services() {
           {services.map((service) => {
             return (
               <div className="w-76 flex-col flex hover:bg-blue-500 hover:text-white transition-all bg-gray-300 h-64">
-                <div>
+                <div className="hover:scale-75 transition-all">
                   <img src={service} alt="" />
                 </div>
                 <div className="flex w-full h-full px-2 justify-around items-center align-center">
@@ -110,7 +111,14 @@ export default function services() {
                 </p>
               </div>
             </div>
-            <div style={{ backgroundImage: `url(${manWithSmile})` , backgroundPosition: 'center' , backgroundSize: 'cover'}} className="flex w-88 w-full rounded-t-3xl bg-gray-300">
+            <div
+              style={{
+                backgroundImage: `url(${manWithSmile})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+              className="flex w-88 w-full rounded-t-3xl bg-gray-300"
+            >
               {/* <img
                 className="object-contain w-full h-full"
                 src={manWithSmile}
@@ -138,6 +146,48 @@ export default function services() {
                   با استفاده از طراحان گرافیک است، قرار گیرد
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex pt-20 w-full items-center justify-center h-full flex-col">
+        <div className="flex justify-center items-center w-full h-24 flex-col">
+          <h1 className="bg-sky-400 text-white px-4 py-0">workflow</h1>
+          <h2 className="text-2xl font-bold">روال دریافت خدمات و محصولات</h2>
+        </div>
+        <div className="flex justify-center space-x-5 px-5 items-center w-full">
+          <div className="flex w-full text-right  justify-center flex-col">
+            <div className="flex justify-center items-center">
+              <Copy size={32} />
+            </div>
+            <div className=" text-center text-xl font-bold p-5">انتخاب محصول و خدمات</div>
+            <div className="text-xs text-center">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، قرار گیرد
+            </div>
+          </div>
+          <div className="flex w-full text-right  justify-center flex-col">
+            <div className="flex justify-center items-center">icon</div>
+            <div className="text-xl font-bold p-5">انتخاب محصول و خدمات</div>
+            <div className="text-xs text-center">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، قرار گیرد
+            </div>
+          </div>
+          <div className="flex w-full text-right  justify-center flex-col">
+            <div className="flex justify-center items-center">icon</div>
+            <div className="text-xl font-bold p-5">انتخاب محصول و خدمات</div>
+            <div className="text-xs text-center">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، قرار گیرد
+            </div>
+          </div>
+          <div className="flex w-full text-right  justify-center flex-col">
+            <div className="flex justify-center items-center">icon</div>
+            <div className="text-xl font-bold p-5">انتخاب محصول و خدمات</div>
+            <div className="text-xs text-center">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، قرار گیرد
             </div>
           </div>
         </div>
