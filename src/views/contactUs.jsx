@@ -94,19 +94,19 @@ export default function contactUs() {
             </div>
           </div>
           <div className="flex items-center h-72 my-52 w-full justify-around">
-            <button className="flex transition w-56 justify-around border h-20 hover:bg-yellow-400 items-center">
+            <button className="flex shadow-xl transition w-56 justify-around border h-20 hover:bg-yellow-400 items-center">
               <PhoneIncoming size={32} />
               <div className="flex items-center justify-center flex-col">
                 <p>تماس با ما</p> <p>123-542-8695</p>
               </div>
             </button>
-            <button className="flex transition w-56 justify-around border h-20 hover:bg-yellow-400 items-center">
+            <button className="flex shadow-xl transition w-56 justify-around border h-20 hover:bg-yellow-400 items-center">
               <PhoneIncoming size={32} />
               <div className="flex items-center justify-center flex-col">
                 <p>ارتباط با ما</p> <p>info@sazandeh.com</p>
               </div>
             </button>
-            <button className="flex transition w-56 justify-around border h-20 hover:bg-yellow-400 items-center">
+            <button className="flex shadow-xl transition w-56 justify-around border h-20 hover:bg-yellow-400 items-center">
               <PhoneIncoming size={32} />
               <div className="flex items-center justify-center flex-col">
                 <p>اگر سوالی دارید</p> <p>برایمان پیام بگذارید</p>

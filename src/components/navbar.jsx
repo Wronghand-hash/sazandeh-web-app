@@ -27,7 +27,7 @@ export default function navbar() {
           <div className=" w-12 h-12 bg-gray-500"></div>
         </div>
         <div className="flex w-full   h-16 justify-end pr-48 p-8 space-x-12 items-center align-center">
-          <Link className="cursor-pointer duration-300 hover:border-2 border-black transition-all p-2">
+          <Link to={"/aboutus"} className="cursor-pointer duration-300 hover:border-2 border-black transition-all p-2">
             درباره ما
           </Link>
           <Link
