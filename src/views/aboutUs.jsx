@@ -71,7 +71,7 @@ export default function aboutUs() {
           </div>
         </div>
       </div>
-      <div className="flex items-center space-x-12 justify-center bg-sky-500 w-full h-32">
+      <div className="flex items-center space-x-12 justify-center  bg-blue-600 w-full h-32">
         <div className="flex text-white items-center justify-center flex-col">
           <div className="flex justify-center space-x-2">
             <p className="text-4xl font-bold">32</p>

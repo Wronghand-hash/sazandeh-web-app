@@ -10,6 +10,7 @@ import {
   Calculator,
   RocketLaunch,
   Activity,
+  GlobeStand,
 } from "phosphor-react";
 import mainPageBg from "../assets/images/mainPageBg.webp";
 import mainPageProjects from "../assets/images/mainPageProjects.webp";
@@ -19,10 +20,11 @@ import mainPageProjects4 from "../assets/images/mainPageProjects4.webp";
 import mainPageProjects5 from "../assets/images/mainPageProjects5.webp";
 import mainPageProjects6 from "../assets/images/mainPageProjects6.webp";
 import mainPageProjects7 from "../assets/images/mainPageProjects7.webp";
+import mainPageGraphic from "../assets/images/mainPageGraphic.webp";
 
 export default function homePage() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
       // First Section
       <div className="flex justiy-end relative items-center w-screen h-carousel  bg-yellow-400">
@@ -249,7 +251,7 @@ export default function homePage() {
             روال دریافت خدمات و محصولات
           </h1>
 
-          <div className="w-full h-56 flex items-center flex-row-reverse justify-around px-20 my-14 ">
+          <div className="w-full h-56 flex items-center flex-row-reverse justify-around px-32 my-14 ">
             <div className="flex flex-col items-center justify-center space-y-5">
               <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
                 <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
@@ -285,7 +287,7 @@ export default function homePage() {
                 <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
                   3
                 </p>
-                <RocketLaunch size={30} weight="fill" />{" "}
+                <RocketLaunch size={30} weight="fill" />
               </div>
               <div className="flex items-center text-center flex-col w-64 space-y-4">
                 <h1 className="text-lg font-bold">مشاوره و تایید نهایی</h1>
@@ -300,7 +302,7 @@ export default function homePage() {
                 <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
                   4
                 </p>
-                <Activity size={30} weight="fill" />{" "}
+                <Activity size={30} weight="fill" />
               </div>
               <div className="flex items-center text-center flex-col w-64 space-y-4">
                 <h1 className="text-lg font-bold">اجرای پروژه</h1>
@@ -311,6 +313,49 @@ export default function homePage() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      // Sixth Section
+      <div className="w-screen h-auto flex items-center justify-center">
+        <img className="relative" src={mainPageGraphic} alt="" />
+        <button className="transition duration-300 ease-in hover:bg-neutral-900 hover:text-yellow-400 absolute right-80 mr-28 font-bold rounded-sm mt-28   px-4 py-1 bg-white text-neutral-900 text-lg">
+          تماس با ما
+        </button>
+        <h1 className="text-md font-bold absolute mt-10 ml-8 text-right">
+          بهینه ترین هزینه و مناسب ترین زمان برای خدمات ساختمانی
+          <p className="text-sm absolute font-light">
+            لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است
+          </p>
+        </h1>
+      </div>
+      <div className="flex items-center space-x-12 justify-center bg-blue-600 w-full h-32">
+        <div className="flex text-white items-center justify-center flex-col">
+          <div className="flex justify-center space-x-2">
+            <p className="text-4xl font-bold">165</p>
+            <p>
+              <RocketLaunch size={24} />
+            </p>
+          </div>
+          <div className="font-bold">پروژه های موفق</div>
+        </div>
+        <div className="flex border-r border-l px-5 text-white items-center justify-center flex-col">
+          <div className="flex justify-center space-x-2">
+            <p className="text-4xl font-bold">21</p>
+            <p>
+              <GlobeStand size={24} weight="fill" />{" "}
+            </p>
+          </div>
+          <div className="font-bold">متخصصان</div>
+        </div>
+        <div className="flex text-white items-center justify-center flex-col">
+          <div className="flex justify-center space-x-2">
+            <p className="text-4xl font-bold">85</p>
+            <p>
+              <Users size={24} />
+            </p>
+          </div>
+          <div className="font-bold">مشتریان ما</div>
         </div>
       </div>
     </div>
