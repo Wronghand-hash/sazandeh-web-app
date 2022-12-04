@@ -48,9 +48,9 @@ export default function navbar() {
           >
             خدمات
           </Link>
-          <p className="cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition ">
+          <Link to={'/projects'} className="cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition ">
             پروژه ها
-          </p>
+          </Link>
           <Link
             to={"/"}
             className="cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition "
