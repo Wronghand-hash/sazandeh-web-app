@@ -4,6 +4,7 @@ import {
   AiOutlinePhone,
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import Logo from "../assets/images/logo.png";
 
 export default function navbar() {
   return (
@@ -24,10 +25,15 @@ export default function navbar() {
       </div>
       <div className="flex bg-white items-center justify-around h-16">
         <div className="flex justify-center w-2/3">
-          <div className=" w-12 h-12 bg-gray-500"></div>
+          <div className=" w-12 h-12">
+            <img src={Logo} alt="" />
+          </div>
         </div>
         <div className="flex w-full   h-16 justify-end pr-48 p-8 space-x-12 items-center align-center">
-          <Link to={"/aboutus"} className="cursor-pointer duration-300 hover:border-2 border-black transition-all p-2">
+          <Link
+            to={"/aboutus"}
+            className="cursor-pointer duration-300 hover:border-2 border-black transition-all p-2"
+          >
             درباره ما
           </Link>
           <Link
@@ -48,7 +54,10 @@ export default function navbar() {
           >
             خدمات
           </Link>
-          <Link to={'/projects'} className="cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition ">
+          <Link
+            to={"/projects"}
+            className="cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition "
+          >
             پروژه ها
           </Link>
           <Link
