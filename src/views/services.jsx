@@ -4,16 +4,23 @@ import mainPageProjects3 from "../assets/images/mainPageProjects3.webp";
 import mainPageProjects4 from "../assets/images/mainPageProjects4.webp";
 import mainPageProjects5 from "../assets/images/mainPageProjects5.webp";
 import mainPageProjects6 from "../assets/images/mainPageProjects6.webp";
-import { PhoneIncoming } from "phosphor-react";
-import { useState } from "react";
+import mainPageGraphic from "../assets/images/mainPageGraphic.webp";
 import {
+  Copy,
+  Calculator,
+  RocketLaunch,
+  Activity,
+  PhoneIncoming,
   ArrowCircleRight,
   House,
   BookOpen,
   Lightbulb,
+  ArchiveBox,
+  GlobeStand,
+  Users,
   PictureInPicture,
-  Copy,
 } from "phosphor-react";
+import { useState } from "react";
 import manWithSmile from "../assets/images/manWithSmile.webp";
 
 export default function services() {
@@ -37,11 +44,11 @@ export default function services() {
         </div>
       </div>
       <div className="flex w-full items-center py-20 justify-center ">
-        <div className="flex divide-x py-4 w-8/12 ">
+        <div className="flex space-x-2 py-4 w-8/12 ">
           {services.map((service) => {
             return (
               <div className="w-76 flex-col flex hover:bg-blue-500 hover:text-white transition-all bg-gray-300 h-64">
-                <div className="hover:scale-75 transition-all">
+                <div className=" transition-all">
                   <img src={service} alt="" />
                 </div>
                 <div className="flex w-full h-full px-2 justify-around items-center align-center">
@@ -61,7 +68,7 @@ export default function services() {
       <div className="flex flex-col bg-gray-200 w-full h-full">
         <div className="flex justify-center space-x-8 -translate-y-10">
           <button className="flex shadow-xl transition w-64 justify-around bg-white border h-20 hover:bg-yellow-400 items-center">
-            <PhoneIncoming size={32} />
+            <ArchiveBox size={32} />
             <div className="flex items-center justify-center flex-col">
               <p>دریافت</p> <p>کاتالوگ</p>
             </div>
@@ -155,40 +162,108 @@ export default function services() {
           <h1 className="bg-sky-400 text-white px-4 py-0">workflow</h1>
           <h2 className="text-2xl font-bold">روال دریافت خدمات و محصولات</h2>
         </div>
-        <div className="flex justify-center space-x-5 px-5 items-center w-full">
-          <div className="flex w-full text-right  justify-center flex-col">
-            <div className="flex justify-center items-center">
-              <Copy size={32} />
+        <div className="flex flex-row-reverse pt-20 justify-center space-x-5 px-5 items-center w-full">
+          <div className="flex flex-col items-center justify-center space-y-5">
+            <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+              <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                1
+              </p>
+              <Copy size={30} weight="fill" />
             </div>
-            <div className=" text-center text-xl font-bold p-5">انتخاب محصول و خدمات</div>
-            <div className="text-xs text-center">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، قرار گیرد
-            </div>
-          </div>
-          <div className="flex w-full text-right  justify-center flex-col">
-            <div className="flex justify-center items-center">icon</div>
-            <div className="text-xl font-bold p-5">انتخاب محصول و خدمات</div>
-            <div className="text-xs text-center">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، قرار گیرد
+            <div className="flex items-center text-center flex-col w-64 space-y-4">
+              <h1 className="text-lg font-bold">انتخاب محصول و خدمت</h1>
+              <h5 className="text-sm">
+                لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است
+              </h5>
             </div>
           </div>
-          <div className="flex w-full text-right  justify-center flex-col">
-            <div className="flex justify-center items-center">icon</div>
-            <div className="text-xl font-bold p-5">انتخاب محصول و خدمات</div>
-            <div className="text-xs text-center">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، قرار گیرد
+          <div className="flex flex-col items-center justify-center space-y-5">
+            <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+              <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                2
+              </p>
+              <Calculator size={30} weight="fill" />{" "}
+            </div>
+            <div className="flex items-center text-center flex-col w-64 space-y-4">
+              <h1 className="text-lg font-bold">براورد هزینه</h1>
+              <h5 className="text-sm">
+                لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است
+              </h5>
             </div>
           </div>
-          <div className="flex w-full text-right  justify-center flex-col">
-            <div className="flex justify-center items-center">icon</div>
-            <div className="text-xl font-bold p-5">انتخاب محصول و خدمات</div>
-            <div className="text-xs text-center">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، قرار گیرد
+          <div className="flex flex-col items-center justify-center space-y-5">
+            <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+              <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                3
+              </p>
+              <RocketLaunch size={30} weight="fill" />
             </div>
+            <div className="flex items-center text-center flex-col w-64 space-y-4">
+              <h1 className="text-lg font-bold">مشاوره و تایید نهایی</h1>
+              <h5 className="text-sm">
+                لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است
+              </h5>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center space-y-5">
+            <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+              <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                4
+              </p>
+              <Activity size={30} weight="fill" />
+            </div>
+            <div className="flex items-center text-center flex-col w-64 space-y-4">
+              <h1 className="text-lg font-bold">اجرای پروژه</h1>
+              <h5 className="text-sm">
+                لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div className="w-screen mt-20 h-auto flex items-center justify-center">
+          <img className="relative" src={mainPageGraphic} alt="" />
+          <button className="transition duration-300 ease-in hover:bg-neutral-900 hover:text-yellow-400 absolute right-80 mr-28 font-bold rounded-sm mt-28   px-4 py-1 bg-white text-neutral-900 text-lg">
+            تماس با ما
+          </button>
+          <h1 className="text-md font-bold absolute mt-10 ml-8 text-right">
+            بهینه ترین هزینه و مناسب ترین زمان برای خدمات ساختمانی
+            <p className="text-sm absolute font-light">
+              لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است
+            </p>
+          </h1>
+        </div>
+        <div className="flex  items-center space-x-12 justify-center bg-blue-600 w-full h-32">
+          <div className="flex text-white items-center justify-center flex-col">
+            <div className="flex justify-center space-x-2">
+              <p className="text-4xl font-bold">165</p>
+              <p>
+                <RocketLaunch size={24} />
+              </p>
+            </div>
+            <div className="font-bold">پروژه های موفق</div>
+          </div>
+          <div className="flex border-r border-l px-5 text-white items-center justify-center flex-col">
+            <div className="flex justify-center space-x-2">
+              <p className="text-4xl font-bold">21</p>
+              <p>
+                <GlobeStand size={24} weight="fill" />{" "}
+              </p>
+            </div>
+            <div className="font-bold">متخصصان</div>
+          </div>
+          <div className="flex text-white items-center justify-center flex-col">
+            <div className="flex justify-center space-x-2">
+              <p className="text-4xl font-bold">85</p>
+              <p>
+                <Users size={24} />
+              </p>
+            </div>
+            <div className="font-bold">مشتریان ما</div>
           </div>
         </div>
       </div>
