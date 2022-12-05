@@ -13,6 +13,8 @@ import { useState } from "react";
 export default function projects() {
   const [show, setShow] = useState(false);
 
+  const [showIndex, setShowIndex] = useState(null);
+
   const [projects, setProjects] = useState([
     mainPageProjects,
     mainPageProjects2,
@@ -73,34 +75,51 @@ export default function projects() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center py-20">
+          <div className="flex flex-col items-center   justify-center py-20">
             <div className="bg-gray-500 justify-center items-center flex flex-wrap w-2/3">
-              {projects.map((project) => {
-                let showHover = false;
+              {projects.map((project, i) => {
+                let [hover, setHover] = useState(false);
                 return (
                   <div
-                    key={project}
+                    key={i}
                     style={{
                       backgroundImage: `url(${project})`,
                       backgroundPosition: "center",
                     }}
-                    className="w-56 h-56 bg-red-500"
-                    onMouseOver={() => (showHover = true)}
-                    onMouseLeave={() => (showHover = false)}
+                    className="w-56 transition-all h-56 bg-red-500"
+                    onMouseEnter={() => setShowIndex(i)}
+                    onMouseLeave={() => setShowIndex(null)}
                   >
-                    {showHover ? (
-                      <div className="flex p-2 space-y-2 flex-col w-full h-full justify-center items-center">
-                        <h1 className="font-bold text-xl text-white">
-                          قضای اداری
-                        </h1>
-                        <button className="bg-white text-md font-bold px-4">
-                          جزییات پروژه
-                        </button>
-                      </div>
-                    ) : null}
+                    <div
+                      style={{
+                        visibility: showIndex === i ? "visible" : "hidden",
+                      }}
+                      className="w-56 absolute h-56 bg-black opacity-25"
+                    ></div>
+                    <div
+                      style={{
+                        transition: "0.4",
+                        transition: "ease",
+                        visibility: showIndex === i ? "visible" : "hidden",
+                      }}
+                      className="flex transition-all p-2 space-y-2 flex-col w-full h-full justify-center items-center"
+                    >
+                      <h1 className="font-bold text-xl text-white">
+                        قضای اداری
+                      </h1>
+                      <button className="bg-white text-md font-bold px-4">
+                        جزییات پروژه
+                      </button>
+                    </div>
                   </div>
                 );
               })}
+            </div>
+
+            <div className="flex justify-center items-center mt-20">
+              <button className="px-8 border-b-4 border-yellow-400 py-2 font-bold bg-black text-white  hover:border-b-6 transition-all border-yellow-500">
+                ارسال
+              </button>
             </div>
           </div>
         </div>
