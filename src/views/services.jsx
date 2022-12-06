@@ -183,7 +183,7 @@ export default function services() {
               <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
                 2
               </p>
-              <Calculator size={30} weight="fill" />{" "}
+              <Calculator size={30} weight="fill" />
             </div>
             <div className="flex items-center text-center flex-col w-64 space-y-4">
               <h1 className="text-lg font-bold">براورد هزینه</h1>
@@ -251,7 +251,7 @@ export default function services() {
             <div className="flex justify-center space-x-2">
               <p className="text-4xl font-bold">21</p>
               <p>
-                <GlobeStand size={24} weight="fill" />{" "}
+                <GlobeStand size={24} weight="fill" />
               </p>
             </div>
             <div className="font-bold">متخصصان</div>

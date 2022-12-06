@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import {
   Timer,
   HeartStraight,
@@ -358,6 +359,7 @@ export default function homePage() {
           <div className="font-bold">مشتریان ما</div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
