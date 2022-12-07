@@ -1,6 +1,7 @@
 import Navbar from "../components/navbar";
 import ProjectsImage from "../assets/images/projectsImage.webp";
 import { AiOutlineLeft } from "react-icons/ai";
+import { CaretDown } from "phosphor-react";
 import mainPageProjects from "../assets/images/mainPageProjects.webp";
 import mainPageProjects2 from "../assets/images/mainPageProjects2.webp";
 import mainPageProjects3 from "../assets/images/mainPageProjects3.webp";
@@ -9,6 +10,7 @@ import mainPageProjects5 from "../assets/images/mainPageProjects5.webp";
 import mainPageProjects6 from "../assets/images/mainPageProjects6.webp";
 import mainPageProjects7 from "../assets/images/mainPageProjects7.webp";
 import { useState } from "react";
+import { Menu } from "@headlessui/react";
 
 export default function projects() {
   const [show, setShow] = useState(false);
@@ -25,18 +27,18 @@ export default function projects() {
     mainPageProjects7,
   ]);
   return (
-    <div className="w-full h-full">
+    <div className="w-full overflow-hidden h-full">
       <Navbar />
       <div
         style={{
           backgroundImage: `url(${ProjectsImage})`,
-          backgroundSize: "100%",
-          backgroundPosition: "top",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
         className="flex justiy-end overflow-hidden items-center w-full h-rem26 bg-black"
       >
-        <div className=" w-96 h-96 bg-yellow-400 absolute transform rotate-45 overflow-hidden -translate-x-64 overflow-hidden -translate-y-8"></div>
+        <div className="hidden lg:absolute w-96 h-96 bg-yellow-400 absolute transform rotate-45 overflow-hidden -translate-x-64 overflow-hidden -translate-y-8"></div>
         <div className="flex flex-col justify-end items-center w-1/2 h-1/2">
           <p className="text-white font-bold text-5xl">تماس با ما</p>
           <div className="flex text-white p-2 items-center align-center flex-row">
@@ -47,33 +49,81 @@ export default function projects() {
         </div>
       </div>
       <div className="flex py-20 w-full justify-center items-center">
-        <div className="flex flex-col h-full w-2/3">
-          <div className="flex w-full justify-between items-center">
+        <div className="flex flex-col h-full w-full lg:w-2/3">
+          <div className="flex px-2 w-full justify-between items-center">
             <div className="flex flex-col">
               <div className="flex justify-start">
                 <p className="bg-yellow-400 px-2">projects</p>
               </div>
               <p className="text-3xl font-bold">پروژه های ما</p>
             </div>
-            <div className="flex">
-              <div className="flex space-x-10">
-                <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
-                  همه
-                </p>
-                <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
-                  دکوراسیون
-                </p>
-                <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
-                  نقشه و طرح
-                </p>
-                <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
-                  بازسازی
-                </p>
-                <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
-                  اداری
-                </p>
-              </div>
+            <div className="flex hidden lg:flex flex-wrap lg:space-x-10">
+              <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
+                همه
+              </p>
+              <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
+                دکوراسیون
+              </p>
+              <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
+                نقشه و طرح
+              </p>
+              <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
+                بازسازی
+              </p>
+              <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
+                اداری
+              </p>
             </div>
+
+            <Menu>
+              <Menu.Items className="absolute lg:hidden p-5 right-0 translate-y-32 bg-yellow-400 rounded-2xl space-y-4">
+                <Menu.Item>
+                  {({ active }) => (
+                    <div className={`${active && "bg-blue-500"}`}>
+                      <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
+                        همه
+                      </p>
+                    </div>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <div className={`${active && "bg-blue-500"}`}>
+                      <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
+                        دکوراسیون
+                      </p>
+                    </div>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <div className={`${active && "bg-blue-500"}`}>
+                      <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
+                        نقشه و طرح
+                      </p>
+                    </div>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <div className={`${active && "bg-blue-500"}`}>
+                      <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
+                        بازسازی
+                      </p>
+                    </div>
+                  )}
+                </Menu.Item>
+                <Menu.Item >
+                  <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
+                    اداری
+                  </p>
+                </Menu.Item>
+              </Menu.Items>
+              <Menu.Button className="flex lg:hidden">
+                <CaretDown size={32} />
+                <p className="font-bold text-xl">نشونم بده</p>
+              </Menu.Button>
+            </Menu>
           </div>
           <div className="flex flex-col items-center   justify-center py-20">
             <div className="bg-gray-500 justify-center items-center flex flex-wrap w-2/3">
@@ -94,7 +144,7 @@ export default function projects() {
                       style={{
                         visibility: showIndex === i ? "visible" : "hidden",
                       }}
-                      className="w-56 absolute h-56 bg-black opacity-25"
+                      className="w-56 absolute h-56 bg-black bg-opacity-25"
                     ></div>
                     <div
                       style={{

@@ -31,7 +31,7 @@ export default function services() {
     mainPageProjects6,
   ]);
   return (
-    <div>
+    <div className="w-full h-full overflow-hidden">
       <Navbar />
       <div className="flex flex-row-reverse justiy-end overflow-hidden items-center w-full h-rem26 bg-black">
         <div className="flex flex-col justify-end items-center w-1/2 h-1/2">
@@ -44,7 +44,7 @@ export default function services() {
         </div>
       </div>
       <div className="flex w-full items-center py-20 justify-center ">
-        <div className="flex space-x-2 py-4 w-8/12 ">
+        <div className="flex flex-col lg:flex-row lg:space-y-0  space-y-2 lg:space-x-2 py-4 w-8/12 ">
           {services.map((service) => {
             return (
               <div className="w-76 flex-col flex hover:bg-blue-500 hover:text-white transition-all bg-gray-300 h-64">
@@ -66,7 +66,7 @@ export default function services() {
         </div>
       </div>
       <div className="flex flex-col bg-gray-200 w-full h-full">
-        <div className="flex justify-center space-x-8 -translate-y-10">
+        <div className="flex flex-col lg:flex-row justify-center space-y-2 lg:space-x-8 items-center -translate-y-10">
           <button className="flex shadow-xl transition w-64 justify-around bg-white border h-20 hover:bg-yellow-400 items-center">
             <ArchiveBox size={32} />
             <div className="flex items-center justify-center flex-col">
@@ -86,7 +86,7 @@ export default function services() {
             </div>
           </button>
         </div>
-        <div className="flex items-center justify-center flex-col">
+        <div className="flex  items-center justify-center flex-col">
           <div className="pt-20 justify-center items-center flex flex-col">
             <div>
               <p className="bg-sky-400 justify-center items-center flex w-14 text-white">
@@ -95,7 +95,7 @@ export default function services() {
             </div>
             <p className="font-bold text-2xl">خدمات سازنده</p>
           </div>
-          <div className="flex  justify-center w-full h-5/6 ">
+          <div className="flex flex-col lg:flex-row justify-center w-full h-5/6 ">
             <div className="w-full pt-28 space-y-8  items-end text-end flex flex-col">
               <div className="flex items-center text-center px-8 flex-col">
                 <p>
@@ -124,7 +124,7 @@ export default function services() {
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
-              className="flex w-88 w-full rounded-t-3xl bg-gray-300"
+              className="flex hidden lg:flex w-88 w-full rounded-t-3xl bg-gray-300"
             >
               {/* <img
                 className="object-contain w-full h-full"
@@ -162,7 +162,7 @@ export default function services() {
           <h1 className="bg-sky-400 text-white px-4 py-0">workflow</h1>
           <h2 className="text-2xl font-bold">روال دریافت خدمات و محصولات</h2>
         </div>
-        <div className="flex flex-row-reverse pt-20 justify-center space-x-5 px-5 items-center w-full">
+        <div className="flex flex-col space-y-14  lg:space-y-0 lg:flex-row-reverse pt-20 justify-center md:space-x-5 lg:space-x-5 px-5 items-center w-full">
           <div className="flex flex-col items-center justify-center space-y-5">
             <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
               <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
