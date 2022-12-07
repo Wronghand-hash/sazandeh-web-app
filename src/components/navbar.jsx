@@ -81,7 +81,7 @@ export default function navbar() {
           <button
             type="button"
             onClick={openModal}
-            className="rounded-md   px-4 py-2 text-sm font-bold text-white text-black"
+            className="rounded-md lg:hidden  px-4 py-2 text-sm font-bold text-white text-black"
           >
             <List size={32} />
           </button>
@@ -116,7 +116,7 @@ export default function navbar() {
                       as="h3"
                       className="text-lg font-medium leading-6 text-gray-900"
                     >
-                      Payment successful
+                      منو سازنده
                     </Dialog.Title>
 
                     <div className="flex flex-col-reverse text-right mt-24">

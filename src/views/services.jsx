@@ -44,10 +44,13 @@ export default function services() {
         </div>
       </div>
       <div className="flex w-full items-center py-20 justify-center ">
-        <div className="flex flex-col lg:flex-row lg:space-y-0  space-y-2 lg:space-x-2 py-4 w-8/12 ">
-          {services.map((service) => {
+        <div className="flex flex-col lg:flex-row lg:space-y-0 lg:space-x-2  space-y-10 lg:space-x-2 py-4 w-8/12 ">
+          {services.map((service, i) => {
             return (
-              <div className="w-76 flex-col flex hover:bg-blue-500 hover:text-white transition-all bg-gray-300 h-64">
+              <div
+                key={i}
+                className="w-76 flex-col flex hover:bg-blue-500 hover:text-white transition-all bg-gray-300 h-68"
+              >
                 <div className=" transition-all">
                   <img src={service} alt="" />
                 </div>

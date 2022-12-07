@@ -53,7 +53,7 @@ export default function projects() {
           <div className="flex px-2 w-full justify-between items-center">
             <div className="flex flex-col">
               <div className="flex justify-start">
-                <p className="bg-yellow-400 px-2">projects</p>
+                <p className="bg-yellow-400 captlize px-2">projects</p>
               </div>
               <p className="text-3xl font-bold">پروژه های ما</p>
             </div>
@@ -126,7 +126,7 @@ export default function projects() {
             </Menu>
           </div>
           <div className="flex flex-col items-center   justify-center py-20">
-            <div className="bg-gray-500 justify-center items-center flex flex-wrap w-2/3">
+            <div className=" justify-center space-y-2 items-center flex flex-wrap w-2/3">
               {projects.map((project, i) => {
                 let [hover, setHover] = useState(false);
                 return (
