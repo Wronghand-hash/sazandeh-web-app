@@ -10,7 +10,7 @@ module.exports = {
         rem26: "26rem",
         dialog: "32rem",
         rem33: "33rem",
-
+        bg: "45rem",
         carousel: "38rem",
       },
       width: {

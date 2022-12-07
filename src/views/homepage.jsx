@@ -27,14 +27,13 @@ export default function homePage() {
   return (
     <div className="overflow-x-hidden">
       <Navbar />
-      // First Section
-      <div className="flex justiy-end relative items-center w-screen h-carousel  bg-yellow-400">
+      <div className="flex justiy-start relative items-center w-screen h-auto  ">
         <img
-          className=" filter bright w-full object-contain"
+          className="  w-full h-full object-contain"
           src={mainPageBg}
           alt=""
         />
-        <div className="flex w-full h-full items-center flex-col pb-16 pr-96 space-y-4 justify-end">
+        <div className="flex w-full absolute h-full items-center flex-col right-72 pb-16 space-y-4 justify-end">
           <h3 className="bg-white text-black p-2">
             از صفر تا صد پروژه های ساختمانی در کنار شما هستیم
           </h3>
@@ -57,7 +56,6 @@ export default function homePage() {
           </div>
         </div>
       </div>
-      // Second Section
       <div className="w-screen h-60 bg-gray-100 flex mb-10">
         <div className="h-full w-4/6 flex justify-end px-20 space-x-4 ">
           <div className="h-full w-60 space-y-1 flex items-end text-right justify-center flex-col">
@@ -98,7 +96,6 @@ export default function homePage() {
           </h1>
         </div>
       </div>
-      // Third Section
       <div className="w-screen mb-28 h-rem26 flex bg-white px-56 py-20">
         <div className="h-full w-full ">
           <div className="  flex items-center justify-between">
@@ -169,7 +166,6 @@ export default function homePage() {
           </div>
         </div>
       </div>
-      // Forth Section
       <div className="w-screen mb-8 h-auto bg-gray-200 pt-24">
         <div className="flex w-full items-center justify-between  px-52  mb-7">
           <div className="flex items-center space-x-5">
@@ -244,7 +240,6 @@ export default function homePage() {
           </div>
         </div>
       </div>
-      // Fifth Section
       <div className="w-screen h-rem26  pt-10 bg-white">
         <div className="w-screen flex items-center flex-col">
           <h3 className="py-2 text-md px-1 bg-blue-600 text-white">WORKFLOW</h3>
@@ -316,7 +311,6 @@ export default function homePage() {
           </div>
         </div>
       </div>
-      // Sixth Section
       <div className="w-screen h-auto flex items-center justify-center">
         <img className="relative" src={mainPageGraphic} alt="" />
         <button className="transition duration-300 ease-in hover:bg-neutral-900 hover:text-yellow-400 absolute right-80 mr-28 font-bold rounded-sm mt-28   px-4 py-1 bg-white text-neutral-900 text-lg">
