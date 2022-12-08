@@ -15,6 +15,8 @@ module.exports = {
       },
       width: {
         carousel: "50rem",
+        textArea: "38rem",
+        blog: "30rem",
       },
       fontFamily: {
         mainFont: ["LaleZar"],

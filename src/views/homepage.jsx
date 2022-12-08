@@ -12,7 +12,9 @@ import {
   RocketLaunch,
   Activity,
   GlobeStand,
+  Quotes,
 } from "phosphor-react";
+import { BsPhoneFill } from "react-icons/bs";
 import mainPageBg from "../assets/images/mainPageBg.webp";
 import mainPageProjects from "../assets/images/mainPageProjects.webp";
 import mainPageProjects2 from "../assets/images/mainPageProjects2.webp";
@@ -22,22 +24,33 @@ import mainPageProjects5 from "../assets/images/mainPageProjects5.webp";
 import mainPageProjects6 from "../assets/images/mainPageProjects6.webp";
 import mainPageProjects7 from "../assets/images/mainPageProjects7.webp";
 import mainPageGraphic from "../assets/images/mainPageGraphic.webp";
+import butanLogo from "../assets/images/butanLogo.webp";
+import akhavanLogo from "../assets/images/akhavanLogo.webp";
+import alborzLogo from "../assets/images/alborzLogo.webp";
+import iransteelLogo from "../assets/images/iransteelLogo.webp";
+import { useState } from "react";
 
 export default function homePage() {
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const handleSubmit = () => {
+    let review = {
+      phoneNumber,
+    };
+  };
   return (
     <div className="overflow-x-hidden">
       <Navbar />
-      <div className="flex justiy-start relative items-center w-screen h-auto  ">
+      <div className="flex justiy-start relative items-center w-screen h-96 lg:h-auto  ">
         <img
           className="  w-full h-full object-contain"
           src={mainPageBg}
           alt=""
         />
-        <div className="flex w-full absolute h-full items-center flex-col right-72 pb-16 space-y-4 justify-end">
+        <div className="flex w-full absolute h-full items-center flex-col lg:right-72 lg:pb-16 space-y-4 justify-end">
           <h3 className="bg-white text-black p-2">
             از صفر تا صد پروژه های ساختمانی در کنار شما هستیم
           </h3>
-          <h1 className="text-5xl text-slate-100 w-96 font-black">
+          <h1 className="lg:text-5xl text-2xl text-slate-100 w-96 font-black">
             ارائه خدمات و محصولات ساختمانی
           </h1>
           <button className="px-6 py-3 rounded-sm text-md border-b border-yellow-400 bg-neutral-900 text-white">
@@ -56,8 +69,8 @@ export default function homePage() {
           </div>
         </div>
       </div>
-      <div className="w-screen h-60 bg-gray-100 flex mb-10">
-        <div className="h-full w-4/6 flex justify-end px-20 space-x-4 ">
+      <div className="w-screen h-auto lg:h-60 bg-gray-100 flex lg:flex-row flex-col-reverse mb-10">
+        <div className="h-full w-full lg:w-4/6 flex lg:flex-row flex-col justify-end px-20 space-x-4 ">
           <div className="h-full w-60 space-y-1 flex items-end text-right justify-center flex-col">
             <div className="flex bg-yellow-400 text-neutral-900 w-10 h-10">
               <Users className="m-auto" size={20} weight="fill" />
@@ -89,21 +102,21 @@ export default function homePage() {
             </h5>
           </div>
         </div>
-        <div className="h-full w-1/3 bg-gray-200 flex items-center">
+        <div className="h-full w-full lg:w-1/3 bg-gray-200 flex items-center">
           <h1 className="text-3xl mx-7  flex flex-col text-neutral-900 font-bold border-b-2 pb-5 border-blue-600 border-spacing-11 W-96">
             خدمات تخصصی
             <span className="text-2xl">ساختمانی و بازرگانی</span>
           </h1>
         </div>
       </div>
-      <div className="w-screen mb-28 h-rem26 flex bg-white px-56 py-20">
+      <div className="w-screen mb-28 h-auto lg:h-rem26 flex bg-white lg:px-56 py-20">
         <div className="h-full w-full ">
           <div className="  flex items-center justify-between">
             <div className="flex items-center space-x-1">
-              <button className="px-3 py-3 rounded-sm text-md bg-blue-600 text-white">
+              <button className="px-3 py-3 rounded-sm text-md bg-neutral-900 transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  text-white">
                 <CaretLeft size={20} weight="fill" />
               </button>
-              <button className="px-3 py-3 rounded-sm text-md bg-neutral-900 text-white">
+              <button className="px-3 py-3 rounded-sm text-md bg-neutral-900 transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  text-white">
                 <CaretRight size={20} weight="fill" />
               </button>
             </div>
@@ -114,9 +127,33 @@ export default function homePage() {
               <h1 className="text-3xl my-2 font-bold">خدمات ما</h1>
             </div>
           </div>
-          <div className="w-full h-full py-10 flex space-x-2 items-center">
-            <div className=" h-full w-1/4 bg-gray-200">
-              <div className="w-full h-3/5 bg-white"></div>
+          <div className="w-full h-full  py-3 flex lg:flex-row-reverse flex-col  lg:space-y-0 space-y-8 space-x-2 items-center">
+            <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-200">
+              <div className="w-full h-full lg:h-3/5 bg-white">
+                <img
+                  className=" w-full h-full object-fill"
+                  src={mainPageProjects}
+                  alt=""
+                />
+              </div>
+              <div className="w-full h-full lg:h-2/5 flex items-center justify-around">
+                <div className="flex flex-col space-y-1">
+                  <h1 className="text-lg font-black text-right">
+                    بازسازی و تعمیرات
+                  </h1>
+                  <h1 className="text-md  text-right">منازل و ادارات</h1>
+                </div>
+                <ArrowCircleRight size={20} weight="fill" />
+              </div>
+            </div>
+            <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-200">
+              <div className="w-full h-3/5 bg-white">
+                <img
+                  className=" w-full h-full object-fill"
+                  src={mainPageProjects2}
+                  alt=""
+                />
+              </div>
               <div className="w-full h-2/5 flex items-center justify-around">
                 <div className="flex flex-col space-y-1">
                   <h1 className="text-lg font-black text-right">
@@ -127,38 +164,38 @@ export default function homePage() {
                 <ArrowCircleRight size={20} weight="fill" />
               </div>
             </div>
-            <div className=" h-full w-1/4 bg-gray-200">
-              <div className="w-full h-3/5 bg-white"></div>
+            <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-200">
+              <div className="w-full h-3/5 bg-white">
+                <img
+                  className=" w-full h-full object-fill"
+                  src={mainPageProjects3}
+                  alt=""
+                />
+              </div>
               <div className="w-full h-2/5 flex items-center justify-around">
                 <div className="flex flex-col space-y-1">
                   <h1 className="text-lg font-black text-right">
-                    دکوراسیون داخلی
+                    پیاده سازی و اجرای
                   </h1>
-                  <h1 className="text-md  text-right">منازل و ادارات</h1>
+                  <h1 className="text-md  text-right">پروژه های ساختمانی</h1>
                 </div>
                 <ArrowCircleRight size={20} weight="fill" />
               </div>
-            </div>{" "}
-            <div className=" h-full w-1/4 bg-gray-200">
-              <div className="w-full h-3/5 bg-white"></div>
-              <div className="w-full h-2/5 flex items-center justify-around">
-                <div className="flex flex-col space-y-1">
-                  <h1 className="text-lg font-black text-right">
-                    دکوراسیون داخلی
-                  </h1>
-                  <h1 className="text-md  text-right">منازل و ادارات</h1>
-                </div>
-                <ArrowCircleRight size={20} weight="fill" />
+            </div>
+            <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-200">
+              <div className="w-full h-3/5 bg-white">
+                <img
+                  className=" w-full h-full object-fill"
+                  src={mainPageProjects4}
+                  alt=""
+                />
               </div>
-            </div>{" "}
-            <div className=" h-full w-1/4 bg-gray-200">
-              <div className="w-full h-3/5 bg-white"></div>
               <div className="w-full h-2/5 flex items-center justify-around">
                 <div className="flex flex-col space-y-1">
                   <h1 className="text-lg font-black text-right">
-                    دکوراسیون داخلی
+                    طراحی و معماری
                   </h1>
-                  <h1 className="text-md  text-right">منازل و ادارات</h1>
+                  <h1 className="text-md  text-right">ساختمان</h1>
                 </div>
                 <ArrowCircleRight size={20} weight="fill" />
               </div>
@@ -169,11 +206,21 @@ export default function homePage() {
       <div className="w-screen mb-8 h-auto bg-gray-200 pt-24">
         <div className="flex w-full items-center justify-between  px-52  mb-7">
           <div className="flex items-center space-x-5">
-            <h3 className="text-md font-light">همه</h3>
-            <h3 className="text-md font-light">دکوراسیون</h3>
-            <h3 className="text-md font-light">اداری</h3>
-            <h3 className="text-md font-light">نقشه و طرح</h3>
-            <h3 className="text-md font-light">بازسازی</h3>
+            <h3 className="text-md font-light transition ease-in duration-300 hover:bg-yellow-400 p-3 cursor-pointer">
+              همه
+            </h3>
+            <h3 className="text-md font-light transition ease-in duration-300 hover:bg-yellow-400 p-3 cursor-pointer">
+              دکوراسیون
+            </h3>
+            <h3 className="text-md font-light transition ease-in duration-300 hover:bg-yellow-400 p-3 cursor-pointer">
+              اداری
+            </h3>
+            <h3 className="text-md font-light transition ease-in duration-300 hover:bg-yellow-400 p-3 cursor-pointer">
+              نقشه و طرح
+            </h3>
+            <h3 className="text-md font-light transition ease-in duration-300 hover:bg-yellow-400 p-3 cursor-pointer">
+              بازسازی
+            </h3>
           </div>
           <div className="flex flex-col items-center">
             <h3 className="py-2 text-md px-1 bg-yellow-400 text-neutral-900">
@@ -240,14 +287,14 @@ export default function homePage() {
           </div>
         </div>
       </div>
-      <div className="w-screen h-rem26  pt-10 bg-white">
+      <div className="w-screen h-auto lg:h-rem26  pt-10 bg-white">
         <div className="w-screen flex items-center flex-col">
           <h3 className="py-2 text-md px-1 bg-blue-600 text-white">WORKFLOW</h3>
           <h1 className="text-3xl my-2 font-bold">
             روال دریافت خدمات و محصولات
           </h1>
 
-          <div className="w-full h-56 flex items-center flex-row-reverse justify-around px-32 my-14 ">
+          <div className="w-full h-auto space-y-6 lg:space-y-0 lg:h-56 flex items-center flex-col-reverse lg:flex-row-reverse justify-around px-32 my-14 ">
             <div className="flex flex-col items-center justify-center space-y-5">
               <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
                 <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
@@ -268,7 +315,7 @@ export default function homePage() {
                 <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
                   2
                 </p>
-                <Calculator size={30} weight="fill" />{" "}
+                <Calculator size={30} weight="fill" />
               </div>
               <div className="flex items-center text-center flex-col w-64 space-y-4">
                 <h1 className="text-lg font-bold">براورد هزینه</h1>
@@ -324,7 +371,7 @@ export default function homePage() {
           </p>
         </h1>
       </div>
-      <div className="flex items-center space-x-12 justify-center bg-blue-600 w-full h-32">
+      <div className="flex items-center space-x-12 justify-center bg-blue-600  w-full h-32">
         <div className="flex text-white items-center justify-center flex-col">
           <div className="flex justify-center space-x-2">
             <p className="text-4xl font-bold">165</p>
@@ -338,7 +385,7 @@ export default function homePage() {
           <div className="flex justify-center space-x-2">
             <p className="text-4xl font-bold">21</p>
             <p>
-              <GlobeStand size={24} weight="fill" />{" "}
+              <GlobeStand size={24} weight="fill" />
             </p>
           </div>
           <div className="font-bold">متخصصان</div>
@@ -351,6 +398,135 @@ export default function homePage() {
             </p>
           </div>
           <div className="font-bold">مشتریان ما</div>
+        </div>
+      </div>
+      <div className=" h-rem33 w-screen flex flex-row-reverse items-center justify-between space-x-24  ">
+        <div className="h-full w-96 py-14">
+          <div
+            className="flex flex-col items-center my-5
+          "
+          >
+            <h3 className="py-2 text-md px-1 bg-yellow-400 text-neutral-900">
+              خبرنامه ما
+            </h3>
+            <h1 className="text-xl my-2 font-bold">
+              اطلاع از تخفیفات و جشنواره ها
+            </h1>
+          </div>
+          <div className="w-full h-auto flex justify-center space-y-7 px-20 text-right flex-col items-center">
+            <div className="flex w-full border">
+              <label
+                className="bg-gray-100 flex justify-center items-center p-3"
+                htmlFor="phoneNumber"
+              >
+                <BsPhoneFill />
+              </label>
+              <input
+                onChange={(e) => {
+                  setPhoneNumber(e.target.value);
+                }}
+                className="w-full   text-right p-2"
+                placeholder="شماره تماس"
+                name="phoneNumber"
+                type="number"
+              />
+            </div>
+            <h1 className="text-md">
+              برای اطلاع از جدیدترین محصولات و اطلاع از تخفیفات و جشنواره های ما
+              شماره تماس خود را وارد کنید
+            </h1>
+          </div>
+        </div>
+        <div className="h-full w-textArea py-14 text-right">
+          <div
+            className="flex flex-col items-center my-5
+          "
+          >
+            <h3 className="py-2 text-md px-1 bg-yellow-400 text-neutral-900">
+              CLIENTS
+            </h3>
+            <h1 className="text-xl my-2 font-bold">نظرات مشتریان ما </h1>
+          </div>
+          <div className="flex items-center justify-between">
+            <div className="space-x-1">
+              <button className="px-3 py-3 rounded-sm text-md bg-neutral-900 transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  text-white">
+                <CaretLeft size={20} weight="fill" />
+              </button>
+              <button className="px-3 py-3 rounded-sm text-md bg-neutral-900 transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  text-white">
+                <CaretRight size={20} weight="fill" />
+              </button>
+            </div>
+            <Quotes className="text-gray-300" size={120} weight="fill" />
+          </div>
+          <h1>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+          </h1>
+          <div className="flex my-6 border-t-4 py-1 justify-start items-center space-x-8">
+            <div className="w-20 h-20 bg-neutral-900"></div>
+            <div className="flex flex-col">
+              <p>آقای فلانی</p>
+              <p>مدیر عامل آداک فناوری</p>
+            </div>
+          </div>
+        </div>
+        <div className="h-full   flex items-center flex-col w-blog py-14">
+          <div
+            className="flex flex-col items-center my-5
+          "
+          >
+            <h3 className="py-2 text-md px-1 bg-yellow-400 text-neutral-900">
+              LATEST
+            </h3>
+            <h1 className="text-xl my-2 font-bold">وبلاگ سازنده </h1>
+          </div>
+          <div className="w-full   flex justify-center items-center">
+            <img
+              className=" w-80 object-contain"
+              src={mainPageProjects6}
+              alt=""
+            />
+          </div>
+          <div className="px-14 my-4 flex space-y-2 text-right items-end flex-col">
+            <h1 className="font-bold text-lg">
+              بازسازی منزل شما تنها در 2 هفته
+            </h1>
+            <h5 className="text-sm">
+              لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div className="w-auto h-40 px-10 py-5 my-9 flex items-center justify-center">
+        <div className="w-full h-full   flex items-center space-x-14">
+          <button className="px-3 py-3 rounded-sm text-md bg-blue-600 text-white">
+            <CaretLeft size={20} weight="fill" />
+          </button>
+
+          <div className="border-2    flex items-center justify-center border-gray-300   w-60 h-full">
+            <img className="w-32 object-contain" src={butanLogo} alt="" />
+          </div>
+          <div className="border-2    flex items-center justify-center border-gray-300   w-60 h-full">
+            <img className="w-32 object-contain" src={akhavanLogo} alt="" />
+          </div>
+          <div className="border-2    flex items-center justify-center border-gray-300   w-60 h-full">
+            <img className="w-32 object-contain" src={iransteelLogo} alt="" />
+          </div>
+          <div className="border-2    flex items-center justify-center border-gray-300   w-60 h-full">
+            <img className="w-32 object-contain" src={alborzLogo} alt="" />
+          </div>
+          <button className="px-3 py-3 rounded-sm text-md bg-neutral-900 text-white">
+            <CaretRight size={20} weight="fill" />
+          </button>
+        </div>
+        <div className="flex flex-col w-64 items-center">
+          <h3 className="py-2 text-md px-1 bg-yellow-400 text-neutral-900">
+            PARTNERS
+          </h3>
+          <h1 className="text-5xl my-2 font-light">همکاران ما</h1>
         </div>
       </div>
       <Footer />

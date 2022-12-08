@@ -57,7 +57,7 @@ export default function contactUs() {
                   </label>
                   <input
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full font-bold text-right p-2"
+                    className="w-full   text-right p-2"
                     placeholder="نام و نام خانوادگی"
                     name="name"
                     type="text"
@@ -74,7 +74,7 @@ export default function contactUs() {
                     onChange={(e) => {
                       setEmailAddress(e.target.value);
                     }}
-                    className="w-full font-bold text-right p-2"
+                    className="w-full   text-right p-2"
                     placeholder="آدرس ایمیل"
                     name="email"
                     type="email"
@@ -91,7 +91,7 @@ export default function contactUs() {
                     onChange={(e) => {
                       setPhoneNumber(e.target.value);
                     }}
-                    className="w-full font-bold text-right p-2"
+                    className="w-full   text-right p-2"
                     placeholder="شماره تماس"
                     name="phoneNumber"
                     type="number"

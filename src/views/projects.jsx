@@ -113,7 +113,7 @@ export default function projects() {
                     </div>
                   )}
                 </Menu.Item>
-                <Menu.Item >
+                <Menu.Item>
                   <p className="hover:bg-yellow-400 px-2 transition-all cursor-pointer">
                     اداری
                   </p>
@@ -167,7 +167,8 @@ export default function projects() {
             </div>
 
             <div className="flex justify-center items-center mt-20">
-              <button className="px-8 border-b-4 border-yellow-400 py-2 font-bold bg-black text-white  hover:border-b-6 transition-all border-yellow-500">
+              5
+              <button className="px-8 border-b-4 border-yellow-400 py-2 font-bold bg-black text-white  hover:border-b-6 transition-all border-yellow-00">
                 ارسال
               </button>
             </div>
