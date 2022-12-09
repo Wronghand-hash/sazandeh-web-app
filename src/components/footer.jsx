@@ -94,10 +94,26 @@ export default function Footer() {
           </h1>
         </div>
         <div className="flex items-center space-x-4 text-white">
-          <InstagramLogo size={40} weight="thin" />
-          <LinkedinLogo size={40} weight="thin" />
-          <FacebookLogo size={40} weight="fill" />
-          <TwitterLogo size={40} weight="fill" />
+          <InstagramLogo
+            className="cursor-pointer transition ease-in duration-300 hover:text-yellow-400"
+            size={40}
+            weight="thin"
+          />
+          <LinkedinLogo
+            className="cursor-pointer transition ease-in duration-300 hover:text-yellow-400"
+            size={40}
+            weight="thin"
+          />
+          <FacebookLogo
+            className="cursor-pointer transition ease-in duration-300 hover:text-yellow-400"
+            size={40}
+            weight="fill"
+          />
+          <TwitterLogo
+            className="cursor-pointer transition ease-in duration-300 hover:text-yellow-400"
+            size={40}
+            weight="fill"
+          />
         </div>
       </div>
     </div>
