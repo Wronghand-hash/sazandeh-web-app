@@ -41,40 +41,46 @@ export default function navbar() {
             <img src={Logo} alt="" />
           </div>
         </div>
-        <div className="flex w-full   h-16 justify-end lg:pr-48 p-8 space-x-12 items-center align-center">
+        <div className="flex w-fu ll   h-16 justify-end lg:pr-48 p-8 space-x-12 items-center align-center">
           <Link
             to={"/aboutus"}
-            className="hidden lg:block cursor-pointer duration-300 hover:border-2 border-black transition-all p-2"
+            className="hidden text-sm lg:block cursor-pointer duration-300 hover:bg-black border-black transition-all px-8 py-2 hover:text-white"
           >
             درباره ما
           </Link>
           <Link
             to={"/contactus"}
-            className="hidden lg:block cursor-pointer duration-300 text-md   hover:bg-black hover:text-white  p-4 transition"
+            className="hidden text-sm lg:block cursor-pointer duration-300   hover:bg-black hover:text-white  px-8 py-2 transition"
           >
-            <span className="px-10 flex items-center w-full">تماس باما</span>
+            تماس باما
           </Link>
-          <Link className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition ">
+          <Link
+            to={"/shop"}
+            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+          >
             فروشگاه
           </Link>
-          <Link className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition ">
+          <Link
+            to={"/blogs"}
+            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+          >
             وبلاگ
           </Link>
           <Link
             to={"/services"}
-            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition "
+            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
           >
             خدمات
           </Link>
           <Link
             to={"/projects"}
-            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition "
+            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
           >
-            پروژه ها
+            پروژها
           </Link>
           <Link
             to={"/"}
-            className="cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition "
+            className="cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
           >
             خانه
           </Link>
@@ -135,7 +141,10 @@ export default function navbar() {
                       <Link className=" cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition ">
                         فروشگاه
                       </Link>
-                      <Link className=" cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition ">
+                      <Link
+                        to={"/blogs"}
+                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition "
+                      >
                         وبلاگ
                       </Link>
                       <Link

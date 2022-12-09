@@ -2,6 +2,7 @@ import { AiOutlineLeft } from "react-icons/ai";
 import Navbar from "../components/navbar";
 import AboutusImage from "../assets/images/aboutusImage.webp";
 import { Users, RocketLaunch, Heart, Clock } from "phosphor-react";
+import Footer from "../components/footer";
 
 export default function aboutUs() {
   return (
@@ -164,6 +165,7 @@ export default function aboutUs() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { BsPhoneFill } from "react-icons/bs";
 import googlemapImage from "../assets/images/GoogleMapTA.webp";
 import { PhoneIncoming } from "phosphor-react";
 import { useState } from "react";
+import Footer from '../components/footer'
 
 export default function contactUs() {
   const [fullName, setFullName] = useState("");
@@ -211,6 +212,7 @@ export default function contactUs() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

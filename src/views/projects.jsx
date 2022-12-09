@@ -11,6 +11,7 @@ import mainPageProjects6 from "../assets/images/mainPageProjects6.webp";
 import mainPageProjects7 from "../assets/images/mainPageProjects7.webp";
 import { useState } from "react";
 import { Menu } from "@headlessui/react";
+import Footer from "../components/footer";
 
 export default function projects() {
   const [show, setShow] = useState(false);
@@ -126,7 +127,7 @@ export default function projects() {
             </Menu>
           </div>
           <div className="flex flex-col items-center   justify-center py-20">
-            <div className=" justify-center space-y-2 items-center flex flex-wrap w-2/3">
+            <div className=" justify-center lg:space-y-4 space-x-4 items-center flex flex-wrap w-full">
               {projects.map((project, i) => {
                 let [hover, setHover] = useState(false);
                 return (
@@ -136,7 +137,7 @@ export default function projects() {
                       backgroundImage: `url(${project})`,
                       backgroundPosition: "center",
                     }}
-                    className="w-56 transition-all h-56 bg-red-500"
+                    className="w-72 transition-all h-72 bg-red-500"
                     onMouseEnter={() => setShowIndex(i)}
                     onMouseLeave={() => setShowIndex(null)}
                   >
@@ -144,7 +145,7 @@ export default function projects() {
                       style={{
                         visibility: showIndex === i ? "visible" : "hidden",
                       }}
-                      className="w-56 absolute h-56 bg-black bg-opacity-25"
+                      className="w-72 absolute h-72 bg-black bg-opacity-25"
                     ></div>
                     <div
                       style={{
@@ -167,7 +168,6 @@ export default function projects() {
             </div>
 
             <div className="flex justify-center items-center mt-20">
-              5
               <button className="px-8 border-b-4 border-yellow-400 py-2 font-bold bg-black text-white  hover:border-b-6 transition-all border-yellow-00">
                 ارسال
               </button>
@@ -175,6 +175,7 @@ export default function projects() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
