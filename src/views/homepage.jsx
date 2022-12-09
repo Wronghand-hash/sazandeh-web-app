@@ -40,13 +40,13 @@ export default function homePage() {
   return (
     <div className="overflow-x-hidden">
       <Navbar />
-      <div className=" justiy-start relative items-center w-screen h-96 lg:h-auto  ">
+      <div className="flex justiy-start relative items-center w-screen h-96 lg:h-auto  ">
         <img
           className="lg:flex hidden  w-full h-full object-contain"
           src={mainPageBg}
           alt=""
         />
-        <div className="flex lg:my-0 lg:bg-transparent bg-gray-200 mb-10 w-full absolute h-full items-center flex-col lg:right-72 lg:pb-16 space-y-4 justify-end">
+        <div className="flex lg:my-0 lg:bg-transparent bg-gray-200 lg:mb-0 mb-0 w-full lg:absolute h-full items-center flex-col lg:right-72 lg:pb-16 space-y-4 justify-end">
           <h3 className="bg-white text-black p-2">
             از صفر تا صد پروژه های ساختمانی در کنار شما هستیم
           </h3>
