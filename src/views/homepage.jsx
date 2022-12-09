@@ -400,7 +400,7 @@ export default function homePage() {
           <div className="font-bold">مشتریان ما</div>
         </div>
       </div>
-      <div className=" h-rem33 w-screen flex flex-row-reverse items-center justify-between space-x-24  ">
+      <div className=" h-rem33 w-screen flex flex-row-reverse items-center justify-between    ">
         <div className="h-full w-96 py-14">
           <div
             className="flex flex-col items-center my-5
