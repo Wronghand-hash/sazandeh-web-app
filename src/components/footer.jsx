@@ -13,8 +13,8 @@ export default function Footer() {
   return (
     <div className="w-screen h-auto items-center space-y-14 lg:space-y-0 bg-neutral-800 mt-9 flex flex-col  justify-center overflow-x-hidden">
       <div className="flex-col-reverse flex lg:flex-row-reverse justify-center">
-        <div className=" lg:w-96 w-full h-full flex flex-col space-y-4 items-end    justify-center lg:px-0 px-6 my-5">
-          <h1 className="text-white font-semibold text-lg">
+        <div className=" lg:w-96 w-full h-full flex flex-col space-y-4 items-end lg:border-t-0 border-t border-rose-50 justify-center lg:px-0 px-6 my-5">
+          <h1 className="text-white font-semibold text-lg mt-5">
             با ما در ارتباط باشید
           </h1>
           <h2 className="text-md transition text-right ease-in duration-200 hover:text-yellow-400 cursor-pointer text-neutral-500 space-x-3 flex justify-center">
@@ -31,8 +31,10 @@ export default function Footer() {
             <PhoneOutgoing size={20} weight="fill" /> <span>123-456-1345 </span>
           </h2>
         </div>
-        <div className=" lg:w-96 w-full h-full flex flex-col space-y-9 items-center justify-center lg:px-0 px-6 my-5">
-          <h1 className="text-white font-semibold text-lg">دسترسی های سریع</h1>
+        <div className=" lg:w-96 w-full h-full flex flex-col space-y-9 lg:border-t-0 border-t border-rose-50 items-center justify-center lg:px-0 px-6 my-5">
+          <h1 className="text-white font-semibold text-lg mt-4">
+            دسترسی های سریع
+          </h1>
           <div className="flex flex-col items-end space-y-3 justify-start">
             <div className="flex items-center space-x-4">
               <h1 className="transition text-white flex flex-row-reverse items-center text-right ease-in duration-200 hover:text-yellow-400 cursor-pointer">
