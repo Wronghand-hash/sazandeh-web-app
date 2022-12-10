@@ -37,15 +37,15 @@ export default function projects() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="flex justiy-end overflow-hidden items-center w-full h-rem26 bg-black"
+        className="flex justiy-start overflow-hidden items-center w-full h-rem26 bg-black"
       >
         <div className="hidden lg:absolute w-96 h-96 bg-yellow-400 absolute transform rotate-45 overflow-hidden -translate-x-64 overflow-hidden -translate-y-8"></div>
         <div className="flex flex-col justify-end items-center w-1/2 h-1/2">
-          <p className="text-white font-bold text-5xl">تماس با ما</p>
+          <p className="text-white  font-bold text-5xl">پروژه</p>
           <div className="flex text-white p-2 items-center align-center flex-row">
-            <p className="text-yellow-500">تماس با ما</p>
+            <p className="text-yellow-500">پروژه</p>
             <AiOutlineLeft />
-            <p className="text-black font-bold">خانه</p>
+            <p className="text-white font-bold">خانه</p>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ export default function projects() {
             </Menu>
           </div>
           <div className="flex flex-col items-center   justify-center py-20">
-            <div className=" justify-center lg:space-y-4 space-x-4 items-center flex flex-wrap w-full">
+            <div className=" justify-center lg:space-y-4 lg:space-x-4 items-center flex flex-wrap w-full">
               {projects.map((project, i) => {
                 let [hover, setHover] = useState(false);
                 return (

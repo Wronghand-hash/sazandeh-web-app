@@ -8,6 +8,7 @@ import "./index.css";
 import AboutUs from "./views/aboutUs";
 import Projects from "./views/projects";
 import Blogs from "./views/blogs";
+import Shop from "./views/shop";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/services" element={<Services />}></Route>
       <Route path="/projects" element={<Projects />} />
       <Route path="/blogs" element={<Blogs />} />
+      <Route path="/shop" element={<Shop />} />
     </Routes>
   </BrowserRouter>
 );

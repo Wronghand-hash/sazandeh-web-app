@@ -35,54 +35,58 @@ export default function navbar() {
           <p>123-231-2422</p>
         </div>
       </div>
-      <div className="flex bg-white items-center justify-around h-16">
-        <div className="flex justify-center w-2/3">
+      <div className="flex border-b-2 border-yellow-400 bg-white items-center justify-around h-16">
+        <div className="flex justify-start lg:justify-center px-2 w-2/3">
           <div className=" w-12 h-12">
-            <img src={Logo} alt="" />
+            <Link to={"/"}>
+              <a href="www.sazandeh.onrender.com/">
+                <img src={Logo} alt="" />
+              </a>
+            </Link>
           </div>
         </div>
-        <div className="flex w-fu ll   h-16 justify-end lg:pr-48 p-8 space-x-12 items-center align-center">
+        <div className="flex w-full   h-16 justify-end lg:pr-48 p-8 space-x-12 items-center align-center">
           <Link
             to={"/aboutus"}
             className="hidden text-sm lg:block cursor-pointer duration-300 hover:bg-black border-black transition-all px-8 py-2 hover:text-white"
           >
-            درباره ما
+            <a href="www.sazandeh.onrender.com/aboutus">درباره</a>
           </Link>
           <Link
             to={"/contactus"}
             className="hidden text-sm lg:block cursor-pointer duration-300   hover:bg-black hover:text-white  px-8 py-2 transition"
           >
-            تماس باما
+            <a href="www.sazandeh.onrender.com/contactus"> تماس</a>
           </Link>
           <Link
             to={"/shop"}
             className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
           >
-            فروشگاه
+            <a href="www.sazandeh.onrender.com/shop">فروشگاه</a>
           </Link>
           <Link
             to={"/blogs"}
             className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
           >
-            وبلاگ
+            <a href="www.sazandeh.onrender.com/blog">وبلاگ</a>
           </Link>
           <Link
             to={"/services"}
             className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
           >
-            خدمات
+            <a href="www.sazandeh.onrender.com/services">خدمات</a>
           </Link>
           <Link
             to={"/projects"}
             className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
           >
-            پروژها
+            <a href="www.sazandeh.onrender.com/projects">پروژها</a>
           </Link>
           <Link
             to={"/"}
-            className="cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+            className="cursor-pointer hidden lg:block duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
           >
-            خانه
+            <a href="www.sazandeh.onrender.com">خانه</a>
           </Link>
           <button
             type="button"
@@ -93,7 +97,11 @@ export default function navbar() {
           </button>
         </div>
         <Transition appear show={isOpen} as={Fragment}>
-          <Dialog as="div" className=" w-full h-full z-20" onClose={closeModal}>
+          <Dialog
+            as="div"
+            className="lg:hidden w-full h-full z-20"
+            onClose={closeModal}
+          >
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -128,36 +136,45 @@ export default function navbar() {
                     <div className="flex flex-col-reverse text-right mt-24">
                       <Link
                         to={"/aboutus"}
-                        className=" cursor-pointer duration-300 hover:border-2 border-black transition-all p-2"
+                        className="hidden text-sm lg:block cursor-pointer duration-300 hover:bg-black border-black transition-all px-8 py-2 hover:text-white"
                       >
-                        درباره ما
+                        <a href="www.sazandeh.onrender.com/aboutus">درباره</a>
                       </Link>
                       <Link
                         to={"/contactus"}
-                        className=" cursor-pointer duration-300 text-md   hover:bg-black hover:text-white  p-4 transition"
+                        className=" text-sm lg:block cursor-pointer duration-300   hover:bg-black hover:text-white  px-8 py-2 transition"
                       >
-                        تماس باما
+                        <a href="www.sazandeh.onrender.com/contactus"> تماس</a>
                       </Link>
-                      <Link className=" cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition ">
-                        فروشگاه
+                      <Link
+                        to={"/shop"}
+                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+                      >
+                        <a href="www.sazandeh.onrender.com/shop">فروشگاه</a>
                       </Link>
                       <Link
                         to={"/blogs"}
-                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition "
+                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
                       >
-                        وبلاگ
+                        <a href="www.sazandeh.onrender.com/blog">وبلاگ</a>
                       </Link>
                       <Link
                         to={"/services"}
-                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition "
+                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
                       >
-                        خدمات
+                        <a href="www.sazandeh.onrender.com/services">خدمات</a>
                       </Link>
                       <Link
                         to={"/projects"}
-                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white p-4 transition "
+                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
                       >
-                        پروژه ها
+                        <a href="www.sazandeh.onrender.com/projects">پروژها</a>
+                      </Link>
+                      <Link
+                        to={"/"}
+                        className="cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+                      >
+                        <a href="www.sazandeh.onrender.com">خانه</a>
                       </Link>
                       <h2 className="text-2xl font-bold">منو</h2>
                     </div>
