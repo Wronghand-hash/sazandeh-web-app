@@ -35,7 +35,7 @@ export default function navbar() {
           <p>123-231-2422</p>
         </div>
       </div>
-      <div className="flex bg-white items-center justify-around h-16">
+      <div className="flex border-b-2 border-yellow-400 bg-white items-center justify-around h-16">
         <div className="flex justify-center w-2/3">
           <div className=" w-12 h-12">
             <img src={Logo} alt="" />
