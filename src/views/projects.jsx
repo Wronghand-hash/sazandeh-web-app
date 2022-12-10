@@ -127,7 +127,7 @@ export default function projects() {
             </Menu>
           </div>
           <div className="flex flex-col items-center   justify-center py-20">
-            <div className=" justify-center lg:space-y-4 space-x-4 items-center flex flex-wrap w-full">
+            <div className=" justify-center lg:space-y-4 lg:space-x-4 items-center flex flex-wrap w-full">
               {projects.map((project, i) => {
                 let [hover, setHover] = useState(false);
                 return (
