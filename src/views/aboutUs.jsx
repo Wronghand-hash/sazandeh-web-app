@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import AboutusImage from "../assets/images/aboutusImage.webp";
 import { Users, RocketLaunch, Heart, Clock } from "phosphor-react";
 import Footer from "../components/footer";
+import { Link } from "react-router-dom";
 
 export default function aboutUs() {
   return (
@@ -22,11 +23,18 @@ export default function aboutUs() {
       >
         <div className="hidden lg:absolute w-96 h-96 bg-yellow-400 absolute transform rotate-45 overflow-hidden -translate-x-64 overflow-hidden -translate-y-8"></div>
         <div className="flex flex-col justify-end items-center w-1/2 h-1/2">
-          <p className="text-white font-bold text-5xl">تماس با ما</p>
+          <p className="text-white font-bold text-5xl">درباره ما</p>
           <div className="flex text-white p-2 items-center align-center flex-row">
-            <p className="text-yellow-500">تماس با ما</p>
+            <p className="text-yellow-500">درباره ما</p>
             <AiOutlineLeft />
-            <p className="text-white font-bold">خانه</p>
+            <Link to={"/"}>
+              <a
+                href="www.sazandeh.onredner.com"
+                className="text-white font-bold"
+              >
+                خانه
+              </a>
+            </Link>
           </div>
         </div>
       </div>

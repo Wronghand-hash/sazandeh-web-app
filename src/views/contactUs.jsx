@@ -5,7 +5,8 @@ import { BsPhoneFill } from "react-icons/bs";
 import googlemapImage from "../assets/images/GoogleMapTA.webp";
 import { PhoneIncoming } from "phosphor-react";
 import { useState } from "react";
-import Footer from '../components/footer'
+import Footer from "../components/footer";
+import { Link } from "react-router-dom";
 
 export default function contactUs() {
   const [fullName, setFullName] = useState("");
@@ -34,7 +35,14 @@ export default function contactUs() {
           <div className="flex text-white p-2 items-center align-center flex-row">
             <p className="text-yellow-500">تماس با ما</p>
             <AiOutlineLeft />
-            <p>خانه</p>
+            <Link to={"/"}>
+              <a
+                href="www.sazandeh.onredner.com"
+                className="text-white font-bold"
+              >
+                خانه
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -48,7 +56,7 @@ export default function contactUs() {
           </div>
           <div className="flex justify-around">
             <div className="flex w-full space-y-5 flex-col">
-              <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 justify-between w-full md:space-x-5  my-2">
+              <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 justify-between w-full md:space-x-0  my-2">
                 <div className="flex w-full border">
                   <label
                     className="bg-gray-100 flex justify-center items-center p-3"

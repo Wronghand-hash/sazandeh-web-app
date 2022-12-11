@@ -22,6 +22,7 @@ import {
 } from "phosphor-react";
 import { useState } from "react";
 import manWithSmile from "../assets/images/manWithSmile.webp";
+import { Link } from "react-router-dom";
 
 export default function services() {
   const [services, setServices] = useState([
@@ -39,7 +40,14 @@ export default function services() {
           <div className="flex text-white p-2 items-center align-center flex-row">
             <p className="text-yellow-500">خدمات ما</p>
             <AiOutlineLeft />
-            <p className="text-black font-bold">خانه</p>
+            <Link to={"/"}>
+              <a
+                href="www.sazandeh.onredner.com"
+                className="text-white font-bold"
+              >
+                خانه
+              </a>
+            </Link>
           </div>
         </div>
       </div>

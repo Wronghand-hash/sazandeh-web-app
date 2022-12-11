@@ -12,6 +12,7 @@ import mainPageProjects7 from "../assets/images/mainPageProjects7.webp";
 import { useState } from "react";
 import { Menu } from "@headlessui/react";
 import Footer from "../components/footer";
+import { Link } from "react-router-dom";
 
 export default function projects() {
   const [show, setShow] = useState(false);
@@ -45,7 +46,14 @@ export default function projects() {
           <div className="flex text-white p-2 items-center align-center flex-row">
             <p className="text-yellow-500">پروژه</p>
             <AiOutlineLeft />
-            <p className="text-white font-bold">خانه</p>
+            <Link to={"/"}>
+              <a
+                href="www.sazandeh.onredner.com"
+                className="text-white font-bold"
+              >
+                خانه
+              </a>
+            </Link>
           </div>
         </div>
       </div>

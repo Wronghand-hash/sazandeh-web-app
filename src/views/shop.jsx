@@ -51,7 +51,7 @@ export default function shopPage() {
   return (
     <div className="w-full h-full">
       <Navbar />
-      <div className="flex pt-52 w-full h-full justify-center ">
+      <div className="flex pt-20 lg:pt-52 w-full h-full justify-center ">
         <div className="lg:w-9/12 w-full h-full  flex">
           <div className="flex h-full flex-col w-full ">
             <div className="bg-yellow-500 my-4 md:bg-white flex h-24 items-center w-full lg:px-8 py-2 justify-around">
@@ -245,7 +245,7 @@ export default function shopPage() {
                     منو سازنده
                   </Dialog.Title>
 
-                  <div className="flex flex-col space-y-5 text-right mt-24">
+                  <div className="flex px-8 flex-col space-y-5 text-right mt-20">
                     <div className="flex flex-col space-y-4 items-end ">
                       <h1 className="font-bold border-b-2 w-full py-2 text-xl">
                         دسته بندی ها

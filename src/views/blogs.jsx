@@ -10,8 +10,8 @@ import mainPageProjects6 from "../assets/images/mainPageProjects6.webp";
 import mainPageProjects7 from "../assets/images/mainPageProjects7.webp";
 import { useState } from "react";
 import { Heart, ChatsCircle, User } from "phosphor-react";
-import Footer from '../components/footer'
-
+import Footer from "../components/footer";
+import { Link } from "react-router-dom";
 export default function blogs() {
   const [blogs, setBlogs] = useState([
     mainPageProjects,
@@ -24,7 +24,7 @@ export default function blogs() {
   ]);
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full overflow-x-hidden h-full">
       <Navbar></Navbar>
       <div
         style={{
@@ -41,7 +41,14 @@ export default function blogs() {
           <div className="flex text-white p-2 items-center align-center flex-row">
             <p className="text-yellow-500 font-bold">تماس با ما</p>
             <AiOutlineLeft />
-            <p className="text-white font-bold">خانه</p>
+            <Link to={"/"}>
+              <a
+                href="www.sazandeh.onredner.com"
+                className="text-white font-bold"
+              >
+                خانه
+              </a>
+            </Link>
           </div>
         </div>
       </div>
