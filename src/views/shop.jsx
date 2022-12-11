@@ -54,22 +54,26 @@ export default function shopPage() {
       <div className="flex pt-52 w-full h-full justify-center ">
         <div className="lg:w-9/12 w-full h-full  flex">
           <div className="flex h-full flex-col w-full ">
-            <div className="bg-yellow-500 md:bg-white flex h-24 items-center w-full lg:px-8 py-2 justify-around">
-              <p className="text-sm cursor-pointer hover:text-sky-600">
+            <div className="bg-yellow-500 my-4 md:bg-white flex h-24 items-center w-full lg:px-8 py-2 justify-around">
+              <p className="text-sm hover:border-b-2 transition-all border-black py-2  cursor-pointer hover:text-sky-600">
                 جدید ترین
               </p>
-              <p className="text-sm cursor-pointer hover:text-sky-600">
+              <p className="text-sm hover:border-b-2 transition-all border-black py-2  cursor-pointer hover:text-sky-600">
                 پرفروش ترین
               </p>
-              <p className="text-sm cursor-pointer hover:text-sky-600">
+              <p className="text-sm hover:border-b-2 transition-all border-black py-2  cursor-pointer hover:text-sky-600">
                 از قیمت پایین
               </p>
-              <p className="text-sm cursor-pointer hover:text-sky-600">
+              <p className="text-sm hover:border-b-2 transition-all border-black py-2  cursor-pointer hover:text-sky-600">
                 از قیمت بالا
               </p>
-              <DotsThreeOutlineVertical onClick={openModal} className="lg:hidden" size={32} />
+              <DotsThreeOutlineVertical
+                onClick={openModal}
+                className="lg:hidden"
+                size={32}
+              />
             </div>
-            <div className="flex justify-around h-full w-full px-12  items-around flex-wrap">
+            <div className="flex justify-around space-y-4 lg:space-y-0 h-full w-full px-12  items-around flex-wrap">
               {products.map((product, i) => {
                 return (
                   <div
@@ -243,7 +247,9 @@ export default function shopPage() {
 
                   <div className="flex flex-col space-y-5 text-right mt-24">
                     <div className="flex flex-col space-y-4 items-end ">
-                      <h1 className="font-bold text-xl">دسته بندی ها</h1>
+                      <h1 className="font-bold border-b-2 w-full py-2 text-xl">
+                        دسته بندی ها
+                      </h1>
                       <div className="flex text-md  h-full space-y-3  justify-around text-right flex-col">
                         <p className="cursor-pointer hover:text-blue-400">
                           شیر آلات
@@ -269,7 +275,9 @@ export default function shopPage() {
                       </div>
                     </div>
                     <div className="flex flex-col space-y-4 items-end ">
-                      <h1 className="font-bold text-xl">برند ها</h1>
+                      <h1 className="font-bold border-b-2 w-full py-2 text-xl">
+                        برند ها
+                      </h1>
                       <div className="flex w-full justify-between">
                         <div className="flex text-sm  h-full space-y-3  justify-around text-right flex-col">
                           <p className="cursor-pointer hover:text-blue-400">
