@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -33,5 +34,29 @@ module.exports = {
     md: { min: "992px", max: "1199px" },
     lg: { min: "1200px" },
   },
+  colors: {
+      // Build your palette here
+      transparent: "transparent",
+    
+      white: colors.white,
+      black: colors.black,
+      gray: colors.neutral,
+      LightBlue: colors.sky,
+      red: colors.red,
+      blue: colors.blue,
+      yellow: colors.yellow,
+      blueGray: colors.slate,
+      Lime: colors.lime,
+      Fuchsia: colors.fuchsia,
+      purple: colors.purple,
+      green: colors.green,
+      pink: colors.pink,
+      Rose: colors.rose,
+      Indigo: colors.indigo,
+      Amber: colors.amber,
+      Cyan: colors.cyan,
+      Emerald: colors.emerald,
+      Sky: colors.sky,
+    },
   plugins: [],
 };
