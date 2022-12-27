@@ -11,7 +11,7 @@ import {
 import logo from "../assets/images/logo.webp";
 export default function Footer() {
   return (
-    <div className="w-screen h-auto items-center space-y-14 lg:space-y-0 bg-neutral-800 mt-9 flex flex-col  justify-center overflow-x-hidden">
+    <div className="w-screen overflow-x-hidden h-auto items-center space-y-14 lg:space-y-0 bg-neutral-800 mt-9 flex flex-col  justify-center overflow-x-hidden">
       <div className="flex-col-reverse flex lg:flex-row-reverse lg:px-14 w-full justify-center">
         <div className=" lg:w-96 w-full h-full flex flex-col space-y-4 items-end lg:border-t-0 border-t border-rose-50 justify-center lg:px-0 px-6 my-5">
           <h1 className="text-white font-semibold text-lg mt-5">
