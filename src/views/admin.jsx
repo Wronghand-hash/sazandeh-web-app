@@ -11,12 +11,12 @@ export default function admin() {
   const [tab, setTab] = useState("shop");
 
   return (
-    <div className="w-screen overflow-x-hidden h-full">
+    <div className="w-screen overflow-hidden h-full">
       <Navbar className="" />
 
-      <div className="flex h-32 h-full w-full "></div>
+      <div className="flex h-32 h-full w-screen "></div>
 
-      <div className="flex justify-end px-4 w-full h-24 bg-gray-900">
+      <div className="flex justify-end lg:px-8 px-4 w-full h-24 bg-gray-900">
         <div className="flex justify-center items-center space-x-4 text-white text-right">
           <div className="w-20 rounded-full h-20 bg-blue-500"></div>
           <div className="flex items-end justify-center flex-col">

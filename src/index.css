@@ -11,3 +11,12 @@
 * {
   font-family: "IranSans";
 }
+
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}

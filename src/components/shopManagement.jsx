@@ -4,6 +4,7 @@ import {
   SortDescending,
   Trash,
   Upload,
+  PlusCircle
 } from "phosphor-react";
 import oneproduct from "../assets/images/productImages/oneproduct.webp";
 import twoproduct from "../assets/images/productImages/twoproduct.webp";
@@ -30,39 +31,59 @@ export default function shopManagement() {
     { title: "لورم", price: 232333, image: nineproduct },
   ];
   return (
-    <div className="flex justify-center  w-full h-full">
-      <div className="flex flex-col h-full  justify-center items-center">
+    <div className="flex lg:px-5 justify-center  w-screen overflow-x-hidden h-full">
+      <div className="flex w-full flex-col h-full  justify-center items-center">
         <div className="flex w-full font-bold justify-center py-5">
           مدیریت کالاها
         </div>
 
-        <div className="flex flex-col w-full">
-          <div className="flex w-full h-10 bg-gray-400">
+        <div className="flex space-y-6 justify-center items-center flex-col w-full">
+          <div className="flex items-center w-11/12 w-full justify-end h-10 bg-gray-400">
             {ascention ? (
-              <SortAscending size={30} />
+              <SortAscending
+                onClick={() => {
+                  setAscention(false);
+                }}
+                size={30}
+              />
             ) : (
-              <SortDescending size={30} />
+              <SortDescending
+                onClick={() => {
+                  setAscention(true);
+                }}
+                size={30}
+              />
             )}
           </div>
-          {products.map((product) => {
-            return (
-              <div className="flex h-16 justify-around items-center w-full bg-gray-100 border-b-2 border-gray-900">
-                <div>
-                  <img
-                    className="object-contain w-10 h-10"
-                    src={product.image}
-                    alt=""
-                  />
+          <div className="flex bg-white p-5  w-10/12 justify-center items-center space-y-3 flex-col">
+            {products.map((product) => {
+              return (
+                <div className="flex flex-row-reverse hover:bg-sky-300 transition w-full h-16 shadow-2xl rounded-2xl justify-around items-center w-full bg-gray-100 border-b-2 border-gray-900">
+                  <div>
+                    <img
+                      className="object-contain w-10 h-10"
+                      src={product.image}
+                      alt=""
+                    />
+                  </div>
+                  <div> {product.title}</div>
+                  <div>{product.price}</div>
+                  <div>
+                    <button>بیشتر</button>
+                    <Trash />
+                  </div>
                 </div>
-                <div> {product.title}</div>
-                <div>{product.price}</div>
-                <div>
-                  <button>بیشتر</button>
-                  <Trash />
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+        </div>
+        <div className=" fixed bottom-5 right-5">
+          <div className="flex bg-gray-900 rounded-full justify-center items-center">
+              <PlusCircle
+                className="w-14 h-14 justify-self-center text-white bg-blueGray-900 rounded-full"
+                size={42}
+              />
+          </div>
         </div>
         <div className="w-full space-y-2 flex-col h-full flex">
           <div className="flex justify-center w-full">
