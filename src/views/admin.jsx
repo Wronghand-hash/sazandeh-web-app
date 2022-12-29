@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import BlogManagement from "../components/blogManagement.jsx";
 import ShopManagement from "../components/shopManagement.jsx";
+import OrdersManagement from "../components/ordersManagement.jsx";
 
 export default function admin() {
   const [tab, setTab] = useState("shop");
@@ -54,6 +55,17 @@ export default function admin() {
               </div>
               <div
                 onClick={() => {
+                  setTab("order");
+                }}
+                className="flex justify-center hover:bg-yellow-400 transition bg-gray-400 flex-col items-center w-full h-52"
+              >
+                <h1 className="font-bold text-xl"> سفارش ها </h1>
+                <div>
+                  <Article size={50} />
+                </div>
+              </div>
+              <div
+                onClick={() => {
                   setTab("shop");
                 }}
                 className="flex justify-center hover:bg-yellow-400 transition bg-gray-200 flex-col items-center w-full h-52"
@@ -69,6 +81,8 @@ export default function admin() {
           <ShopManagement />
         ) : tab === "blog" ? (
           <BlogManagement />
+        ) : tab === "order" ? (
+          <OrdersManagement />
         ) : null}
       </div>
       <Footer />

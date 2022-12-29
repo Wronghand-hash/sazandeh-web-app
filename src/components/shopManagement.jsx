@@ -67,10 +67,14 @@ export default function shopManagement() {
                     />
                   </div>
                   <div> {product.title}</div>
-                  <div>{product.price}</div>
-                  <div>
-                    <button>بیشتر</button>
-                    <Trash />
+                  <div className="hidden lg:flex">{product.price}</div>
+                  <div className="flex space-x-2 w-24 mx-4 lg:mx-0">
+                    <button className="bg-yellow-400 py-2 hover:bg-yellow-500 px-4 rounded shadow-xl">
+                      بیشتر
+                    </button>
+                    <div className="bg-red-400 py-2 hover:bg-red-500 px-4 rounded shadow-xl">
+                      <Trash className=" text-white" size={28} />
+                    </div>
                   </div>
                 </div>
               );
