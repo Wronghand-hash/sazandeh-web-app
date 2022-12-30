@@ -9,7 +9,7 @@ import ShopManagement from "../components/shopManagement.jsx";
 import OrdersManagement from "../components/ordersManagement.jsx";
 
 export default function admin() {
-  const [tab, setTab] = useState("shop");
+  const [tab, setTab] = useState("");
 
   return (
     <div className="w-screen overflow-hidden h-full">
