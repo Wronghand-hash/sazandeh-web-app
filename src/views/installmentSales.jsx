@@ -1,6 +1,8 @@
 import { AiOutlineLeft } from "react-icons/ai";
 import Navbar from "../components/navbar";
 import AboutusImage from "../assets/images/aboutusImage.webp";
+import { Disclosure } from "@headlessui/react";
+import { CaretDown } from "phosphor-react";
 import {
   Users,
   Coins,
@@ -52,7 +54,9 @@ export default function installmentSales() {
       <div className="flex pt-20 pb-10 w-full items-center justify-center h-full flex-col">
         <div className="flex justify-center items-center w-full h-24 flex-col">
           <h1 className="bg-sky-400 text-white px-4 py-0">workflow</h1>
-          <h2 className="text-2xl font-bold">روال دریافت خدمات تسهیلات اقساطی</h2>
+          <h2 className="text-2xl font-bold">
+            روال دریافت خدمات تسهیلات اقساطی
+          </h2>
         </div>
         <div className="flex flex-col space-y-14  lg:space-y-0 lg:flex-row-reverse pt-20 justify-center md:space-x-5 lg:space-x-5 px-5 items-center w-full">
           <div className="flex flex-col items-center justify-center space-y-5">
@@ -63,7 +67,9 @@ export default function installmentSales() {
               <Copy size={30} weight="fill" />
             </div>
             <div className="flex items-center text-center flex-col w-64 space-y-4">
-              <h1 className="text-lg font-bold">ثبت درخواست و بارگذاری مدارک</h1>
+              <h1 className="text-lg font-bold">
+                ثبت درخواست و بارگذاری مدارک
+              </h1>
               <h5 className="text-sm">
                 لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
                 استفاده از طراحان گرافیک است
@@ -115,6 +121,83 @@ export default function installmentSales() {
               </h5>
             </div>
           </div>
+        </div>
+        <div className="mx-auto mt-20 bg-yellow-100 space-y-2 w-9/12 rounded-2xl bg-white p-2">
+          <div className="flex w-full text-center justify-center items-center font-bold text-3xl">
+            برای تهیه مدارک به کمک نیاز داری؟
+          </div>
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex flex-row-reverse border-b py-2 bg-gray-200 rounded w-full justify-between rounded-lg text-sm font-medium text-right">
+                  <span>مدارک را چطور تهیه کنم؟</span>
+                  <CaretDown
+                    className={`${
+                      open ? "rotate-180 transform" : ""
+                    } h-5 w-5 text-purple-500`}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className=" bg-gray-900  text-right p-4 text-sm text-gray-50">
+                  لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex flex-row-reverse border-b py-2 bg-gray-200 rounded w-full justify-between rounded-lg text-sm font-medium text-right">
+                  <span>مدارک را چطور تهیه کنم؟</span>
+                  <CaretDown
+                    className={`${
+                      open ? "rotate-180 transform" : ""
+                    } h-5 w-5 text-purple-500`}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className=" bg-gray-900  text-right p-4 text-sm text-gray-50">
+                  لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex flex-row-reverse border-b py-2 bg-gray-200 rounded w-full justify-between rounded-lg text-sm font-medium text-right">
+                  <span>چرا میتونید به ما اطمینان کنید؟</span>
+                  <CaretDown
+                    className={`${
+                      open ? "rotate-180 transform" : ""
+                    } h-5 w-5 text-purple-500`}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className=" bg-gray-900  text-right p-4 text-sm text-gray-50">
+                  لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex flex-row-reverse border-b py-2 bg-gray-200 rounded w-full justify-between rounded-lg text-sm font-medium text-right">
+                  <span>امضای الکترونیکی چیه؟</span>
+                  <CaretDown
+                    className={`${
+                      open ? "rotate-180 transform" : ""
+                    } h-5 w-5 text-purple-500`}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className=" bg-gray-900  text-right p-4 text-sm text-gray-50">
+                  لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
         </div>
       </div>
       <div className="flex items-center space-x-2 lg:space-x-12 justify-center  bg-blue-600 w-full h-32">
