@@ -63,7 +63,7 @@ export default function installmentSales() {
               <Copy size={30} weight="fill" />
             </div>
             <div className="flex items-center text-center flex-col w-64 space-y-4">
-              <h1 className="text-lg font-bold">ثبت درخواست و براگذاری مدارک</h1>
+              <h1 className="text-lg font-bold">ثبت درخواست و بارگذاری مدارک</h1>
               <h5 className="text-sm">
                 لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
                 استفاده از طراحان گرافیک است

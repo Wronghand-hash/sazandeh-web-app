@@ -11,6 +11,7 @@ import Blogs from "./views/blogs";
 import Shop from "./views/shop";
 import AdminPage from "./views/admin.jsx";
 import InstallmentSales from "./views/installmentSales";
+import Catalogs from "./views/catalog";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/admin" element={<AdminPage />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/blogs" element={<Blogs />} />
+      <Route path="/catalogs" element={<Catalogs />} />
       <Route path="/shop" element={<Shop />} />
       <Route path="/installmentSales" element={<InstallmentSales />} />
     </Routes>

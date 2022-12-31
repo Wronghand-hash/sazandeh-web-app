@@ -59,10 +59,10 @@ export default function navbar() {
             <a href="www.sazandeh.onrender.com/contactus"> تماس</a>
           </Link>
           <Link
-            to={"/shop"}
+            to={"/catalogs"}
             className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition "
           >
-            <a href="www.sazandeh.onrender.com/shop">کاتالوگ</a>
+            <a href="www.sazandeh.onrender.com/catalogs">کاتالوگ</a>
           </Link>
           <Link
             to={"/blogs"}
@@ -100,14 +100,19 @@ export default function navbar() {
           >
             <a href="www.sazandeh.onrender.com">خانه</a>
           </Link>
-          <button
-            type="button"
-            onClick={openModal}
-            className="rounded-md lg:hidden  px-4 py-2 text-sm font-bold text-white text-black"
-          >
-            <List size={32} />
-          </button>
+          <div className="flex justify-center items-center ">
+            {" "}
+            <div onClick={(() => {console.log('open that nigga ')})} className="flex transfrom  lg:hidden ">سبد</div>
+            <button
+              type="button"
+              onClick={openModal}
+              className="rounded-md lg:hidden  px-4 py-2 text-sm font-bold text-white text-black"
+            >
+              <List size={32} />
+            </button>
+          </div>
         </div>
+        <div className="flex transfrom hidden lg:flex -translate-x-10">سبد</div>
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog
             as="div"
