@@ -1,7 +1,16 @@
 import { AiOutlineLeft } from "react-icons/ai";
 import Navbar from "../components/navbar";
 import AboutusImage from "../assets/images/aboutusImage.webp";
-import { Users, Coins, RocketLaunch, Heart, Clock } from "phosphor-react";
+import {
+  Users,
+  Coins,
+  RocketLaunch,
+  Copy,
+  Calculator,
+  Activity,
+  Clock,
+  GlobeStand,
+} from "phosphor-react";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -40,46 +49,71 @@ export default function installmentSales() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row w-full h-full lg:h-96 px-14">
-        <div className="flex text-3xl font-bold px-4 py-8 lg:py-0 w-full flex-col justify-center items-end h-full bg-gray-200">
-          <p>فروش اقساطی</p>
-          <p>ویژگیها و شرایط</p>
+      <div className="flex pt-20 pb-10 w-full items-center justify-center h-full flex-col">
+        <div className="flex justify-center items-center w-full h-24 flex-col">
+          <h1 className="bg-sky-400 text-white px-4 py-0">workflow</h1>
+          <h2 className="text-2xl font-bold">روال دریافت خدمات تسهیلات اقساطی</h2>
         </div>
-        <div className="flex flex-col items-center p-5 space-y-2 justify-center">
-          <div>
-            <Users className="p-2 bg-yellow-400" size={36} />
+        <div className="flex flex-col space-y-14  lg:space-y-0 lg:flex-row-reverse pt-20 justify-center md:space-x-5 lg:space-x-5 px-5 items-center w-full">
+          <div className="flex flex-col items-center justify-center space-y-5">
+            <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+              <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                1
+              </p>
+              <Copy size={30} weight="fill" />
+            </div>
+            <div className="flex items-center text-center flex-col w-64 space-y-4">
+              <h1 className="text-lg font-bold">ثبت درخواست و براگذاری مدارک</h1>
+              <h5 className="text-sm">
+                لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است
+              </h5>
+            </div>
           </div>
-          <h1 className="font-bold">تیم متخصص و حرفه ای</h1>
-          <div className="flex text-center justify-center items-center">
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، قرار گیرد
-            </p>
+          <div className="flex flex-col items-center justify-center space-y-5">
+            <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+              <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                2
+              </p>
+              <Calculator size={30} weight="fill" />
+            </div>
+            <div className="flex items-center text-center flex-col w-64 space-y-4">
+              <h1 className="text-lg font-bold">ثبت امضا الکترونیکی</h1>
+              <h5 className="text-sm">
+                لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است
+              </h5>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col items-center p-5 space-y-2 justify-center">
-          <div>
-            <Heart className="p-2 bg-yellow-400" size={36} />
+          <div className="flex flex-col items-center justify-center space-y-5">
+            <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+              <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                3
+              </p>
+              <RocketLaunch size={30} weight="fill" />
+            </div>
+            <div className="flex items-center text-center flex-col w-64 space-y-4">
+              <h1 className="text-lg font-bold">امضای قرارداد ها</h1>
+              <h5 className="text-sm">
+                لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است
+              </h5>
+            </div>
           </div>
-          <h1 className="font-bold">هزینه های متناسب و بهینه</h1>
-          <div className="flex text-center justify-center items-center">
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، قرار گیرد
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center p-5 space-y-2 justify-center">
-          <div>
-            <Clock className="p-2 bg-yellow-400" size={36} />
-          </div>
-          <h1 className="font-bold">زمان بندی و تحویل به موقع</h1>
-          <div className="flex text-center justify-center items-center">
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، قرار گیرد
-            </p>
+          <div className="flex flex-col items-center justify-center space-y-5">
+            <div className="relative flex items-center justify-center h-20 border-2 border-dashed border-gray-300 w-20">
+              <p className="px-2 flex text-center transform -translate-y-4 bg-yellow-400 absolute right-7 top-0">
+                4
+              </p>
+              <Activity size={30} weight="fill" />
+            </div>
+            <div className="flex items-center text-center flex-col w-64 space-y-4">
+              <h1 className="text-lg font-bold">دریافت تسهیلات اقساطی</h1>
+              <h5 className="text-sm">
+                لورم ایپسوم متن ساختگی یا تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است
+              </h5>
+            </div>
           </div>
         </div>
       </div>
@@ -222,6 +256,11 @@ export default function installmentSales() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="flex items-center px-20 w-full h-24">
+            <button className="bg-green-600 text-gray-50 hover:text-white hover:bg-green-400 transition w-full rounded h-14">
+              ثبت درخواست
+            </button>
           </div>
         </div>
       </div>
