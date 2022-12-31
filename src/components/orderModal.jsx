@@ -72,6 +72,10 @@ export default function orderModal(props) {
                       <h1>:شماره تماس</h1>
                     </div>
                     <div className="flex items-center justify-around border-b">
+                      جمالزاده کوی البرز مجتمع اندیمشک
+                      <h1>:آدرس کامل</h1>
+                    </div>
+                    <div className="flex items-center justify-around border-b">
                       <div className="w-full px-4">
                         <div className="mx-auto w-full max-w-md rounded-2xl bg-white p-2">
                           <Disclosure>
@@ -131,6 +135,14 @@ export default function orderModal(props) {
                           </Disclosure>
                         </div>
                       </div>
+                    </div>
+                    <div className="flex w-full space-x-4 px-4 justify-around items-center">
+                      <button className="w-full rounded shadow-xl hover:bg-green-800 font-bold transition hover:text-gray-50  h-8 bg-green-500">
+                        افزودن به ارسال شده
+                      </button>
+                      <button className="w-full rounded shadow-xl hover:bg-red-800 font-bold transition hover:text-gray-50  h-8 bg-red-500">
+                        رد سفارش
+                      </button>
                     </div>
                   </div>
                 </Dialog.Panel>

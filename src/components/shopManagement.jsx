@@ -99,10 +99,10 @@ export default function shopManagement() {
         <div className=" fixed cursor-pointer bottom-5 right-5">
           <div
             onClick={openModal}
-            className="flex bg-gray-900 rounded-full justify-center items-center"
+            className="flex bg-yellow-500 rounded-full justify-center items-center"
           >
             <PlusCircle
-              className="w-14 h-14 justify-self-center text-white bg-blueGray-900 rounded-full"
+              className="w-14 h-14 justify-self-center text-blueGray-900 bg-blueGray-900 rounded-full"
               size={42}
             />
           </div>

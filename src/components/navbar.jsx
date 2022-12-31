@@ -45,46 +45,58 @@ export default function navbar() {
             </Link>
           </div>
         </div>
-        <div className="flex w-full   h-16 justify-end lg:pr-48 p-8 space-x-12 items-center align-center">
+        <div className="flex w-full   h-16 justify-end lg:pr-32 py-8 space-x-12 items-center align-center">
           <Link
             to={"/aboutus"}
-            className="hidden text-sm lg:block cursor-pointer duration-300 hover:bg-black border-black transition-all px-8 py-2 hover:text-white"
+            className="hidden text-sm lg:block cursor-pointer duration-300 hover:bg-black border-black transition-all px-4 py-2 hover:text-white"
           >
             <a href="www.sazandeh.onrender.com/aboutus">درباره</a>
           </Link>
           <Link
             to={"/contactus"}
-            className="hidden text-sm lg:block cursor-pointer duration-300   hover:bg-black hover:text-white  px-8 py-2 transition"
+            className="hidden text-sm lg:block cursor-pointer duration-300   hover:bg-black hover:text-white  px-4 py-2 transition"
           >
             <a href="www.sazandeh.onrender.com/contactus"> تماس</a>
           </Link>
           <Link
             to={"/shop"}
-            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition "
           >
-            <a href="www.sazandeh.onrender.com/shop">فروشگاه</a>
+            <a href="www.sazandeh.onrender.com/shop">کاتالوگ</a>
           </Link>
           <Link
             to={"/blogs"}
-            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition "
           >
             <a href="www.sazandeh.onrender.com/blog">وبلاگ</a>
           </Link>
           <Link
-            to={"/services"}
-            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+            to={"/installmentsales"}
+            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white w-20 flex  py-3 transition "
           >
-            <a href="www.sazandeh.onrender.com/services">خدمات</a>
+            <a href="www.sazandeh.onrender.com/installmentSales">خریداقساطی</a>
           </Link>
           <Link
             to={"/projects"}
-            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition "
           >
             <a href="www.sazandeh.onrender.com/projects">پروژها</a>
           </Link>
           <Link
+            to={"/shop"}
+            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition "
+          >
+            <a href="www.sazandeh.onrender.com/shop">کالا</a>
+          </Link>
+          <Link
+            to={"/services"}
+            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition "
+          >
+            <a href="www.sazandeh.onrender.com/services">خدمات</a>
+          </Link>
+          <Link
             to={"/"}
-            className="cursor-pointer hidden lg:block duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+            className="cursor-pointer hidden lg:block duration-300 hover:bg-black hover:text-white px-4 py-3 transition "
           >
             <a href="www.sazandeh.onrender.com">خانه</a>
           </Link>

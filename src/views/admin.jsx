@@ -1,5 +1,5 @@
 import { AiOutlineLeft } from "react-icons/ai";
-import { Article, Storefront, ArrowElbowUpRight } from "phosphor-react";
+import { Article, Storefront, Book, ArrowElbowUpRight } from "phosphor-react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ import { useState } from "react";
 import BlogManagement from "../components/blogManagement.jsx";
 import ShopManagement from "../components/shopManagement.jsx";
 import OrdersManagement from "../components/ordersManagement.jsx";
+import CatalogManagement from "../components/catalogManagement.jsx";
 
 export default function admin() {
   const [tab, setTab] = useState("");
@@ -75,6 +76,17 @@ export default function admin() {
                   <Storefront size={50} />
                 </div>
               </div>
+              <div
+                onClick={() => {
+                  setTab("catalog");
+                }}
+                className="flex justify-center hover:bg-yellow-400 transition bg-gray-300 flex-col items-center w-full h-52"
+              >
+                <h1 className="font-bold text-xl">مدیریت کاتالوگ</h1>
+                <div>
+                  <Book size={32} />
+                </div>
+              </div>
             </div>
           </div>
         ) : tab === "shop" ? (
@@ -83,6 +95,8 @@ export default function admin() {
           <BlogManagement />
         ) : tab === "order" ? (
           <OrdersManagement />
+        ) : tab === "catalog" ? (
+          <CatalogManagement />
         ) : null}
       </div>
       <Footer />
