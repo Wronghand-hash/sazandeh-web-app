@@ -501,7 +501,7 @@ export default function homePage() {
         </div>
       </div>
       <div className="w-auto h-auto lg:h-40 px-10 py-5 my-9 flex lg:flex-row flex-col-reverse items-center justify-center">
-        <div className="w-full h-full lg:space-y-0 space-y-6 flex lg:flex-row flex-col items-center lg:space-x-14">
+        <div className="w-auto h-full lg:space-y-0 space-y-6 flex lg:flex-row flex-col items-center lg:space-x-10">
           <button className="px-3 py-3 rounded-sm text-md bg-blue-600 text-white">
             <CaretLeft size={20} weight="fill" />
           </button>
@@ -522,11 +522,11 @@ export default function homePage() {
             <CaretRight size={20} weight="fill" />
           </button>
         </div>
-        <div className="flex flex-col w-64 items-center lg:my-0 my-4">
+        <div className="flex flex-col mx-6 text-center items-center lg:my-0 my-4">
           <h3 className="py-2 text-md px-1 bg-yellow-400 text-neutral-900">
             PARTNERS
           </h3>
-          <h1 className="text-5xl my-2 font-light">همکاران ما</h1>
+          <h1 className="text-4xl my-2 font-light">همکاران ما</h1>
         </div>
       </div>
       <Footer />
