@@ -14,6 +14,7 @@ import InstallmentSales from "./views/installmentSales";
 import Catalogs from "./views/catalog";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Checkout from "./views/checkout";
+import Profile from "./views/profile";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -24,6 +25,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/services" element={<Services />}></Route>
       <Route path="/admin" element={<AdminPage />} />
       <Route path="/checkout" element={<Checkout />} />
+      <Route path="/profile" element={<Profile />} />
+
       <Route path="/projects" element={<Projects />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/catalogs" element={<Catalogs />} />
