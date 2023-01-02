@@ -7,10 +7,11 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import { List } from "phosphor-react";
+import { List, ShoppingCart } from "phosphor-react";
 
 export default function navbar() {
   let [isOpen, setIsOpen] = useState(false);
+  let [isOpen2, setIsOpen2] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
@@ -18,6 +19,13 @@ export default function navbar() {
 
   function openModal() {
     setIsOpen(true);
+  }
+  function closeModal2() {
+    setIsOpen2(false);
+  }
+
+  function openModal2() {
+    setIsOpen2(true);
   }
   return (
     <div className="w-screen fixed flex-col h-24 bg-black flex z-50">
@@ -102,7 +110,9 @@ export default function navbar() {
           </Link>
           <div className="flex justify-center items-center ">
             {" "}
-            <div onClick={(() => {console.log('open that nigga ')})} className="flex transfrom  lg:hidden ">سبد</div>
+            <div onClick={openModal2} className="flex transfrom   ">
+              <ShoppingCart size={32} />
+            </div>
             <button
               type="button"
               onClick={openModal}
@@ -112,7 +122,6 @@ export default function navbar() {
             </button>
           </div>
         </div>
-        <div className="flex transfrom hidden lg:flex -translate-x-10">سبد</div>
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog
             as="div"
@@ -194,6 +203,60 @@ export default function navbar() {
                         <a href="www.sazandeh.onrender.com">خانه</a>
                       </Link>
                       <h2 className="text-2xl font-bold">منو</h2>
+                    </div>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+        <Transition appear show={isOpen2} as={Fragment}>
+          <Dialog as="div" className="flex h-screen w-full h-screen inset-0 z-10" onClose={closeModal2}>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="sticky inset-0 bg-black bg-opacity-25" />
+            </Transition.Child>
+
+            <div className="fixed h-screen inset-0 overflow-y-auto">
+              <div className="flex h-screen items-center justify-center p-4 text-center">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 scale-95 -translate-x-24"
+                  enterTo="opacity-100 scale-100 translate-x-0"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 scale-100"
+                  leaveTo="opacity-0 scale-95 "
+                >
+                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                    <Dialog.Title
+                      as="h3"
+                      className="text-lg font-medium leading-6 text-gray-900"
+                    >
+                      Payment successful
+                    </Dialog.Title>
+                    <div className="mt-2">
+                      <p className="text-sm text-gray-500">
+                        Your payment has been successfully submitted. We’ve sent
+                        you an email with all of the details of your order.
+                      </p>
+                    </div>
+
+                    <div className="mt-4">
+                      <button
+                        type="button"
+                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                        onClick={closeModal}
+                      >
+                        Got it, thanks!
+                      </button>
                     </div>
                   </Dialog.Panel>
                 </Transition.Child>
