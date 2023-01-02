@@ -235,7 +235,7 @@ export default function services() {
             </div>
           </div>
         </div>
-        <div className="w-screen mt-20 h-auto flex items-center justify-center">
+        <div className="w-screen mt-20 h-auto hidden lg:flex items-center justify-center">
           <img className="relative" src={mainPageGraphic} alt="" />
           <button className="transition duration-300 ease-in hover:bg-neutral-900 hover:text-yellow-400 absolute right-80 mr-28 font-bold rounded-sm mt-28   px-4 py-1 bg-white text-neutral-900 text-lg">
             تماس با ما
@@ -248,7 +248,7 @@ export default function services() {
             </p>
           </h1>
         </div>
-        <div className="flex  items-center space-x-12 justify-center bg-blue-600 w-full h-32">
+        <div className="flex  items-center space-x-12 justify-center bg-blue-600 w-full h-32 mt-10">
           <div className="flex text-white items-center justify-center flex-col">
             <div className="flex justify-center space-x-2">
               <p className="text-4xl font-bold">165</p>
