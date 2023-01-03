@@ -85,7 +85,9 @@ export default function Checkout() {
           </div>
           <div className="w-auto h-carousel shadow-2xl   flex justify-end text-right items-center">
             <div className="h-full bg-white w-96 justify-around pb-20 flex items-center flex-col  my-2">
-              <h1 className="m-5 text-4xl font-bold">اطلاعات ارسال</h1>
+              <h1 className="m-5 text-4xl border-b py-2 border-black font-bold">
+                اطلاعات ارسال
+              </h1>
 
               <FormControl isRequired>
                 <div className="h-full w-full flex justify-end items-center">
@@ -119,7 +121,11 @@ export default function Checkout() {
               </FormControl>
               <div className=" h-10   pt-14 w-full flex items-center pr-24">
                 <Select isRequired variant="filled" placeholder="استان">
-                  <option>آذربایجان شرقی</option>
+                  <option>تهران</option>
+                  <option>اصفحان</option>
+                  <option>مشهد</option>
+                  <option>مرکزی</option>
+                  <option>تهران</option>
                   <option>آذربایجان غربی</option>
                 </Select>
               </div>
