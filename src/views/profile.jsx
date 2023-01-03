@@ -28,7 +28,7 @@ export default function Profile() {
   return (
     <div className="h-full w-screen">
       <Navbar></Navbar>
-      <div className="h-auto w-screen">
+      <div className="h-full w-screen">
         <div
           style={{
             backgroundImage: `url(${blogsImage})`,
@@ -57,7 +57,7 @@ export default function Profile() {
             </div>
           </div>
         </div>
-        <div className="h-screen w-screen bg-gray-300 flex flex-col items-center justify-center">
+        <div className="h-full pb-8 w-screen bg-gray-300 flex flex-col items-center justify-center">
           <img src={ProfilePicture} alt="" />
           <button className="px-12 bg-black text-white border-l-4 my-4 border-yellow-400 rounded-sm py-1">
             تغییر عکس کاربری

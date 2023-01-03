@@ -2,30 +2,76 @@ import {
   AiOutlineClockCircle,
   AiOutlineMail,
   AiOutlinePhone,
+  AiOutlineUser,
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
 import { Dialog, Transition } from "@headlessui/react";
+import { BsPhoneFill } from "react-icons/bs";
 import { Fragment, useState } from "react";
-import { List, ShoppingCart } from "phosphor-react";
+import {
+  List,
+  Minus,
+  Plus,
+  SignIn,
+  ShoppingCart,
+  User,
+  Password,
+} from "phosphor-react";
+
+import mainPageProjects6 from "../assets/images/mainPageProjects6.webp";
+import mainPageProjects7 from "../assets/images/mainPageProjects7.webp";
 
 export default function navbar() {
-  let [isOpen, setIsOpen] = useState(false);
-  let [isOpen2, setIsOpen2] = useState(false);
+  let items = [
+    { title: "لوله", price: 1000, quantity: 2, image: mainPageProjects7 },
+    { title: "سیم", price: 3000, quantity: 1, image: mainPageProjects6 },
+  ];
 
+  const [mode, setMode] = useState("login");
+
+  // menu drawer modal controls
+  let [isOpen, setIsOpen] = useState(false);
   function closeModal() {
     setIsOpen(false);
   }
-
   function openModal() {
     setIsOpen(true);
   }
+
+  // shopping drawer controls
+  let [isOpen2, setIsOpen2] = useState(false);
+
   function closeModal2() {
     setIsOpen2(false);
   }
 
   function openModal2() {
     setIsOpen2(true);
+  }
+
+  // login dialog control
+
+  let [isOpen3, setIsOpen3] = useState(false);
+
+  function closeModal3() {
+    setIsOpen3(false);
+  }
+
+  function openModal3() {
+    setIsOpen3(true);
+  }
+
+  // signup dialog control
+
+  let [isOpen4, setIsOpen4] = useState(false);
+
+  function closeModal4() {
+    setIsOpen4(false);
+  }
+
+  function openModal4() {
+    setIsOpen4(true);
   }
   return (
     <div className="w-screen fixed flex-col h-24 bg-black flex z-50">
@@ -109,9 +155,17 @@ export default function navbar() {
             <a href="www.sazandeh.onrender.com">خانه</a>
           </Link>
           <div className="flex justify-center items-center ">
-            {" "}
-            <div onClick={openModal2} className="flex transfrom   ">
+            <div
+              onClick={openModal2}
+              className="flex hover:bg-gray-900 hover:text-white transition px-4 py-3 cursor-pointer transfrom   "
+            >
               <ShoppingCart size={32} />
+            </div>
+            <div
+              onClick={openModal3}
+              className="flex hover:bg-gray-900 hover:text-white transition px-4 py-3 cursor-pointer transfrom   "
+            >
+              <SignIn size={32} />
             </div>
             <button
               type="button"
@@ -173,28 +227,42 @@ export default function navbar() {
                         <a href="www.sazandeh.onrender.com/contactus"> تماس</a>
                       </Link>
                       <Link
-                        to={"/shop"}
+                        to={"/installmentsales"}
+                        className="cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+                      >
+                        <a href="www.sazandeh.onrender.com">خرید اقساطی</a>
+                      </Link>
+                      <Link
+                        to={"/catalog"}
                         className=" cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
                       >
-                        <a href="www.sazandeh.onrender.com/shop">فروشگاه</a>
+                        <a href="www.sazandeh.onrender.com/catalog">کاتالوگ</a>
                       </Link>
+
                       <Link
                         to={"/blogs"}
                         className=" cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
                       >
                         <a href="www.sazandeh.onrender.com/blog">وبلاگ</a>
                       </Link>
-                      <Link
-                        to={"/services"}
-                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
-                      >
-                        <a href="www.sazandeh.onrender.com/services">خدمات</a>
-                      </Link>
+
                       <Link
                         to={"/projects"}
                         className=" cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
                       >
                         <a href="www.sazandeh.onrender.com/projects">پروژها</a>
+                      </Link>
+                      <Link
+                        to={"/shop"}
+                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+                      >
+                        <a href="www.sazandeh.onrender.com/shop">فروشگاه</a>
+                      </Link>
+                      <Link
+                        to={"/services"}
+                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+                      >
+                        <a href="www.sazandeh.onrender.com/services">خدمات</a>
                       </Link>
                       <Link
                         to={"/"}
@@ -211,7 +279,11 @@ export default function navbar() {
           </Dialog>
         </Transition>
         <Transition appear show={isOpen2} as={Fragment}>
-          <Dialog as="div" className="flex h-screen w-full h-screen inset-0 z-10" onClose={closeModal2}>
+          <Dialog
+            as="div"
+            className="flex h-screen w-full h-screen inset-0 z-10"
+            onClose={closeModal2}
+          >
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -225,7 +297,7 @@ export default function navbar() {
             </Transition.Child>
 
             <div className="fixed h-screen inset-0 overflow-y-auto">
-              <div className="flex h-screen items-center justify-center p-4 text-center">
+              <div className="flex w-10/12 h-screen items-center justify-start text-center">
                 <Transition.Child
                   as={Fragment}
                   enter="ease-out duration-300"
@@ -233,29 +305,225 @@ export default function navbar() {
                   enterTo="opacity-100 scale-100 translate-x-0"
                   leave="ease-in duration-200"
                   leaveFrom="opacity-100 scale-100"
-                  leaveTo="opacity-0 scale-95 "
+                  leaveTo="opacity-0 scale-95 -translate-x-24"
                 >
-                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Panel className="w-full h-full text-gray-100 max-w-md transform overflow-hidden pt-32 bg-gray-800 z-80  p-6 text-left align-middle shadow-xl transition-all">
                     <Dialog.Title
                       as="h3"
-                      className="text-lg font-medium leading-6 text-gray-900"
+                      className="text-2xl border-b text-right py-6 font-bold leading-6 text-gray-100"
                     >
-                      Payment successful
+                      سبد خرید
                     </Dialog.Title>
-                    <div className="mt-2">
-                      <p className="text-sm text-gray-500">
-                        Your payment has been successfully submitted. We’ve sent
-                        you an email with all of the details of your order.
-                      </p>
+                    <div className="flex flex-col border-b w-full space-y-2 h-4/6 mt-2">
+                      {items.map((item) => {
+                        return (
+                          <div className="flex justify-around items-center bg-gray-100 text-gray-900 h-16 w-full">
+                            <div className="flex justify-around items-around space-x-2 ">
+                              <Plus
+                                className="border rounded-full cursor-pointer hover:bg-gray-900 hover:text-gray-50 transition"
+                                size={20}
+                              />
+                              <h3>{item.quantity}</h3>
+                              <Minus
+                                className="border rounded-full cursor-pointer hover:bg-gray-900 hover:text-gray-50 transition"
+                                size={20}
+                              />
+                            </div>
+                            <h2>{item.price}</h2>
+                            <h1>{item.title}</h1>
+                            <div className="flex">
+                              <img
+                                className="object-contain w-10 h-10 rounded"
+                                src={item.image}
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
 
-                    <div className="mt-4">
+                    <div className="flex space-y-4 flex-col justify-around items-start mt-4">
+                      <div className="flex justify-around rounded-md  items-center bg-gray-100 text-gray-900 shadow-2xl w-36 py-4">
+                        <div className="flex">20000</div>
+                        <div className="flex ">:مجموع خرید</div>
+                      </div>
+                      <Link to={"/checkout"}>
+                        <button
+                          type="button"
+                          className="inline-flex justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-yellow-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-2"
+                          onClick={closeModal2}
+                        >
+                          تکمیل خرید
+                        </button>
+                      </Link>
+                    </div>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+        <Transition appear show={isOpen3} as={Fragment}>
+          <Dialog as="div" className="relative z-10" onClose={closeModal3}>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-black bg-opacity-25" />
+            </Transition.Child>
+
+            <div className="fixed inset-0 overflow-y-auto">
+              <div className="flex min-h-full items-center justify-center p-4 text-center">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 scale-95"
+                  enterTo="opacity-100 scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 scale-100"
+                  leaveTo="opacity-0 scale-95"
+                >
+                  <Dialog.Panel className="w-full bg-gray-700 max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                    <Dialog.Title
+                      as="h3"
+                      className="text-lg font-bold leading-6 text-right text-gray-100"
+                    >
+                      {mode === "login" ? (
+                        <div>ورود به حساب کاربری</div>
+                      ) : mode === "signup" ? (
+                        <div>ساخت حساب جدید</div>
+                      ) : null}
+                    </Dialog.Title>
+                    {mode === "login" ? (
+                      <div className="flex flex-col justify-center h-full space-y-4 p-4 mt-2">
+                        <div className="flex w-full border">
+                          <label
+                            className="bg-gray-100 flex justify-center items-center p-3"
+                            htmlFor="email"
+                          >
+                            <User />
+                          </label>
+                          <input
+                            onChange={(e) => {
+                              setEmailAddress(e.target.value);
+                            }}
+                            className="w-full   text-right p-2"
+                            placeholder="نام کاربری"
+                            name="email"
+                            type="email"
+                          />
+                        </div>
+                        <div className="flex w-full border">
+                          <label
+                            className="bg-gray-100 flex justify-center items-center p-3"
+                            htmlFor="password"
+                          >
+                            <Password />
+                          </label>
+                          <input
+                            onChange={(e) => {
+                              setPhoneNumber(e.target.value);
+                            }}
+                            className="w-full   text-right p-2"
+                            placeholder="گذرواژه"
+                            name="password"
+                            type="password"
+                          />
+                        </div>
+                        <div className="flex cursor-pointer justify-end items-center text-gray-100">
+                          <p>بازیابی گذرواژه؟</p>
+                        </div>
+                      </div>
+                    ) : mode === "signup" ? (
+                      <div className="flex flex-col justify-center h-full space-y-4 p-4 mt-2">
+                        <div className="flex w-full border">
+                          <label
+                            className="bg-gray-100 flex justify-center items-center p-3"
+                            htmlFor="name"
+                          >
+                            <AiOutlineUser />
+                          </label>
+                          <input
+                            onChange={(e) => setFullName(e.target.value)}
+                            className="w-full   text-right p-2"
+                            placeholder="نام و نام خانوادگی"
+                            name="name"
+                            type="text"
+                          />
+                        </div>
+                        <div className="flex w-full border">
+                          <label
+                            className="bg-gray-100 flex justify-center items-center p-3"
+                            htmlFor="email"
+                          >
+                            <AiOutlineMail />
+                          </label>
+                          <input
+                            onChange={(e) => {
+                              setEmailAddress(e.target.value);
+                            }}
+                            className="w-full   text-right p-2"
+                            placeholder="آدرس ایمیل"
+                            name="email"
+                            type="email"
+                          />
+                        </div>
+                        <div className="flex w-full border">
+                          <label
+                            className="bg-gray-100 flex justify-center items-center p-3"
+                            htmlFor="password"
+                          >
+                            <Password />
+                          </label>
+                          <input
+                            onChange={(e) => {
+                              setPhoneNumber(e.target.value);
+                            }}
+                            className="w-full   text-right p-2"
+                            placeholder="گذرواژه"
+                            name="password"
+                            type="password"
+                          />
+                        </div>
+                      </div>
+                    ) : null}
+
+                    <div className="flex space-y-2 flex-col justify-center items-center mt-4">
                       <button
                         type="button"
-                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                        onClick={closeModal}
+                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-lg font-medium text-gray-900 hover:bg-yellow-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                        onClick={closeModal3}
                       >
-                        Got it, thanks!
+                        ورود
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {}}
+                        className="inline-flex justify-center rounded-md border border-transparent bg-gray-900 hover:bg-black transition px-4 py-2 text-lg text-gray-100 "
+                      >
+                        {mode === "login" ? (
+                          <div
+                            onClick={() => {
+                              setMode("signup");
+                            }}
+                          >
+                            ساخت حساب جدید
+                          </div>
+                        ) : mode === "signup" ? (
+                          <div
+                            onClick={() => {
+                              setMode("login");
+                            }}
+                          >
+                            بازگشت
+                          </div>
+                        ) : null}
                       </button>
                     </div>
                   </Dialog.Panel>
