@@ -265,6 +265,12 @@ export default function navbar() {
                         <a href="www.sazandeh.onrender.com/services">خدمات</a>
                       </Link>
                       <Link
+                        to={"/admin"}
+                        className="cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+                      >
+                        <a href="www.sazandeh.onrender.com">ادمین</a>
+                      </Link>
+                      <Link
                         to={"/"}
                         className="cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
                       >
