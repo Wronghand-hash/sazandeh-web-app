@@ -104,7 +104,7 @@ export default function services() {
                 سایر
               </p>
             </div>
-            <p className="font-bold text-2xl">خدمات سازنده</p>
+            <p className="font-bold text-2xl">خدمات چاره جو</p>
           </div>
           <div className="flex flex-col lg:flex-row justify-center w-full h-5/6 ">
             <div className="w-full pt-28 space-y-8  items-end text-end flex flex-col">
@@ -237,9 +237,7 @@ export default function services() {
         </div>
         <div className="w-screen mt-20 h-auto hidden lg:flex items-center justify-center">
           <img className="relative" src={mainPageGraphic} alt="" />
-          <button className="transition duration-300 ease-in hover:bg-neutral-900 hover:text-yellow-400 absolute right-80 mr-28 font-bold rounded-sm mt-28   px-4 py-1 bg-white text-neutral-900 text-lg">
-            تماس با ما
-          </button>
+
           <h1 className="text-md font-bold absolute mt-10 ml-8 text-right">
             بهینه ترین هزینه و مناسب ترین زمان برای خدمات ساختمانی
             <p className="text-sm absolute font-light">

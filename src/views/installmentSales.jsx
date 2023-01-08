@@ -36,9 +36,9 @@ export default function installmentSales() {
       >
         <div className="hidden lg:absolute w-96 h-96 bg-yellow-400 absolute transform rotate-45 overflow-hidden -translate-x-64 overflow-hidden -translate-y-8"></div>
         <div className="flex flex-col justify-end items-center w-1/2 h-1/2">
-          <p className="text-white font-bold text-5xl">فروش اقساطی</p>
+          <p className="text-white font-bold text-5xl">خرید اقساطی</p>
           <div className="flex text-white p-2 items-center align-center flex-row">
-            <p className="text-yellow-500">فروش اقساطی</p>
+            <p className="text-yellow-500">خرید اقساطی</p>
             <AiOutlineLeft />
             <Link to={"/"}>
               <a
@@ -233,7 +233,7 @@ export default function installmentSales() {
         <div className="flex bg-gray-50 border flex-col w-10/12 h-full rounded">
           <div className="flex justify-around items-center bg-gray-900 rounded w-full h-14">
             <div className="flex text-xl font-bold text-gray-50">
-              فروشگاه سازنده
+              فروشگاه چاره جو
             </div>
             <div className="flex text-xl font-bold text-gray-50">
               محاسبه مبلغ

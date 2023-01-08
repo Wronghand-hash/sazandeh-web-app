@@ -17,6 +17,8 @@ import {
   ShoppingCart,
   User,
   Password,
+  MagnifyingGlass,
+  Phone,
 } from "phosphor-react";
 
 import mainPageProjects6 from "../assets/images/mainPageProjects6.webp";
@@ -74,31 +76,49 @@ export default function navbar() {
     setIsOpen4(true);
   }
   return (
-    <div className="w-screen fixed flex-col h-24 bg-black flex z-50">
-      <div className="bg-transparent hidden lg:flex text-white flex justify-end pr-52 p-4 space-x-8">
-        <div className="flex space-x-2 justity-between items-center">
-          <AiOutlineClockCircle />
-          <p>شنبه تا پنج شنبه 12 الی 11</p>
-        </div>
-        <div className="flex space-x-2 justify-between items-center">
-          <AiOutlineMail></AiOutlineMail>
-          <p>info@sazandeh.com</p>
-        </div>
-        <div className="flex space-x-2 justify-between items-center">
-          <AiOutlinePhone />
-          <p>123-231-2422</p>
-        </div>
-      </div>
-      <div className="flex border-b-2 border-yellow-400 bg-white items-center justify-around h-16">
-        <div className="flex justify-start lg:justify-center px-2 w-2/3">
-          <div className=" w-12 h-12">
+    <div className="w-screen fixed flex-col h-24  flex z-50">
+      <div className="bg-white shadow-md lg:flex hidden flex-row-reverse  text-white items-center justify-between pl-4 py-4 pr-6 ">
+        <div className="flex flex-row-reverse items-center">
+          <div className=" w-16 h-16">
             <Link to={"/"}>
               <a href="www.sazandeh.onrender.com/">
                 <img src={Logo} alt="" />
               </a>
             </Link>
           </div>
+          <div class="pt-2 relative text-black mr-10">
+            <button
+              type="submit"
+              className="absolute flex items-center right-0 top-0 mt-5 mr-4"
+            >
+              <MagnifyingGlass size={20} weight="bold" />
+            </button>
+
+            <input
+              className="border-2 placeholder-gray-500 text-right transition ease-in duration-300 text-darkPurple w-textArea hover:bg-white border-gray-300 bg-mainBlue h-10 px-5 pr-4 md:pr-16 rounded-full text-md focus:outline-none"
+              type="search"
+              name="search"
+              placeholder="جستجو"
+            />
+          </div>
         </div>
+        <div className="flex ">
+          <div
+            onClick={openModal2}
+            className="flex hover:bg-gray-900 text-neutral-900 hover:text-white transition px-4 py-3 cursor-pointer transfrom   "
+          >
+            <ShoppingCart size={32} />
+          </div>
+          <div
+            onClick={openModal3}
+            className="flex hover:bg-gray-900 text-neutral-900 hover:text-white transition px-4 py-3 cursor-pointer transfrom   "
+          >
+            <SignIn size={32} />
+          </div>
+        </div>
+      </div>
+      <div className="flex border-b-2 border-yellow-400 bg-white items-center justify-around h-16">
+        <div className="flex justify-start lg:justify-center px-2 w-2/3"></div>
         <div className="flex w-full   h-16 justify-end lg:pr-32 py-8 space-x-12 items-center align-center">
           <Link
             to={"/aboutus"}
@@ -128,7 +148,7 @@ export default function navbar() {
             to={"/installmentsales"}
             className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white w-20 flex  py-3 transition "
           >
-            <a href="www.sazandeh.onrender.com/installmentSales">خریداقساطی</a>
+            <a href="www.sazandeh.onrender.com/installmentSales">خرید اقساطی</a>
           </Link>
           <Link
             to={"/projects"}
@@ -155,18 +175,6 @@ export default function navbar() {
             <a href="www.sazandeh.onrender.com">خانه</a>
           </Link>
           <div className="flex justify-center items-center ">
-            <div
-              onClick={openModal2}
-              className="flex hover:bg-gray-900 hover:text-white transition px-4 py-3 cursor-pointer transfrom   "
-            >
-              <ShoppingCart size={32} />
-            </div>
-            <div
-              onClick={openModal3}
-              className="flex hover:bg-gray-900 hover:text-white transition px-4 py-3 cursor-pointer transfrom   "
-            >
-              <SignIn size={32} />
-            </div>
             <button
               type="button"
               onClick={openModal}
@@ -210,7 +218,7 @@ export default function navbar() {
                       as="h3"
                       className="text-lg font-medium leading-6 text-gray-900"
                     >
-                      منو سازنده
+                      منو چاره جو
                     </Dialog.Title>
 
                     <div className="flex flex-col-reverse text-right mt-24">
@@ -395,7 +403,7 @@ export default function navbar() {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="w-full bg-gray-700 max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Panel className="w-full bg-neutral-900 max-w-md transform overflow-hidden rounded-sm p-6 text-left align-middle shadow-xl transition-all">
                     <Dialog.Title
                       as="h3"
                       className="text-lg font-bold leading-6 text-right text-gray-100"
@@ -413,14 +421,14 @@ export default function navbar() {
                             className="bg-gray-100 flex justify-center items-center p-3"
                             htmlFor="email"
                           >
-                            <User />
+                            <Phone size={20} weight="bold" />
                           </label>
                           <input
                             onChange={(e) => {
                               setEmailAddress(e.target.value);
                             }}
                             className="w-full   text-right p-2"
-                            placeholder="نام کاربری"
+                            placeholder="شماره تماس"
                             name="email"
                             type="email"
                           />
@@ -442,7 +450,7 @@ export default function navbar() {
                             type="password"
                           />
                         </div>
-                        <div className="flex cursor-pointer justify-end items-center text-gray-100">
+                        <div className="flex my-3 cursor-pointer justify-end items-center text-gray-100">
                           <p>بازیابی گذرواژه؟</p>
                         </div>
                       </div>
@@ -453,33 +461,17 @@ export default function navbar() {
                             className="bg-gray-100 flex justify-center items-center p-3"
                             htmlFor="name"
                           >
-                            <AiOutlineUser />
+                            <Phone size={20} weight="bold" />
                           </label>
                           <input
                             onChange={(e) => setFullName(e.target.value)}
                             className="w-full   text-right p-2"
-                            placeholder="نام و نام خانوادگی"
+                            placeholder="شماره تماس"
                             name="name"
                             type="text"
                           />
                         </div>
-                        <div className="flex w-full border">
-                          <label
-                            className="bg-gray-100 flex justify-center items-center p-3"
-                            htmlFor="email"
-                          >
-                            <AiOutlineMail />
-                          </label>
-                          <input
-                            onChange={(e) => {
-                              setEmailAddress(e.target.value);
-                            }}
-                            className="w-full   text-right p-2"
-                            placeholder="آدرس ایمیل"
-                            name="email"
-                            type="email"
-                          />
-                        </div>
+
                         <div className="flex w-full border">
                           <label
                             className="bg-gray-100 flex justify-center items-center p-3"
@@ -503,7 +495,7 @@ export default function navbar() {
                     <div className="flex space-y-2 flex-col justify-center items-center mt-4">
                       <button
                         type="button"
-                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-lg font-medium text-gray-900 hover:bg-yellow-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                        className="inline-flex justify-center rounded-sm my-5 transition ease-in duration-300   bg-yellow-400 px-12 py-2 text-lg   text-gray-900 hover:bg-neutral-900 hover:text-white  "
                         onClick={closeModal3}
                       >
                         ورود
@@ -511,7 +503,7 @@ export default function navbar() {
                       <button
                         type="button"
                         onClick={() => {}}
-                        className="inline-flex justify-center rounded-md border border-transparent bg-gray-900 hover:bg-black transition px-4 py-2 text-lg text-gray-100 "
+                        className="inline-flex justify-center mb-5 rounded-sm transition ease-in duration-300 bg-white hover:bg-black px-4 py-2 text-lg text-neutral-900 "
                       >
                         {mode === "login" ? (
                           <div

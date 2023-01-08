@@ -37,9 +37,9 @@ export default function blogs() {
       >
         <div className="hidden lg:block w-96 h-96 bg-yellow-400 absolute transform rotate-45 overflow-hidden -translate-x-64 overflow-hidden -translate-y-8"></div>
         <div className="flex flex-col justify-end items-center w-1/2 h-1/2">
-          <p className="text-white font-bold text-5xl">وبلاگ سازنده</p>
-          <div className="flex text-white p-2 items-center align-center flex-row">
-            <p className="text-yellow-500 font-bold">تماس با ما</p>
+          <p className="text-white font-bold text-5xl">وبلاگ چاره جو</p>
+          <div className="flex text-white p-2 items-center align-center flex-row space-x-2">
+            <p className="text-yellow-500 font-bold">وبلاگ</p>
             <AiOutlineLeft />
             <Link to={"/"}>
               <a

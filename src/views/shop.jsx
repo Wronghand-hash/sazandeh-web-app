@@ -242,7 +242,7 @@ export default function shopPage() {
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
                   >
-                    منو سازنده
+                    منو چاره جو
                   </Dialog.Title>
 
                   <div className="flex px-8 flex-col space-y-5 text-right mt-20">

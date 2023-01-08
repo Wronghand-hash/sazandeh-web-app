@@ -46,27 +46,16 @@ export default function homePage() {
           src={mainPageBg}
           alt=""
         />
-        <div className="flex lg:my-0 lg:bg-transparent bg-gray-200 lg:mb-0 mb-0 w-full lg:absolute h-full items-center flex-col lg:right-72 lg:pb-16 space-y-4 justify-end">
+        <div className="flex lg:my-0 lg:bg-transparent bg-gray-200 lg:mb-0 mb-0 w-full lg:absolute h-full items-center flex-col lg:right-72 lg:pb-10 space-y-4 justify-end">
           <h3 className="bg-white text-black p-2">
             از صفر تا صد پروژه های ساختمانی در کنار شما هستیم
           </h3>
           <h1 className="lg:text-5xl text-2xl text-neutral-900 text-center lg:text-slate-100 w-96 font-black">
             ارائه خدمات و محصولات ساختمانی
           </h1>
-          <button className="px-6 py-3 rounded-sm text-md border-b border-yellow-400 bg-neutral-900 text-white">
-            استعلام قیمت و مشاوره
+          <button className="px-6 py-3 my-7 rounded-sm text-xl border-b-4 border-yellow-400 bg-neutral-900 text-white transition ease-in duration-300 hover:bg-yellow-400 hover:text-neutral-900 hover:border-neutral-900">
+            محاسبه هزینه ی بازسازی
           </button>
-          <div className="space-x-2 py-2 flex items-center justify-center">
-            <button className="px-3 py-3 font-black rounded-sm transition ease-in duration-300 hover:bg-yellow-400 hover:text-neutral-900 text-md border-b border-yellow-400 bg-neutral-900 text-white">
-              استعلام قیمت
-            </button>
-            <button className="px-3 py-3 font-black rounded-sm transition ease-in duration-300 hover:bg-neutral-900  hover:text-white text-md border-b border-yellow-400 bg-yellow-400 text-neutral-900">
-              تعمیرات
-            </button>
-            <button className="px-3 py-3 font-black rounded-sm transition ease-in duration-300 hover:bg-yellow-400 hover:text-neutral-900 text-md border-b border-yellow-400 bg-neutral-900 text-white">
-              بازسازی
-            </button>
-          </div>
         </div>
       </div>
       <div className="w-screen h-auto lg:h-60 bg-gray-100 flex lg:flex-row flex-col-reverse mb-10">
@@ -478,7 +467,7 @@ export default function homePage() {
             <h3 className="py-2 text-md px-1 bg-yellow-400 text-neutral-900">
               LATEST
             </h3>
-            <h1 className="text-xl my-2 font-bold">وبلاگ سازنده </h1>
+            <h1 className="text-xl my-2 font-bold">وبلاگ چاره جو </h1>
           </div>
           <div className="w-full   flex justify-center items-center">
             <img
@@ -498,8 +487,8 @@ export default function homePage() {
           </div>
         </div>
       </div>
-      <div className="w-auto h-auto lg:h-40 px-10 py-5 my-9 flex lg:flex-row flex-col-reverse items-center justify-center">
-        <div className="w-auto h-full lg:space-y-0 space-y-6 flex lg:flex-row flex-col items-center lg:space-x-10">
+      <div className="w-screen h-auto lg:h-40 px-10 py-5 my-9 flex lg:flex-row flex-col-reverse items-center justify-center">
+        <div className="  h-full lg:space-y-0 space-y-6 flex lg:flex-row flex-col items-center lg:space-x-10">
           <button className="px-3 py-3 rounded-sm text-md bg-blue-600 text-white">
             <CaretLeft size={20} weight="fill" />
           </button>
@@ -520,7 +509,7 @@ export default function homePage() {
             <CaretRight size={20} weight="fill" />
           </button>
         </div>
-        <div className="flex flex-col mx-6 text-center items-center lg:my-0 my-4">
+        <div className="flex w-full flex-col mx-6 text-center items-center lg:my-0 my-4">
           <h3 className="py-2 text-md px-1 bg-yellow-400 text-neutral-900">
             PARTNERS
           </h3>
