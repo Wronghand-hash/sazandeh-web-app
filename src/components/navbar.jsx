@@ -146,7 +146,7 @@ export default function navbar() {
           </Link>
           <Link
             to={"/installmentsales"}
-            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white w-20 flex  py-3 transition "
+            className="hidden lg:flex cursor-pointer duration-300 hover:bg-black hover:text-white w-28 items-center justify-center  py-3 transition "
           >
             <a href="www.sazandeh.onrender.com/installmentSales">خرید اقساطی</a>
           </Link>
@@ -495,7 +495,7 @@ export default function navbar() {
                     <div className="flex space-y-2 flex-col justify-center items-center mt-4">
                       <button
                         type="button"
-                        className="inline-flex justify-center rounded-sm my-5 transition ease-in duration-300   bg-yellow-400 px-12 py-2 text-lg   text-gray-900 hover:bg-neutral-900 hover:text-white  "
+                        className="inline-flex justify-center rounded-sm my-5 transition ease-in duration-300   bg-yellow-400 px-12 py-2 text-lg   text-gray-900 hover:bg-black hover:text-white  "
                         onClick={closeModal3}
                       >
                         ورود
@@ -503,7 +503,7 @@ export default function navbar() {
                       <button
                         type="button"
                         onClick={() => {}}
-                        className="inline-flex justify-center mb-5 rounded-sm transition ease-in duration-300 bg-white hover:bg-black px-4 py-2 text-lg text-neutral-900 "
+                        className="inline-flex justify-center mb-5 rounded-sm transition ease-in duration-300 hover:text-white bg-white hover:bg-black px-4 py-2 text-lg text-neutral-900 "
                       >
                         {mode === "login" ? (
                           <div
