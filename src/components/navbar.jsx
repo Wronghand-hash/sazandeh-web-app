@@ -310,7 +310,7 @@ export default function navbar() {
               <div className="sticky inset-0 bg-black bg-opacity-25" />
             </Transition.Child>
 
-            <div className="fixed h-screen inset-0 overflow-y-auto">
+            <div className="fixed z-50 h-screen inset-0 overflow-y-auto">
               <div className="flex w-10/12 h-screen items-center justify-start text-center">
                 <Transition.Child
                   as={Fragment}

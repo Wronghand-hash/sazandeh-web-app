@@ -3,6 +3,8 @@ import Navbar from "../components/navbar";
 import AboutusImage from "../assets/images/aboutusImage.webp";
 import { Disclosure } from "@headlessui/react";
 import { CaretDown } from "phosphor-react";
+import timche from "../assets/images/timche.svg";
+import { Select } from "@chakra-ui/react";
 import {
   Users,
   Coins,
@@ -10,8 +12,6 @@ import {
   Copy,
   Calculator,
   Activity,
-  Clock,
-  GlobeStand,
 } from "phosphor-react";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
@@ -231,11 +231,33 @@ export default function installmentSales() {
       </div>
       <div className="flex flex-col w-full py-8 lg:p-20 h-full justify-center items-center">
         <div className="flex bg-gray-50 border flex-col w-10/12 h-full rounded">
-          <div className="flex justify-around items-center bg-gray-900 rounded w-full h-14">
-            <div className="flex text-xl font-bold text-gray-50">
-              فروشگاه چاره جو
+          <div className="flex justify-between items-center bg-gray-900 rounded w-full h-14">
+            <div className=" px-5 flex items-center justify-center w-full text-lg  text-gray-50">
+              <Select
+              size={'md'}
+                className="rounded text-gray-900 text-sm text-right w-10/12 "
+                placeholder="تامیین کننده وام را انتخاب کنید"
+                icon={<div></div>}
+              >
+                <option
+                  className="p-5 space-x-4 flex w-full justify-between items-center"
+                  value="تیمچه"
+                >
+                  <h2 className="px-3 flex space-x-4">
+                    {" "}
+                    <h1>فروشگاه</h1>:تیمچه
+                  </h2>
+                </option>
+                <option value="option2">
+                  {" "}
+                  <h2 className="px-3 flex space-x-4">
+                    {" "}
+                    <h1>فروشگاه</h1>:بن کارت
+                  </h2>
+                </option>
+              </Select>
             </div>
-            <div className="flex text-xl font-bold text-gray-50">
+            <div className="flex items-center justify-center w-full text-xl font-bold text-gray-50">
               محاسبه مبلغ
             </div>
           </div>
