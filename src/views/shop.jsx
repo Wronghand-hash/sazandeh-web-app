@@ -8,6 +8,9 @@ import fiveproduct from "../assets/images/productImages/fiveproduct.webp";
 import sixproduct from "../assets/images/productImages/sixproduct.webp";
 import sevenproduct from "../assets/images/productImages/sevenproduct.webp";
 import eightproduct from "../assets/images/productImages/eightproduct.webp";
+import catalogImage from "../assets/images/catalogImage.jpg";
+import { AiOutlineLeft } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import nineproduct from "../assets/images/productImages/nineproduct.webp";
 import { Fragment, useState } from "react";
 import {
@@ -51,7 +54,32 @@ export default function shopPage() {
   return (
     <div className="w-full h-full">
       <Navbar />
-      <div className="flex pt-20 lg:pt-52 w-full h-full justify-center ">
+      <div
+        style={{
+          backgroundImage: `url(${catalogImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="flex  flex-row-reverse justiy-end overflow-hidden items-center w-full h-rem26 bg-black"
+      >
+        <div className="flex flex-col justify-end items-center w-1/2 h-1/2">
+          <p className="text-white font-bold text-5xl">کاتالوگ ها</p>
+          <div className="flex text-white p-2 items-center align-center flex-row">
+            <p className="text-yellow-500">کاتالوگ ها</p>
+            <AiOutlineLeft />
+            <Link to={"/"}>
+              <a
+                href="www.sazandeh.onredner.com"
+                className="text-white font-bold"
+              >
+                خانه
+              </a>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="flex pt-20  w-full h-full justify-center ">
         <div className="lg:w-9/12 w-full h-full  flex">
           <div className="flex h-full flex-col w-full ">
             <div className="bg-yellow-500 my-4 md:bg-white flex h-24 items-center w-full lg:px-8 py-2 justify-around">
