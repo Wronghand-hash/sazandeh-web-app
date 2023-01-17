@@ -15,6 +15,7 @@ import {
   Quotes,
 } from "phosphor-react";
 import { BsPhoneFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import mainPageBg from "../assets/images/mainPageBg.webp";
 import mainPageProjects from "../assets/images/mainPageProjects.webp";
 import mainPageProjects2 from "../assets/images/mainPageProjects2.webp";
@@ -393,9 +394,11 @@ export default function homePage() {
             className="flex flex-col items-center my-5
           "
           >
-            <h3 className="py-2 text-md px-1 bg-yellow-400 text-neutral-900">
-              خبرنامه ما
-            </h3>
+            <Link to="/news">
+              <h3 className="py-2 cursor-pointer text-md px-1 bg-yellow-400 text-neutral-900">
+                خبرنامه ما
+              </h3>
+            </Link>
             <h1 className="text-xl my-2 font-bold">
               اطلاع از تخفیفات و جشنواره ها
             </h1>

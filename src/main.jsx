@@ -16,6 +16,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Checkout from "./views/checkout";
 import Profile from "./views/profile";
 import NewsPage from "./views/newPage";
+import News from "./views/news";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/news" element={<NewsPage />} />
+      <Route path="/newsitem" element={<News />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/catalogs" element={<Catalogs />} />
