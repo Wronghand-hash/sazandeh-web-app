@@ -18,6 +18,7 @@ import {
   ArchiveBox,
   GlobeStand,
   Users,
+  CirclesThreePlus,
   PictureInPicture,
 } from "phosphor-react";
 import { useState } from "react";
@@ -51,31 +52,37 @@ export default function services() {
           </div>
         </div>
       </div>
-      <div className="flex w-full items-center py-20 justify-center ">
-        <div className="flex flex-col lg:flex-row lg:space-y-0 lg:space-x-2  space-y-10 lg:space-x-2 py-4 w-9/12 ">
+      <div className="flex space-y-4 flex-col w-full items-center py-20 justify-center ">
+        <div className="flex flex-col lg:flex-row lg:space-y-0 lg:space-x-2 lg:w-full lg:px-2  space-y-10 lg:space-x-2 py-4 w-9/12 ">
           {services.map((service, i) => {
             return (
-              <Link to="/services/service">
-                <div
-                  key={i}
-                  className="w-88 flex-col flex hover:bg-blue-500 hover:text-white transition-all bg-gray-300 h-76"
-                >
-                  <div className=" transition-all">
-                    <img src={service} alt="" />
+              <div
+                key={i}
+                className="w-88 lg:w-96 flex-col flex hover:bg-blue-500 hover:text-white transition-all bg-gray-300 h-76"
+              >
+                <div className=" transition-all">
+                  <img src={service} alt="" />
+                </div>
+                <div className="flex w-full py-3 h-full px-2 justify-around items-center align-center">
+                  <div className="flex justify-center px-4 w-full h-full items-start flex-col">
+                    <p>طراحی و معماری</p>
+                    <p>ساختمان</p>
                   </div>
-                  <div className="flex w-full py-3 h-full px-2 justify-around items-center align-center">
-                    <div className="flex justify-center px-4 w-full h-full items-start flex-col">
-                      <p>طراحی و معماری</p>
-                      <p>ساختمان</p>
-                    </div>
-                    <div>
-                      <ArrowCircleRight size={32} />
-                    </div>
+                  <div>
+                    <ArrowCircleRight size={32} />
                   </div>
                 </div>
-              </Link>
+              </div>
             );
           })}
+        </div>
+        <div className="flex">
+          <button className="flex shadow-xl transition w-64 justify-around hover:bg-yellow-400 hover:text-gray-900 border  text-gray-100 h-20 bg-blue-500 items-center">
+            <CirclesThreePlus size={32} />
+            <div className="flex items-center justify-center flex-col">
+              <p>خدمات </p> <p>بیشتر</p>
+            </div>
+          </button>
         </div>
       </div>
       <div className="flex flex-col bg-gray-200 w-full h-full">
