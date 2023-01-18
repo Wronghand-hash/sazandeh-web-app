@@ -133,24 +133,24 @@ export default function service() {
               <p className="p-5">دیگر خدمات</p>
             </div>
             <div className="flex justify-around items-center p-5 w-full h-full">
-              <div className="flex flex-col w-52 h-72 justify-center items-center bg-gray-200 rounded-lg shadow-2xl">
-                <div className="w-52 h-52 bg-green-300"></div>
+              <div className="flex space-y-2 cursor-pointer flex-col w-52 h-72 justify-center items-center bg-gray-200 rounded-lg shadow-2xl">
+                <div className="w-52 h-52 rounded-lg bg-green-300"></div>
                 <h1>لوله کشی</h1>
                 <p className="text-green-800">
                   <p>تومان</p>
                   <p>30000</p>
                 </p>
               </div>
-              <div className="flex flex-col w-52 h-72 justify-center items-center bg-gray-200 rounded-lg shadow-2xl">
-                <div className="w-52 h-52 bg-green-300"></div>
+              <div className="flex space-y-2 cursor-pointer flex-col w-52 h-72 justify-center items-center bg-gray-200 rounded-lg shadow-2xl">
+                <div className="w-52 h-52 rounded-lg bg-green-300"></div>
                 <h1>لوله کشی</h1>
                 <p className="text-green-800">
                   <p>تومان</p>
                   <p>30000</p>
                 </p>
               </div>
-              <div className="flex flex-col w-52 h-72 justify-center items-center bg-gray-200 rounded-lg shadow-2xl">
-                <div className="w-52 h-52 bg-green-300"></div>
+              <div className="flex space-y-2 cursor-pointer flex-col w-52 h-72 justify-center items-center bg-gray-200 rounded-lg shadow-2xl">
+                <div className="w-52 h-52 rounded-lg bg-green-300"></div>
                 <h1>لوله کشی</h1>
                 <p className="text-green-800">
                   <p>تومان</p>
