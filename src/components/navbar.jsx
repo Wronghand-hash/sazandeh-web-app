@@ -1,10 +1,5 @@
-import {
-  AiOutlineClockCircle,
-  AiOutlineMail,
-  AiOutlinePhone,
-  AiOutlineUser,
-} from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { Menu, Button, Text } from "@mantine/core";
 import Logo from "../assets/images/logo.png";
 import { Dialog, Transition } from "@headlessui/react";
 import { BsPhoneFill } from "react-icons/bs";
@@ -156,17 +151,49 @@ export default function navbar() {
           >
             <a href="www.sazandeh.onrender.com/projects">پروژها</a>
           </Link>
-          <Link
-            to={"/shop"}
-            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition "
-          >
-            <a href="www.sazandeh.onrender.com/shop">کالا</a>
+          <Link to={"/shop"}>
+            <Menu
+              trigger="hover"
+              openDelay={100}
+              closeDelay={400}
+              shadow="md"
+              width={200}
+            >
+              <Menu.Target>
+                <Button className="hidden lg:block text-gray-900 font-semibold cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition ">
+                  <a href="www.sazandeh.onrender.com/shop">کالا</a>
+                </Button>
+              </Menu.Target>
+
+              <Menu.Dropdown className="text-right">
+                <Menu.Label>بر اساس</Menu.Label>
+                <Menu.Item className="text-right">جدید ترین</Menu.Item>
+                <Menu.Item className="text-right">جدید ترین</Menu.Item>
+                <Menu.Item className="text-right">پر بازدید ترین</Menu.Item>
+              </Menu.Dropdown>
+            </Menu>
           </Link>
-          <Link
-            to={"/services"}
-            className="hidden lg:block cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition "
-          >
-            <a href="www.sazandeh.onrender.com/services">خدمات</a>
+          <Link to={"/services"}>
+            <Menu
+              trigger="hover"
+              openDelay={100}
+              closeDelay={400}
+              shadow="md"
+              width={200}
+            >
+              <Menu.Target>
+                <Button className="hidden lg:block text-gray-900 font-semibold cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition ">
+                  <a href="www.sazandeh.onrender.com/services">خدمات</a>
+                </Button>
+              </Menu.Target>
+
+              <Menu.Dropdown className="text-right">
+                <Menu.Label>بر اساس</Menu.Label>
+                <Menu.Item className="text-right">جدید ترین</Menu.Item>
+                <Menu.Item className="text-right">جدید ترین</Menu.Item>
+                <Menu.Item className="text-right">پر بازدید ترین</Menu.Item>
+              </Menu.Dropdown>
+            </Menu>
           </Link>
           <Link
             to={"/"}
