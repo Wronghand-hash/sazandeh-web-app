@@ -55,23 +55,25 @@ export default function services() {
         <div className="flex flex-col lg:flex-row lg:space-y-0 lg:space-x-2  space-y-10 lg:space-x-2 py-4 w-9/12 ">
           {services.map((service, i) => {
             return (
-              <div
-                key={i}
-                className="w-88 flex-col flex hover:bg-blue-500 hover:text-white transition-all bg-gray-300 h-76"
-              >
-                <div className=" transition-all">
-                  <img src={service} alt="" />
-                </div>
-                <div className="flex w-full py-3 h-full px-2 justify-around items-center align-center">
-                  <div className="flex justify-center px-4 w-full h-full items-start flex-col">
-                    <p>طراحی و معماری</p>
-                    <p>ساختمان</p>
+              <Link to="/services/service">
+                <div
+                  key={i}
+                  className="w-88 flex-col flex hover:bg-blue-500 hover:text-white transition-all bg-gray-300 h-76"
+                >
+                  <div className=" transition-all">
+                    <img src={service} alt="" />
                   </div>
-                  <div>
-                    <ArrowCircleRight size={32} />
+                  <div className="flex w-full py-3 h-full px-2 justify-around items-center align-center">
+                    <div className="flex justify-center px-4 w-full h-full items-start flex-col">
+                      <p>طراحی و معماری</p>
+                      <p>ساختمان</p>
+                    </div>
+                    <div>
+                      <ArrowCircleRight size={32} />
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

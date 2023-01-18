@@ -17,6 +17,7 @@ import Checkout from "./views/checkout";
 import Profile from "./views/profile";
 import NewsPage from "./views/newPage";
 import News from "./views/news";
+import Service from "./views/service";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/" element={<HomePage />} />
       <Route path="/aboutus" element={<AboutUs></AboutUs>}></Route>
       <Route path="/services" element={<Services />}></Route>
+      <Route path="/services/service" element={<Service />} />
       <Route path="/admin" element={<AdminPage />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/profile" element={<Profile />} />
