@@ -19,6 +19,8 @@ import NewsPage from "./views/newPage";
 import News from "./views/news";
 import Service from "./views/service";
 
+import ProjectEstimate from "./views/projectEstimate";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
@@ -36,6 +38,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/catalogs" element={<Catalogs />} />
       <Route path="/shop" element={<Shop />} />
+      <Route path="/ProjectEstimate" element={<ProjectEstimate />} />
+
       <Route path="/installmentSales" element={<InstallmentSales />} />
     </Routes>
   </BrowserRouter>
