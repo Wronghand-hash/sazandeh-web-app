@@ -118,78 +118,86 @@ export default function homePage() {
             </div>
           </div>
           <div className="w-full h-full  py-3 flex lg:flex-row-reverse flex-col  lg:space-y-0 space-y-8 space-x-2 items-center">
-            <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
-              <div className="w-full h-full lg:h-3/5 bg-white">
-                <img
-                  className=" w-full h-full object-fill"
-                  src={mainPageProjects}
-                  alt=""
-                />
-              </div>
-              <div className="w-full h-full lg:h-2/5 flex items-center justify-around">
-                <div className="flex flex-col space-y-1 my-5">
-                  <h1 className="text-lg font-black text-right ">
-                    بازسازی و تعمیرات
-                  </h1>
-                  <h1 className="text-md  text-right">منازل و ادارات</h1>
+            <Link to="/services/service">
+              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
+                <div className="w-full h-full lg:h-3/5 bg-white">
+                  <img
+                    className=" w-full h-full object-fill"
+                    src={mainPageProjects}
+                    alt=""
+                  />
                 </div>
-                <ArrowCircleRight size={25} weight="fill" />
-              </div>
-            </div>
-            <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
-              <div className="w-full h-3/5 bg-white">
-                <img
-                  className=" w-full h-full object-fill"
-                  src={mainPageProjects2}
-                  alt=""
-                />
-              </div>
-              <div className="w-full h-2/5 flex items-center justify-around">
-                <div className="flex flex-col space-y-1 my-5">
-                  <h1 className="text-lg font-black text-right ">
-                    دکوراسیون داخلی
-                  </h1>
-                  <h1 className="text-md  text-right">منازل و ادارات</h1>
+                <div className="w-full h-full lg:h-2/5 flex items-center justify-around">
+                  <div className="flex flex-col space-y-1 my-5">
+                    <h1 className="text-lg font-black text-right ">
+                      بازسازی و تعمیرات
+                    </h1>
+                    <h1 className="text-md  text-right">منازل و ادارات</h1>
+                  </div>
+                  <ArrowCircleRight size={25} weight="fill" />
                 </div>
-                <ArrowCircleRight size={25} weight="fill" />
               </div>
-            </div>
-            <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
-              <div className="w-full h-3/5 bg-white">
-                <img
-                  className=" w-full h-full object-fill"
-                  src={mainPageProjects3}
-                  alt=""
-                />
-              </div>
-              <div className="w-full h-2/5 flex items-center justify-around">
-                <div className="flex flex-col space-y-1 my-5">
-                  <h1 className="text-lg font-black text-right ">
-                    پیاده سازی و اجرای
-                  </h1>
-                  <h1 className="text-md  text-right">پروژه های ساختمانی</h1>
+            </Link>
+            <Link to="/services/service">
+              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
+                <div className="w-full h-3/5 bg-white">
+                  <img
+                    className=" w-full h-full object-fill"
+                    src={mainPageProjects2}
+                    alt=""
+                  />
                 </div>
-                <ArrowCircleRight size={25} weight="fill" />
-              </div>
-            </div>
-            <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
-              <div className="w-full h-3/5 bg-white">
-                <img
-                  className=" w-full h-full object-fill"
-                  src={mainPageProjects4}
-                  alt=""
-                />
-              </div>
-              <div className="w-full h-2/5 flex items-center justify-around">
-                <div className="flex flex-col space-y-1 my-5">
-                  <h1 className="text-lg font-black text-right ">
-                    طراحی و معماری
-                  </h1>
-                  <h1 className="text-md  text-right">ساختمان</h1>
+                <div className="w-full h-2/5 flex items-center justify-around">
+                  <div className="flex flex-col space-y-1 my-5">
+                    <h1 className="text-lg font-black text-right ">
+                      دکوراسیون داخلی
+                    </h1>
+                    <h1 className="text-md  text-right">منازل و ادارات</h1>
+                  </div>
+                  <ArrowCircleRight size={25} weight="fill" />
                 </div>
-                <ArrowCircleRight size={25} weight="fill" />
               </div>
-            </div>
+            </Link>
+            <Link to="/services/service">
+              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
+                <div className="w-full h-3/5 bg-white">
+                  <img
+                    className=" w-full h-full object-fill"
+                    src={mainPageProjects3}
+                    alt=""
+                  />
+                </div>
+                <div className="w-full h-2/5 flex items-center justify-around">
+                  <div className="flex flex-col space-y-1 my-5">
+                    <h1 className="text-lg font-black text-right ">
+                      پیاده سازی و اجرای
+                    </h1>
+                    <h1 className="text-md  text-right">پروژه های ساختمانی</h1>
+                  </div>
+                  <ArrowCircleRight size={25} weight="fill" />
+                </div>
+              </div>
+            </Link>
+            <Link to="/services/service">
+              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
+                <div className="w-full h-3/5 bg-white">
+                  <img
+                    className=" w-full h-full object-fill"
+                    src={mainPageProjects4}
+                    alt=""
+                  />
+                </div>
+                <div className="w-full h-2/5 flex items-center justify-around">
+                  <div className="flex flex-col space-y-1 my-5">
+                    <h1 className="text-lg font-black text-right ">
+                      طراحی و معماری
+                    </h1>
+                    <h1 className="text-md  text-right">ساختمان</h1>
+                  </div>
+                  <ArrowCircleRight size={25} weight="fill" />
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
