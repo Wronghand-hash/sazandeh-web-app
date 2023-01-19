@@ -14,6 +14,7 @@ import {
   Password,
   MagnifyingGlass,
   Phone,
+  UserCircle,
 } from "phosphor-react";
 
 import mainPageProjects6 from "../assets/images/mainPageProjects6.webp";
@@ -110,11 +111,35 @@ export default function navbar() {
           >
             <SignIn size={32} />
           </div>
+          <div className="flex hover:bg-gray-900 text-neutral-900 hover:text-white transition px-4 py-3 cursor-pointer transfrom ">
+            <Link to="/profile">
+              <UserCircle size={32} />
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="flex border-b-2 border-yellow-400 bg-white items-center justify-around h-16">
-        <div className="flex justify-start lg:justify-center px-2 w-2/3"></div>
+      <div className="flex w-full border-b-2 border-yellow-400 bg-white items-center justify-around h-16">
+        <div className="flex justify-start lg:justify-center px-2 w-full lg:w-2/3"></div>
         <div className="flex w-full   h-16 justify-end lg:pr-32 py-8 space-x-12 items-center align-center">
+          <div className="flex md:hidden w-full">
+            <div
+              onClick={openModal2}
+              className="flex hover:bg-gray-900 text-neutral-900 hover:text-white transition px-4 py-3 cursor-pointer transfrom   "
+            >
+              <ShoppingCart size={32} />
+            </div>
+            <div
+              onClick={openModal3}
+              className="flex hover:bg-gray-900 text-neutral-900 hover:text-white transition px-4 py-3 cursor-pointer transfrom   "
+            >
+              <SignIn size={32} />
+            </div>
+            <div className="flex hover:bg-gray-900 text-neutral-900 hover:text-white transition px-4 py-3 cursor-pointer transfrom ">
+              <Link to="/profile">
+                <UserCircle size={32} />
+              </Link>
+            </div>
+          </div>
           <Link
             to={"/aboutus"}
             className="hidden text-sm lg:block cursor-pointer duration-300 hover:bg-black border-black transition-all px-4 py-2 hover:text-white"
@@ -201,7 +226,8 @@ export default function navbar() {
           >
             <a href="www.sazandeh.onrender.com">خانه</a>
           </Link>
-          <div className="flex justify-center items-center ">
+
+          <div className="flex justify-between  w-full items-center ">
             <button
               type="button"
               onClick={openModal}
