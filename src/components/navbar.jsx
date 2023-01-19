@@ -299,6 +299,12 @@ export default function navbar() {
                       >
                         <a href="www.sazandeh.onrender.com/catalog">کاتالوگ</a>
                       </Link>
+                      <Link
+                        to={"/news"}
+                        className=" cursor-pointer duration-300 hover:bg-black hover:text-white px-8 py-3 transition "
+                      >
+                        <a href="www.sazandeh.onrender.com/catalog">خبرنامه</a>
+                      </Link>
 
                       <Link
                         to={"/blogs"}
