@@ -12,6 +12,7 @@ import {
   ShoppingCart,
   User,
   Password,
+  Question,
   MagnifyingGlass,
   Phone,
   UserCircle,
@@ -144,7 +145,9 @@ export default function navbar() {
             to={"/questions"}
             className="hidden text-sm lg:block cursor-pointer duration-300 hover:bg-black border-black transition-all px-8 py-2 hover:text-white"
           >
-            <a href="www.sazandeh.onrender.com/aboutus">سوالات</a>
+            <a href="www.sazandeh.onrender.com/aboutus">
+              <Question size={32} />
+            </a>
           </Link>
           <Link
             to={"/aboutus"}
