@@ -117,30 +117,10 @@ export default function homePage() {
               <h1 className="text-3xl my-2 font-bold">خدمات ما</h1>
             </div>
           </div>
-          <div className="w-full h-full  py-3 flex lg:flex-row-reverse flex-col justify-around  lg:space-y-0 space-y-8 space-x-4 items-center">
+          <div className="w-full h-full  py-3 flex lg:flex-row lg:space-x-2 flex-col justify-around  px-4 items-center">
             <Link to="/services/service">
               <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  bg-gray-300">
-                <div className="w-full h-full lg:h-3/5 bg-white">
-                  <img
-                    className=" w-full h-full object-fill"
-                    src={mainPageProjects}
-                    alt=""
-                  />
-                </div>
                 <div className="w-full h-full lg:h-2/5 flex items-center justify-around">
-                  <div className="flex flex-col space-y-1 my-5">
-                    <h1 className="text-lg font-black text-right ">
-                      بازسازی و تعمیرات
-                    </h1>
-                    <h1 className="text-md  text-right">منازل و ادارات</h1>
-                  </div>
-                  <ArrowCircleRight size={25} weight="fill" />
-                </div>
-              </div>
-            </Link>
-            <Link to="/services/service">
-              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  bg-gray-300">
-                <div className="w-full h-3/5 bg-white">
                   <img
                     className=" w-full h-full object-fill"
                     src={mainPageProjects2}
@@ -160,7 +140,47 @@ export default function homePage() {
             </Link>
             <Link to="/services/service">
               <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  bg-gray-300">
-                <div className="w-full h-3/5 bg-white">
+                <div className="w-full h-full lg:h-2/5 flex items-center justify-around">
+                  <img
+                    className=" w-full h-full object-fill"
+                    src={mainPageProjects}
+                    alt=""
+                  />
+                </div>
+                <div className="w-full h-full lg:h-2/5 flex items-center justify-around">
+                  <div className="flex flex-col space-y-1 my-5">
+                    <h1 className="text-lg font-black text-right ">
+                      بازسازی و تعمیرات
+                    </h1>
+                    <h1 className="text-md  text-right">منازل و ادارات</h1>
+                  </div>
+                  <ArrowCircleRight size={25} weight="fill" />
+                </div>
+              </div>
+            </Link>
+            <Link to="/services/service">
+              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  bg-gray-300">
+                <div className="w-full h-full lg:h-2/5 flex items-center justify-around">
+                  <img
+                    className=" w-full h-full object-fill"
+                    src={mainPageProjects}
+                    alt=""
+                  />
+                </div>
+                <div className="w-full h-full lg:h-2/5 flex items-center justify-around">
+                  <div className="flex flex-col space-y-1 my-5">
+                    <h1 className="text-lg font-black text-right ">
+                      بازسازی و تعمیرات
+                    </h1>
+                    <h1 className="text-md  text-right">منازل و ادارات</h1>
+                  </div>
+                  <ArrowCircleRight size={25} weight="fill" />
+                </div>
+              </div>
+            </Link>
+            <Link to="/services/service">
+              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  bg-gray-300">
+                <div className="w-full h-full lg:h-2/5 flex items-center justify-around">
                   <img
                     className=" w-full h-full object-fill"
                     src={mainPageProjects3}
@@ -180,7 +200,7 @@ export default function homePage() {
             </Link>
             <Link to="/services/service">
               <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  bg-gray-300">
-                <div className="w-full h-3/5 bg-white">
+                <div className="w-full h-full lg:h-2/5 flex items-center justify-around">
                   <img
                     className=" w-full h-full object-fill"
                     src={mainPageProjects4}
