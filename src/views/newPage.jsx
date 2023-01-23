@@ -114,8 +114,8 @@ export default function newsPage() {
           </div>
         </div>
       </div>
-      <div className="px-5 lg:px-15 items-center h-full w-full flex flex-col">
-        <div className="w-full px-2 text-lg items-center text-gray-400 flex justify-end">
+      <div className=" lg:px-15 items-center h-full w-full flex flex-col">
+        <div className="w-full p-5 px-2 text-lg items-center text-gray-400 flex justify-end">
           <div className="">
             <button>
               <Link to="/">خانه</Link>

@@ -31,6 +31,8 @@ export default function services() {
     mainPageProjects4,
     mainPageProjects5,
     mainPageProjects6,
+    mainPageProjects5,
+    mainPageProjects6,
   ]);
   return (
     <div className="w-full h-full overflow-hidden">
@@ -53,7 +55,7 @@ export default function services() {
         </div>
       </div>
       <div className="flex space-y-4 flex-col w-full items-center py-20 justify-center ">
-        <div className="flex flex-col lg:flex-row lg:space-y-0 lg:space-x-2 lg:w-full lg:px-2  space-y-10 lg:space-x-2 py-4 w-9/12 ">
+        <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center lg:space-y-3 lg:space-x-2 lg:w-full lg:px-2  space-y-10 lg:space-x-2 py-4 w-9/12 ">
           {services.map((service, i) => {
             return (
               <Link to="/services/service">
