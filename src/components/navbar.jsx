@@ -141,6 +141,12 @@ export default function navbar() {
             </div>
           </div>
           <Link
+            to={"/questions"}
+            className="hidden text-sm lg:block cursor-pointer duration-300 hover:bg-black border-black transition-all px-8 py-2 hover:text-white"
+          >
+            <a href="www.sazandeh.onrender.com/aboutus">سوالات</a>
+          </Link>
+          <Link
             to={"/aboutus"}
             className="hidden text-sm lg:block cursor-pointer duration-300 hover:bg-black border-black transition-all px-4 py-2 hover:text-white"
           >
@@ -275,6 +281,12 @@ export default function navbar() {
                     </Dialog.Title>
 
                     <div className="flex flex-col-reverse text-right mt-24">
+                      <Link
+                        to={"/questions"}
+                        className="hidden text-sm lg:block cursor-pointer duration-300 hover:bg-black border-black transition-all px-8 py-2 hover:text-white"
+                      >
+                        <a href="www.sazandeh.onrender.com/aboutus">سوالات</a>
+                      </Link>
                       <Link
                         to={"/aboutus"}
                         className="hidden text-sm lg:block cursor-pointer duration-300 hover:bg-black border-black transition-all px-8 py-2 hover:text-white"

@@ -20,3 +20,62 @@ html,
 body {
   overflow-x: hidden;
 }
+
+* {
+  font-family: "IranSans";
+}
+
+* {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #2b026d #ffe3cb;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+@media only screen and (max-width: 767px) {
+  *::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bb9651;
+  border: 0px none #ffffff;
+  border-radius: 86px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffd1;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #13cfad;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffe3cb;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #f8ddd9;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #f8ddd9;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

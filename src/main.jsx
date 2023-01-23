@@ -18,7 +18,7 @@ import Profile from "./views/profile";
 import NewsPage from "./views/newPage";
 import News from "./views/news";
 import Service from "./views/service";
-
+import Questions from "./views/questions";
 import ProjectEstimate from "./views/projectEstimate";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -39,6 +39,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/catalogs" element={<Catalogs />} />
       <Route path="/shop" element={<Shop />} />
       <Route path="/ProjectEstimate" element={<ProjectEstimate />} />
+      <Route path="/questions" element={<Questions></Questions>} />
 
       <Route path="/installmentSales" element={<InstallmentSales />} />
     </Routes>
