@@ -99,7 +99,7 @@ export default function homePage() {
           </h1>
         </div>
       </div>
-      <div className="w-screen mb-28 h-auto lg:h-rem26 flex bg-white lg:px-56 py-20">
+      <div className="w-screen mb-28 h-auto lg:h-rem26 flex bg-white lg:px-32 py-20">
         <div className="h-full w-full ">
           <div className="  flex items-center justify-between">
             <div className="flex items-center space-x-1 lg:ml-0 ml-8">
@@ -117,9 +117,9 @@ export default function homePage() {
               <h1 className="text-3xl my-2 font-bold">خدمات ما</h1>
             </div>
           </div>
-          <div className="w-full h-full  py-3 flex lg:flex-row-reverse flex-col  lg:space-y-0 space-y-8 space-x-2 items-center">
+          <div className="w-full h-full  py-3 flex lg:flex-row-reverse flex-col justify-around  lg:space-y-0 space-y-8 space-x-4 items-center">
             <Link to="/services/service">
-              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
+              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  bg-gray-300">
                 <div className="w-full h-full lg:h-3/5 bg-white">
                   <img
                     className=" w-full h-full object-fill"
@@ -139,7 +139,7 @@ export default function homePage() {
               </div>
             </Link>
             <Link to="/services/service">
-              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
+              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  bg-gray-300">
                 <div className="w-full h-3/5 bg-white">
                   <img
                     className=" w-full h-full object-fill"
@@ -159,7 +159,7 @@ export default function homePage() {
               </div>
             </Link>
             <Link to="/services/service">
-              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
+              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  bg-gray-300">
                 <div className="w-full h-3/5 bg-white">
                   <img
                     className=" w-full h-full object-fill"
@@ -179,7 +179,7 @@ export default function homePage() {
               </div>
             </Link>
             <Link to="/services/service">
-              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer lg:w-1/4 bg-gray-300">
+              <div className=" h-full w-full transition ease-in duration-300 hover:bg-blue-600 cursor-pointer  bg-gray-300">
                 <div className="w-full h-3/5 bg-white">
                   <img
                     className=" w-full h-full object-fill"
