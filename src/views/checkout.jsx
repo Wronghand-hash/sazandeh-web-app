@@ -11,7 +11,7 @@ import {
   Select,
   Checkbox,
 } from "@chakra-ui/react";
-import { PlusCircle } from "phosphor-react";
+import { PlusCircle, Trash } from "phosphor-react";
 export default function Checkout() {
   return (
     <div className="w-full h-full">
@@ -45,32 +45,73 @@ export default function Checkout() {
             </div>
           </div>
         </div>
-        <div className="h-auto w-full my-14  flex py-5 items-center justify-center lg:flex-row flex-col-reverse">
-          <div className="w-96 bg-white px-28 h-auto flex items-center  flex-col  ">
-            <h1 className="text-3xl font-black my-4 w-full text-right">
-              اقلام انتخاب شده
-            </h1>
-            <div className="border flex w-9/12 lg:w-52 lg:h-68 h-96 flex-col">
-              <div className="absolute bg-yellow-400 cursor-pointer hover:scale-125 transition-all rounded-full -translate-y-4">
-                <PlusCircle color="black" size={45} />
+        <div className="h-auto w-full my-14 px-2 flex py-5 items-center justify-center lg:flex-row flex-col-reverse">
+          <div className="lg:w-1/2 px-3 lg:px-20 bg-white  h-auto flex items-center  flex-col  ">
+            <div className=" flex w-full items-center justify-between flex-row-reverse  my-4 w-full text-right">
+              <h1 className="text-3xl font-black">اقلام انتخاب شده</h1>
+              <div className="flex space-x-4">
+                <p>تومان</p>
+                <p className="text-lg font-bold text-green-500">400000</p>
+                <p>:قیمت کل</p>
               </div>
-              <div className="flex h-62 bg-gray-300 w-full h-full justify-center items-center">
-                <img className=" h-52 object-contain" src={oneproduct} alt="" />
+            </div>
+            <div className="flex space-y-2 py-4 justify-around items-center flex-col w-full">
+              <div className="bg-gray-100 shadow-2xl w-full h-full flex">
+                <div className="flex w-full h-28 bg-gray-300 w-full h-full justify-center items-center">
+                  <img
+                    className=" h-24 w-24 object-contain"
+                    src={oneproduct}
+                    alt=""
+                  />
+                </div>
+                <div className="flex px-4 w-full items-center justify-center">
+                  <div className="flex  flex-col py-4  justify-center items-center">
+                    <div>
+                      <h1>نام کالا</h1>
+                    </div>
+                    <div className="flex space-x-4 justify-around flex-row">
+                      <p className="text-sky-400">تومان</p>
+                      <p className="text-sky-400 flex flex-row-reverse">
+                        30000
+                      </p>
+                      <p>:قیمت</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full justify-center items-center flex  cursor-pointer  transition-all rounded-full ">
+                  <Trash color="red" size={45} />
+                </div>
               </div>
-              <div className="flex  flex-col py-4 space-y-4 justify-center items-center">
-                <div>
-                  <h1>نام کالا</h1>
+              <div className="bg-gray-100 shadow-2xl w-full h-full flex">
+                <div className="flex w-full h-28 bg-gray-300 w-full h-full justify-center items-center">
+                  <img
+                    className=" h-24 w-24 object-contain"
+                    src={oneproduct}
+                    alt=""
+                  />
                 </div>
-                <div className="flex space-x-4 justify-around flex-row">
-                  <p className="text-sky-400">تومان</p>
-                  <p className="text-sky-400 flex flex-row-reverse">30000</p>
-                  <p>:قیمت</p>
+                <div className="flex w-full justify-center">
+                  <div className="flex px-4 flex-col py-4  justify-center items-center">
+                    <div>
+                      <h1>نام کالا</h1>
+                    </div>
+                    <div className="flex space-x-4 justify-around flex-row">
+                      <p className="text-sky-400">تومان</p>
+                      <p className="text-sky-400 flex flex-row-reverse">
+                        30000
+                      </p>
+                      <p>:قیمت</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex justify-center items-center">
-                  <button className="bg-black border-b-2 border-yellow-400 text-white w-24">
-                    جزئیات کالا
-                  </button>
+                <div className="w-full justify-center items-center flex  cursor-pointer  transition-all rounded-full ">
+                  <Trash color="red" size={45} />
                 </div>
+              </div>
+              <div className="flex w-full justify-center h-full items-center h-14">
+                <button className="w-full rounded shadow-2xl text-gray-100 hover:text-gray-900 hover:bg-yellow-500 transition bg-gray-900 h-full">
+                  انتقال به درگاه
+                </button>
               </div>
             </div>
           </div>

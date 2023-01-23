@@ -16,6 +16,7 @@ import {
   MagnifyingGlass,
   Phone,
   UserCircle,
+  TrashSimple,
 } from "phosphor-react";
 
 import mainPageProjects6 from "../assets/images/mainPageProjects6.webp";
@@ -406,6 +407,9 @@ export default function navbar() {
                       {items.map((item) => {
                         return (
                           <div className="flex justify-around items-center bg-gray-100 text-gray-900 h-16 w-full">
+                            <div className="flex cursor-pointer text-red-500 justfiy-center">
+                              <TrashSimple size={20} />
+                            </div>
                             <div className="flex justify-around items-around space-x-2 ">
                               <Plus
                                 className="border rounded-full cursor-pointer hover:bg-gray-900 hover:text-gray-50 transition"
