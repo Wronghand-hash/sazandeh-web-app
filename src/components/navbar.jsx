@@ -176,9 +176,14 @@ export default function navbar() {
           </Link>
           <Link
             to={"/installmentsales"}
-            className="hidden lg:flex cursor-pointer duration-300 hover:bg-black hover:text-white w-28 items-center justify-center  py-3 transition "
+            className="hidden lg:flex cursor-pointer duration-300 px-1 text-center hover:bg-black hover:text-white w-28 items-center justify-center  py-3 transition "
           >
-            <a href="www.sazandeh.onrender.com/installmentSales">خرید اقساطی</a>
+            <a
+              className="w-28"
+              href="www.sazandeh.onrender.com/installmentSales"
+            >
+              خرید اقساطی
+            </a>
           </Link>
           <Link
             to={"/projects"}

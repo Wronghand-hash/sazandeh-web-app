@@ -91,12 +91,15 @@ export default function services() {
       </div>
       <div className="flex flex-col bg-gray-200 w-full h-full">
         <div className="flex flex-col lg:flex-row justify-center space-y-2 lg:space-x-8 items-center -translate-y-10">
-          <button className="flex shadow-xl transition w-64 justify-around bg-white border h-20 hover:bg-yellow-400 items-center">
-            <ArchiveBox size={32} />
-            <div className="flex items-center justify-center flex-col">
-              <p>دریافت</p> <p>کاتالوگ</p>
-            </div>
-          </button>
+          <Link to="/catalogs">
+            {" "}
+            <button className="flex shadow-xl transition w-64 justify-around bg-white border h-20 hover:bg-yellow-400 items-center">
+              <ArchiveBox size={32} />
+              <div className="flex items-center justify-center flex-col">
+                <p>دریافت</p> <p>کاتالوگ</p>
+              </div>
+            </button>
+          </Link>
           <button className="flex shadow-xl transition w-64 justify-around bg-white border h-20 hover:bg-yellow-400 items-center">
             <PhoneIncoming size={32} />
             <div className="flex items-center justify-center flex-col">

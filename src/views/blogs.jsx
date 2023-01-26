@@ -61,50 +61,52 @@ export default function blogs() {
         {blogs.map((blog, i) => {
           return (
             <div className="flex border cursor-pointer hover:bg-gray-100 flex-col bg-white w-full h-full lg:w-1/3 lg:h-1/3">
-              <div className="w-full h-full">
-                <img
-                  className="object-contain w-full h-full"
-                  src={blog}
-                  alt=""
-                />
-              </div>
-              <div className="w-full space-y-2 px-8 py-4 h-full flex flex-col">
-                <div className="flex text-right flex-col">
-                  <p className="bg-blue-500 py-1 w-14 flex justify-center text-sm text-white">
-                    8 april
-                  </p>
-                  <p className="text-2xl font-bold">عنوان وبلاگ</p>
+              <Link to="/blogs/blog">
+                <div className="w-full h-full">
+                  <img
+                    className="object-contain w-full h-full"
+                    src={blog}
+                    alt=""
+                  />
                 </div>
-                <div className="flex text-right justify-center items-center">
-                  <p className="flex text-xs">
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
-                    با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه
-                    و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
-                    تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
-                    کاربردی می باشد.
-                  </p>
+                <div className="w-full space-y-2 px-8 py-4 h-full flex flex-col">
+                  <div className="flex text-right flex-col">
+                    <p className="bg-blue-500 py-1 w-14 flex justify-center text-sm text-white">
+                      8 april
+                    </p>
+                    <p className="text-2xl font-bold">عنوان وبلاگ</p>
+                  </div>
+                  <div className="flex text-right justify-center items-center">
+                    <p className="flex text-xs">
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                      و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
+                      روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای
+                      شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
+                      بهبود ابزارهای کاربردی می باشد.
+                    </p>
+                  </div>
+                  <div className="flex w-full space-x-4">
+                    <div className="flex space-x-2 text-sm justify-around items-center">
+                      <p>
+                        <User size={18} />
+                      </p>
+                      <p>by admin</p>
+                    </div>
+                    <div className="flex space-x-2 text-sm justify-around items-center">
+                      <p>
+                        <Heart size={18} />
+                      </p>
+                      <p>24</p>
+                    </div>
+                    <div className="flex space-x-2 text-sm justify-around items-center">
+                      <p>
+                        <ChatsCircle size={18} />
+                      </p>
+                      <p>12</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex w-full space-x-4">
-                  <div className="flex space-x-2 text-sm justify-around items-center">
-                    <p>
-                      <User size={18} />
-                    </p>
-                    <p>by admin</p>
-                  </div>
-                  <div className="flex space-x-2 text-sm justify-around items-center">
-                    <p>
-                      <Heart size={18} />
-                    </p>
-                    <p>24</p>
-                  </div>
-                  <div className="flex space-x-2 text-sm justify-around items-center">
-                    <p>
-                      <ChatsCircle size={18} />
-                    </p>
-                    <p>12</p>
-                  </div>
-                </div>
-              </div>
+              </Link>
             </div>
           );
         })}
