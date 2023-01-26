@@ -1,6 +1,7 @@
 import { AiOutlineLeft } from "react-icons/ai";
 import Navbar from "../components/navbar";
 import AboutusImage from "../assets/images/aboutusImage.webp";
+import mainPageProjects7 from "../assets/images/mainPageProjects7.webp";
 import { Link } from "react-router-dom";
 import News5 from "../assets/images/news4.webp";
 import {
@@ -120,7 +121,11 @@ export default function news() {
           </div>
           <div className="flex items-center flex-col w-full h-full">
             <div className="flex w-full justify-center">
-              <img className="lg:w-1/2 lg:h-4/6" src={AboutusImage} alt="" />
+              <img
+                className="lg:w-1/2 lg:h-4/6"
+                src={mainPageProjects7}
+                alt=""
+              />
             </div>
             <div className="flex justify-center p-20 border-b border-gray-900 text-right">
               <p>
@@ -159,7 +164,7 @@ export default function news() {
               <div className="flex w-full p-5 justify-end">
                 <h1>اخرین مطالب نویسنده</h1>
               </div>
-              <div className="flex flex-col lg:flex-row lg:space-y-0 space-x-0 space-y-4 border-b border-b-gray-800 py-5 w-full px-2 lg:justify-around lg:space-x-4">
+              <div className="flex flex-col cols-2 lg:flex-row lg:space-y-0 space-x-0 space-y-4 border-b border-b-gray-800 py-5 w-full px-2 lg:justify-around lg:space-x-4">
                 <div className="flex space-x-2 p-2 bg-gray-100 rounded shadow-2xl w-96">
                   <div className="flex flex-col text-right">
                     <h1 className="font-bold">تخریب خانه های هند</h1>
@@ -214,7 +219,7 @@ export default function news() {
                     </p>
                     <div className="flex border-t-4 py-1 justify-start space-x-8">
                       <div className="w-14 h-14 bg-yellow-500"></div>
-                      <div className="flex flex-col">
+                      <div className="flex flex-col text-right w-full px-2">
                         <p>آقای فلانی</p>
                         <p>مدیر عامل آداک فناوری</p>
                       </div>
@@ -229,7 +234,7 @@ export default function news() {
                     </p>
                     <div className="flex border-t-4 py-1 justify-start space-x-8">
                       <div className="w-14 h-14 bg-yellow-500"></div>
-                      <div className="flex flex-col">
+                      <div className="flex flex-col text-right w-full px-2">
                         <p>آقای فلانی</p>
                         <p>مدیر عامل آداک فناوری</p>
                       </div>
@@ -244,7 +249,7 @@ export default function news() {
                     </p>
                     <div className="flex border-t-4 py-1 justify-start space-x-8">
                       <div className="w-14 h-14 bg-yellow-500"></div>
-                      <div className="flex flex-col">
+                      <div className="flex flex-col text-right w-full px-2">
                         <p>آقای فلانی</p>
                         <p>مدیر عامل آداک فناوری</p>
                       </div>
@@ -294,11 +299,21 @@ export default function news() {
                 </div>
                 <div className="flex lg:flex-row space-y-2 flex-col justify-around items-center  w-full">
                   <div className="flex justify-center items-center  space-x-2 w-full">
-                    <input className="py-5 px-8 rounded text-right" placeholder="... نام خود را وارد کنید" type="text" name="name" />
+                    <input
+                      className="py-5 px-8 rounded text-right"
+                      placeholder="... نام خود را وارد کنید"
+                      type="text"
+                      name="name"
+                    />
                     <label htmlFor="name">:نام کاربری</label>
                   </div>
                   <div className="flex justify-center items-center space-x-2  w-full">
-                    <input className="py-5 px-8 rounded text-right" placeholder="... ایمیل خود را وارد کنید" type="email" name="email" />
+                    <input
+                      className="py-5 px-8 rounded text-right"
+                      placeholder="... ایمیل خود را وارد کنید"
+                      type="email"
+                      name="email"
+                    />
                     <label htmlFor="email">:ایمیل</label>
                   </div>
                 </div>
