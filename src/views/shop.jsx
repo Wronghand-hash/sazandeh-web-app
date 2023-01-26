@@ -101,19 +101,19 @@ export default function shopPage() {
                 size={32}
               />
             </div>
-            <div className="flex lg:grid lg:grid-row-2 lg:grid-cols-2 justify-around space-y-4 lg:space-y-5 shadow-xl py-5 h-full w-full px-12  items-around flex-wrap">
+            <div className="flex lg:grid lg:grid-row-2 lg:grid-cols-2 justify-around space-y-4 lg:space-y-5 shadow-xl py-5 h-full w-full lg:px-12  items-around flex-wrap">
               {products.map((product, i) => {
                 return (
                   <div
                     key={i}
-                    className="border flex shadow-2xl w-9/12 lg:w-56 lg:h-68 h-96 flex-col"
+                    className="border flex shadow-2xl w-9/12 lg:w-68 lg:h-68 h-96 flex-col"
                   >
                     <div className="absolute bg-yellow-400 cursor-pointer hover:scale-125 transition-all rounded-full -translate-y-4">
                       <PlusCircle color="black" size={45} />
                     </div>
                     <div className="flex h-62 bg-gray-100 w-full h-full justify-center items-center">
                       <img
-                        className=" h-56 object-contain"
+                        className=" h-68 object-contain"
                         src={product}
                         alt=""
                       />
@@ -164,47 +164,30 @@ export default function shopPage() {
           </div>
           <div className="hidden lg:flex  w-1/2 space-y-8 flex flex-col   ">
             <div className="flex items-center py-6 flex-col ">
-              <h2 className="text-right w-full font-bold text-lg ">جست و جو</h2>
-              <div className="flex border-b border-gray-300 justif-center items-center w-full">
+              <div className="flex border-b border-gray-300 justify-between items-center w-full">
                 <input
                   placeholder="نام محصول یا نام برند"
-                  className="py-3 w-full "
+                  className="py-3 text-right w-full "
                   type="text"
                 />
-                <MagnifyingGlass color="gray" size={32} />
+                <div>
+                  <MagnifyingGlass color="gray" size={32} />
+                </div>
               </div>
             </div>
-            <div className="flex flex-col space-y-4 items-end ">
-              <h1 className="font-bold text-xl">دسته بندی ها</h1>
-              <div className="flex text-md  h-full space-y-3  justify-around text-right flex-col">
-                <p className="cursor-pointer hover:text-blue-400">شیر آلات</p>
-                <p className="cursor-pointer hover:text-blue-400">برق آلات</p>
-                <p className="cursor-pointer hover:text-blue-400">
-                  مصالح نازک کاری
-                </p>
-                <p className="cursor-pointer hover:text-blue-400">
-                  تاسیسات برقی
-                </p>
-                <p className="cursor-pointer hover:text-blue-400">آشپزخانه</p>
-                <p className="cursor-pointer hover:text-blue-400">
-                  لوازم ایمینی
-                </p>
-                <p className="cursor-pointer hover:text-blue-400">
-                  مصالح سفت کاری
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col space-y-4 items-end ">
-              <h1 className="font-bold text-xl">برند ها</h1>
-              <div className="flex w-full justify-between">
-                <div className="flex text-sm  h-full space-y-3  justify-around text-right flex-col">
-                  <p className="cursor-pointer hover:text-blue-400">اخوان</p>
+            <div className="flex flex-col rouneded shadow-2xl p-5 border border-gray-200">
+              <div className="flex flex-col space-y-4 items-end ">
+                <h1 className="font-bold text-xl border-b-2 w-full justify-end text-end cursor-pointer py-2">
+                  دسته بندی ها
+                </h1>
+                <div className="flex text-md  h-full space-y-3  justify-around text-right flex-col">
+                  <p className="cursor-pointer hover:text-blue-400">شیر آلات</p>
+                  <p className="cursor-pointer hover:text-blue-400">برق آلات</p>
                   <p className="cursor-pointer hover:text-blue-400">
-                    استیل البرز
+                    مصالح نازک کاری
                   </p>
-                  <p className="cursor-pointer hover:text-blue-400">بوتان</p>
                   <p className="cursor-pointer hover:text-blue-400">
-                    ایلیا استیل
+                    تاسیسات برقی
                   </p>
                   <p className="cursor-pointer hover:text-blue-400">آشپزخانه</p>
                   <p className="cursor-pointer hover:text-blue-400">
@@ -214,22 +197,50 @@ export default function shopPage() {
                     مصالح سفت کاری
                   </p>
                 </div>
-                <div className="flex text-sm  h-full space-y-3  justify-around text-right flex-col">
-                  <p className="cursor-pointer hover:text-blue-400">راسان</p>
-                  <p className="cursor-pointer hover:text-blue-400">گلنور</p>
-                  <p className="cursor-pointer hover:text-blue-400">
-                    الکتروپیک
-                  </p>
-                  <p className="cursor-pointer hover:text-blue-400">
-                    ایران رادیاتو
-                  </p>
-                  <p className="cursor-pointer hover:text-blue-400">آشپزخانه</p>
-                  <p className="cursor-pointer hover:text-blue-400">
-                    لوازم ایمینی
-                  </p>
-                  <p className="cursor-pointer hover:text-blue-400">
-                    مصالح سفت کاری
-                  </p>
+              </div>
+              <div className="flex flex-col space-y-4 items-end ">
+                <h1 className="font-bold text-xl border-b-2 w-full justify-end text-end cursor-pointer py-2">
+                  برند ها
+                </h1>
+                <div className="flex w-full justify-between">
+                  <div className="flex text-sm  h-full space-y-3  justify-around text-right flex-col">
+                    <p className="cursor-pointer hover:text-blue-400">اخوان</p>
+                    <p className="cursor-pointer hover:text-blue-400">
+                      استیل البرز
+                    </p>
+                    <p className="cursor-pointer hover:text-blue-400">بوتان</p>
+                    <p className="cursor-pointer hover:text-blue-400">
+                      ایلیا استیل
+                    </p>
+                    <p className="cursor-pointer hover:text-blue-400">
+                      آشپزخانه
+                    </p>
+                    <p className="cursor-pointer hover:text-blue-400">
+                      لوازم ایمینی
+                    </p>
+                    <p className="cursor-pointer hover:text-blue-400">
+                      مصالح سفت کاری
+                    </p>
+                  </div>
+                  <div className="flex text-sm  h-full space-y-3  justify-around text-right flex-col">
+                    <p className="cursor-pointer hover:text-blue-400">راسان</p>
+                    <p className="cursor-pointer hover:text-blue-400">گلنور</p>
+                    <p className="cursor-pointer hover:text-blue-400">
+                      الکتروپیک
+                    </p>
+                    <p className="cursor-pointer hover:text-blue-400">
+                      ایران رادیاتو
+                    </p>
+                    <p className="cursor-pointer hover:text-blue-400">
+                      آشپزخانه
+                    </p>
+                    <p className="cursor-pointer hover:text-blue-400">
+                      لوازم ایمینی
+                    </p>
+                    <p className="cursor-pointer hover:text-blue-400">
+                      مصالح سفت کاری
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
