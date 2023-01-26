@@ -64,9 +64,9 @@ export default function shopPage() {
         className="flex  flex-row-reverse justiy-end overflow-hidden items-center w-full h-rem26 bg-black"
       >
         <div className="flex flex-col justify-end items-center w-1/2 h-1/2">
-          <p className="text-white font-bold text-5xl">کاتالوگ ها</p>
+          <p className="text-white font-bold text-5xl">کالا ها</p>
           <div className="flex text-white p-2 items-center align-center flex-row">
-            <p className="text-yellow-500">کاتالوگ ها</p>
+            <p className="text-yellow-500">کالا ها</p>
             <AiOutlineLeft />
             <Link to={"/"}>
               <a
@@ -101,19 +101,19 @@ export default function shopPage() {
                 size={32}
               />
             </div>
-            <div className="flex justify-around space-y-4 lg:space-y-0 h-full w-full px-12  items-around flex-wrap">
+            <div className="flex lg:grid lg:grid-row-2 lg:grid-cols-2 justify-around space-y-4 lg:space-y-5 shadow-xl py-5 h-full w-full px-12  items-around flex-wrap">
               {products.map((product, i) => {
                 return (
                   <div
                     key={i}
-                    className="border flex w-9/12 lg:w-52 lg:h-68 h-96 flex-col"
+                    className="border flex shadow-2xl w-9/12 lg:w-56 lg:h-68 h-96 flex-col"
                   >
                     <div className="absolute bg-yellow-400 cursor-pointer hover:scale-125 transition-all rounded-full -translate-y-4">
                       <PlusCircle color="black" size={45} />
                     </div>
-                    <div className="flex h-62 bg-gray-300 w-full h-full justify-center items-center">
+                    <div className="flex h-62 bg-gray-100 w-full h-full justify-center items-center">
                       <img
-                        className=" h-52 object-contain"
+                        className=" h-56 object-contain"
                         src={product}
                         alt=""
                       />
