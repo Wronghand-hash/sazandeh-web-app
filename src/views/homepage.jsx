@@ -55,7 +55,7 @@ export default function homePage() {
             ارائه خدمات و محصولات ساختمانی
           </h1>
           <button className="px-6 py-3 my-7 rounded-sm text-xl border-b-4 border-yellow-400 bg-neutral-900 text-white transition ease-in duration-300 hover:bg-yellow-400 hover:text-neutral-900 hover:border-neutral-900">
-            <Link to="/projectEstimate">محاسبه هزینه ی بازسازی</Link>
+            <Link to="/projectEstimate">محاسبه هزینه‌ی بازسازی</Link>
           </button>
         </div>
       </div>

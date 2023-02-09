@@ -17,6 +17,8 @@ import {
   Phone,
   UserCircle,
   TrashSimple,
+  CaretLeft,
+  CaretDown,
 } from "phosphor-react";
 
 import mainPageProjects6 from "../assets/images/mainPageProjects6.webp";
@@ -200,13 +202,14 @@ export default function navbar() {
               width={200}
             >
               <Menu.Target>
-                <Button className="hidden lg:block text-gray-900 font-semibold cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition ">
-                  <a href="www.sazandeh.onrender.com/shop">کالا</a>
+                <Button className="hidden flex justify-between lg:block h-10 text-gray-900 font-semibold cursor-pointer duration-300 hover:bg-black hover:text-white px-4 py-3 transition ">
+                  <a className=" h-full" href="www.sazandeh.onrender.com/shop">
+                    کالا
+                  </a>
                 </Button>
               </Menu.Target>
 
               <Menu.Dropdown className="text-right">
-                <Menu.Label>بر اساس</Menu.Label>
                 <Menu.Item className="text-right">جدید ترین</Menu.Item>
                 <Menu.Item className="text-right">جدید ترین</Menu.Item>
                 <Menu.Item className="text-right">پر بازدید ترین</Menu.Item>
@@ -228,7 +231,6 @@ export default function navbar() {
               </Menu.Target>
 
               <Menu.Dropdown className="text-right">
-                <Menu.Label>بر اساس</Menu.Label>
                 <Menu.Item className="text-right">جدید ترین</Menu.Item>
                 <Menu.Item className="text-right">جدید ترین</Menu.Item>
                 <Menu.Item className="text-right">پر بازدید ترین</Menu.Item>
@@ -462,7 +464,7 @@ export default function navbar() {
           </Dialog>
         </Transition>
         <Transition appear show={isOpen3} as={Fragment}>
-          <Dialog as="div" className="relative z-10" onClose={closeModal3}>
+          <Dialog as="div" className="relative z-50" onClose={closeModal3}>
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"

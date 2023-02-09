@@ -2,7 +2,7 @@ import {
   MapPin,
   EnvelopeSimple,
   PhoneOutgoing,
-  CaretRight,
+  CaretLeft,
   InstagramLogo,
   LinkedinLogo,
   FacebookLogo,
@@ -38,36 +38,36 @@ export default function Footer() {
           <div className="flex flex-col items-end space-y-3 justify-start">
             <div className="flex items-center space-x-4">
               <h1 className="transition text-white flex flex-row-reverse items-center text-right ease-in duration-200 hover:text-yellow-400 cursor-pointer">
-                <CaretRight size={13} weight="light" />
+                <CaretLeft size={13} weight="light" />
                 صفحه ی اصلی
               </h1>
               <h1 className="transition text-white flex flex-row-reverse items-center text-right ease-in duration-200 hover:text-yellow-400 cursor-pointer">
-                <CaretRight size={13} weight="light" />
+                <CaretLeft size={13} weight="light" />
                 ارتباط با ما
               </h1>
             </div>
             <div className="flex items-center space-x-4">
               <h1 className="transition text-white flex flex-row-reverse items-center text-right ease-in duration-200 hover:text-yellow-400 cursor-pointer">
-                <CaretRight size={13} weight="light" />
+                <CaretLeft size={13} weight="light" />
                 درباره ی ما
               </h1>
               <h1 className="transition text-white flex flex-row-reverse items-center text-right ease-in duration-200 hover:text-yellow-400 cursor-pointer">
-                <CaretRight size={13} weight="light" />
+                <CaretLeft size={13} weight="light" />
                 قوانین و مقررات
               </h1>
             </div>
             <div className="flex items-center space-x-4">
               <h1 className="transition text-white flex flex-row-reverse items-center text-right ease-in duration-200 hover:text-yellow-400 cursor-pointer">
-                <CaretRight size={13} weight="light" />
+                <CaretLeft size={13} weight="light" />
                 محصولات
               </h1>
               <h1 className="transition text-white flex flex-row-reverse items-center text-right ease-in duration-200 hover:text-yellow-400 cursor-pointer">
-                <CaretRight size={13} weight="light" />
+                <CaretLeft size={13} weight="light" />
                 خدمات مشاوره
               </h1>
             </div>
             <h1 className="transition text-white flex flex-row-reverse items-center text-right ease-in duration-200 hover:text-yellow-400 cursor-pointer">
-              <CaretRight size={13} weight="light" />
+              <CaretLeft size={13} weight="light" />
               وبلاگ چاره جو
             </h1>
           </div>

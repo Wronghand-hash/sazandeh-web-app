@@ -108,7 +108,13 @@ export default function Checkout() {
                   <Trash color="red" size={45} />
                 </div>
               </div>
-              <div className="flex w-full justify-center h-full items-center h-14">
+              <div className="flex  w-full justify-center h-full items-center h-24">
+                <div className="flex bg-gray-300 justify-around items-around flex-col">
+                  <Input className="" placeholder="اسم کامل" />
+                  <button className="w-full rounded shadow-2xl text-gray-500 hover:text-gray-900 hover:bg-yellow-500 transition bg-green-500 h-full">
+                    ثبت تخفیف
+                  </button>
+                </div>
                 <button className="w-full rounded shadow-2xl text-gray-100 hover:text-gray-900 hover:bg-yellow-500 transition bg-gray-900 h-full">
                   انتقال به درگاه
                 </button>
