@@ -109,26 +109,28 @@ export default function Checkout() {
                 </div>
               </div>
               <div className="flex  w-full justify-center h-full items-center h-24">
-                <div className="flex bg-gray-300 justify-around items-around flex-col">
-                  <Input className="" placeholder="اسم کامل" />
-                  <button className="w-full rounded shadow-2xl text-gray-500 hover:text-gray-900 hover:bg-yellow-500 transition bg-green-500 h-full">
-                    ثبت تخفیف
-                  </button>
-                </div>
                 <button className="w-full rounded shadow-2xl text-gray-100 hover:text-gray-900 hover:bg-yellow-500 transition bg-gray-900 h-full">
                   انتقال به درگاه
                 </button>
               </div>
             </div>
           </div>
-          <div className=" text-right h-52 w-full my-7 lg:w-96 bg-white border-2 border-mainWhite  shadow-xl flex items-end flex-col lg:mx-10 px-8">
-            <h1 className="text-3xl font-black my-4 w-full">نحوه ی ارسال </h1>
-            <Checkbox size="lg">
-              <span className="text-2xl">پست پیشتاز</span>
-            </Checkbox>
-            <Checkbox size="lg">
-              <span className="text-2xl">تیپاکس</span>
-            </Checkbox>
+          <div className="flex flex-col">
+            <div className=" text-right h-52 w-full my-7 lg:w-96 bg-white border-2 border-mainWhite  shadow-xl flex items-end flex-col lg:mx-10 px-8">
+              <h1 className="text-3xl font-black my-4 w-full">نحوه ی ارسال </h1>
+              <Checkbox size="lg">
+                <span className="text-2xl">پست پیشتاز</span>
+              </Checkbox>
+              <Checkbox size="lg">
+                <span className="text-2xl">تیپاکس</span>
+              </Checkbox>
+            </div>
+            <div className="flex lg:mx-10 space-y-2 px-8 bg-gray-300 justify-around items-around flex-col">
+              <Input className="py-3 text-right px-2" placeholder="کد تخفیف" />
+              <button className="w-full py-3 px-2 rounded shadow-2xl text-gray-900 hover:text-gray-900 hover:bg-yellow-500 transition bg-green-500 h-full">
+                ثبت تخفیف
+              </button>
+            </div>
           </div>
           <div className="w-auto h-carousel shadow-2xl   flex justify-end text-right items-center">
             <div className="h-full bg-white w-96 justify-around pb-20 flex items-center flex-col  my-2">
